@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  drawing_url: MyString
+  privacy: 1
+  views: 1
+
+two:
+  drawing_url: MyString
+  privacy: 1
+  views: 1

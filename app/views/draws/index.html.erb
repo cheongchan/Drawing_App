@@ -1,0 +1,31 @@
+<h1>Listing draws</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Drawing url</th>
+      <th>Privacy</th>
+      <th>Views</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @draws.each do |draw| %>
+      <tr>
+        <td><%= draw.drawing_url %></td>
+        <td><%= draw.privacy %></td>
+        <td><%= draw.views %></td>
+        <td><%= link_to 'Show', draw %></td>
+        <td><%= link_to 'Edit', edit_draw_path(draw) %></td>
+        <td><%= link_to 'Destroy', draw, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Draw', new_draw_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Drawing url:</strong>
+  <%= @draw.drawing_url %>
+</p>
+
+<p>
+  <strong>Privacy:</strong>
+  <%= @draw.privacy %>
+</p>
+
+<p>
+  <strong>Views:</strong>
+  <%= @draw.views %>
+</p>
+
+<%= link_to 'Edit', edit_draw_path(@draw) %> |
+<%= link_to 'Back', draws_path %>
