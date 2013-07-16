@@ -7,6 +7,9 @@ class DrawsController < ApplicationController
     @draws = Draw.all
   end
 
+  def draws
+  end
+
   # GET /draws/1
   # GET /draws/1.json
   def show
