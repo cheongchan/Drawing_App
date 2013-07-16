@@ -1,0 +1,1801 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'paper' ]
+2 info using npm@1.2.32
+3 info using node@v0.10.12
+4 verbose read json /Users/Admin/Desktop/drawingApp/package.json
+5 warn package.json pnda_tlk@0.0.1 No repository field.
+6 warn package.json pnda_tlk@0.0.1 No readme data.
+7 verbose read json /Users/Admin/Desktop/drawingApp/node_modules/connect/package.json
+8 verbose read json /Users/Admin/Desktop/drawingApp/node_modules/node-dev/package.json
+9 verbose read json /Users/Admin/Desktop/drawingApp/node_modules/socket.io/package.json
+10 verbose from cache /Users/Admin/Desktop/drawingApp/package.json
+11 verbose readDependencies using package.json deps
+12 verbose cache add [ 'paper', null ]
+13 verbose cache add name=undefined spec="paper" args=["paper",null]
+14 verbose parsed url { protocol: null,
+14 verbose parsed url   slashes: null,
+14 verbose parsed url   auth: null,
+14 verbose parsed url   host: null,
+14 verbose parsed url   port: null,
+14 verbose parsed url   hostname: null,
+14 verbose parsed url   hash: null,
+14 verbose parsed url   search: null,
+14 verbose parsed url   query: null,
+14 verbose parsed url   pathname: 'paper',
+14 verbose parsed url   path: 'paper',
+14 verbose parsed url   href: 'paper' }
+15 silly lockFile 950593b1-paper paper
+16 verbose lock paper /Users/Admin/.npm/950593b1-paper.lock
+17 silly lockFile 950593b1-paper paper
+18 silly lockFile 950593b1-paper paper
+19 verbose addNamed [ 'paper', '' ]
+20 verbose addNamed [ null, '' ]
+21 silly lockFile 087e8815-paper paper@
+22 verbose lock paper@ /Users/Admin/.npm/087e8815-paper.lock
+23 silly addNameRange { name: 'paper', range: '', hasData: false }
+24 verbose url raw paper
+25 verbose url resolving [ 'https://registry.npmjs.org/', './paper' ]
+26 verbose url resolved https://registry.npmjs.org/paper
+27 info trying registry request attempt 1 at 16:58:06
+28 http GET https://registry.npmjs.org/paper
+29 http 200 https://registry.npmjs.org/paper
+30 silly registry.get cb [ 200,
+30 silly registry.get   { vary: 'Accept',
+30 silly registry.get     server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+30 silly registry.get     etag: '"7ZV2I1PGVT6V5QIYIGB6YRFR9"',
+30 silly registry.get     date: 'Mon, 15 Jul 2013 20:58:06 GMT',
+30 silly registry.get     'content-type': 'application/json',
+30 silly registry.get     'content-length': '105791' } ]
+31 silly addNameRange number 2 { name: 'paper', range: '', hasData: true }
+32 silly addNameRange versions [ 'paper',
+32 silly addNameRange   [ '0.8.0',
+32 silly addNameRange     '0.8.1',
+32 silly addNameRange     '0.8.2',
+32 silly addNameRange     '0.8.3',
+32 silly addNameRange     '0.9.1',
+32 silly addNameRange     '0.9.2',
+32 silly addNameRange     '0.9.3',
+32 silly addNameRange     '0.9.4',
+32 silly addNameRange     '0.9.5',
+32 silly addNameRange     '0.9.6',
+32 silly addNameRange     '0.9.7',
+32 silly addNameRange     '0.9.8' ] ]
+33 verbose addNamed [ 'paper', '0.9.8' ]
+34 verbose addNamed [ '0.9.8', '0.9.8' ]
+35 silly lockFile 6f2ace83-paper-0-9-8 paper@0.9.8
+36 verbose lock paper@0.9.8 /Users/Admin/.npm/6f2ace83-paper-0-9-8.lock
+37 silly lockFile c5621614--npmjs-org-paper-paper-0-9-8-tgz https://registry.npmjs.org/paper/-/paper-0.9.8.tgz
+38 verbose lock https://registry.npmjs.org/paper/-/paper-0.9.8.tgz /Users/Admin/.npm/c5621614--npmjs-org-paper-paper-0-9-8-tgz.lock
+39 verbose addRemoteTarball [ 'https://registry.npmjs.org/paper/-/paper-0.9.8.tgz',
+39 verbose addRemoteTarball   'f60fd59cb0b5afb57938000ae1ef8d81dce00023' ]
+40 info retry fetch attempt 1 at 16:58:07
+41 verbose fetch to= /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921887274-0.1305463626049459/tmp.tgz
+42 http GET https://registry.npmjs.org/paper/-/paper-0.9.8.tgz
+43 http 200 https://registry.npmjs.org/paper/-/paper-0.9.8.tgz
+44 verbose tar unpack /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921887274-0.1305463626049459/tmp.tgz
+45 silly lockFile 0f1dd01e-87274-0-1305463626049459-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921887274-0.1305463626049459/package
+46 verbose lock tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921887274-0.1305463626049459/package /Users/Admin/.npm/0f1dd01e-87274-0-1305463626049459-package.lock
+47 silly lockFile 64aed35a-87274-0-1305463626049459-tmp-tgz tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921887274-0.1305463626049459/tmp.tgz
+48 verbose lock tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921887274-0.1305463626049459/tmp.tgz /Users/Admin/.npm/64aed35a-87274-0-1305463626049459-tmp-tgz.lock
+49 silly gunzTarPerm modes [ '755', '644' ]
+50 silly gunzTarPerm extractEntry package.json
+51 silly gunzTarPerm extractEntry README.md
+52 silly gunzTarPerm extractEntry AUTHORS.md
+53 silly gunzTarPerm extractEntry LICENSE.txt
+54 silly gunzTarPerm extractEntry dist/paper-node.js
+55 silly gunzTarPerm extractEntry examples/Node.js/AnimatedStar.js
+56 silly gunzTarPerm extractEntry examples/Node.js/Raster.js
+57 silly gunzTarPerm extractEntry examples/Node.js/SVGExport.js
+58 silly gunzTarPerm extractEntry examples/Node.js/SVGImport.js
+59 silly gunzTarPerm extractEntry examples/Node.js/Tadpoles.js
+60 silly gunzTarPerm extractEntry examples/Node.js/Tadpoles.pjs
+61 silly gunzTarPerm extractEntry examples/Node.js/in.svg
+62 verbose read json /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921887274-0.1305463626049459/package/package.json
+63 silly lockFile 0f1dd01e-87274-0-1305463626049459-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921887274-0.1305463626049459/package
+64 silly lockFile 0f1dd01e-87274-0-1305463626049459-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921887274-0.1305463626049459/package
+65 silly lockFile 64aed35a-87274-0-1305463626049459-tmp-tgz tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921887274-0.1305463626049459/tmp.tgz
+66 silly lockFile 64aed35a-87274-0-1305463626049459-tmp-tgz tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921887274-0.1305463626049459/tmp.tgz
+67 verbose from cache /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921887274-0.1305463626049459/package/package.json
+68 verbose tar pack [ '/Users/Admin/.npm/paper/0.9.8/package.tgz',
+68 verbose tar pack   '/var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921887274-0.1305463626049459/package' ]
+69 verbose tarball /Users/Admin/.npm/paper/0.9.8/package.tgz
+70 verbose folder /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921887274-0.1305463626049459/package
+71 silly lockFile 0f1dd01e-87274-0-1305463626049459-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921887274-0.1305463626049459/package
+72 verbose lock tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921887274-0.1305463626049459/package /Users/Admin/.npm/0f1dd01e-87274-0-1305463626049459-package.lock
+73 silly lockFile 46d4f637-dmin-npm-paper-0-9-8-package-tgz tar:///Users/Admin/.npm/paper/0.9.8/package.tgz
+74 verbose lock tar:///Users/Admin/.npm/paper/0.9.8/package.tgz /Users/Admin/.npm/46d4f637-dmin-npm-paper-0-9-8-package-tgz.lock
+75 silly lockFile 0f1dd01e-87274-0-1305463626049459-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921887274-0.1305463626049459/package
+76 silly lockFile 0f1dd01e-87274-0-1305463626049459-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921887274-0.1305463626049459/package
+77 silly lockFile 46d4f637-dmin-npm-paper-0-9-8-package-tgz tar:///Users/Admin/.npm/paper/0.9.8/package.tgz
+78 silly lockFile 46d4f637-dmin-npm-paper-0-9-8-package-tgz tar:///Users/Admin/.npm/paper/0.9.8/package.tgz
+79 silly lockFile 51a1402e-rs-Admin-npm-paper-0-9-8-package /Users/Admin/.npm/paper/0.9.8/package
+80 verbose lock /Users/Admin/.npm/paper/0.9.8/package /Users/Admin/.npm/51a1402e-rs-Admin-npm-paper-0-9-8-package.lock
+81 silly lockFile 51a1402e-rs-Admin-npm-paper-0-9-8-package /Users/Admin/.npm/paper/0.9.8/package
+82 silly lockFile 51a1402e-rs-Admin-npm-paper-0-9-8-package /Users/Admin/.npm/paper/0.9.8/package
+83 verbose tar unpack /Users/Admin/.npm/paper/0.9.8/package.tgz
+84 silly lockFile f6c7846d-rs-Admin-npm-paper-0-9-8-package tar:///Users/Admin/.npm/paper/0.9.8/package
+85 verbose lock tar:///Users/Admin/.npm/paper/0.9.8/package /Users/Admin/.npm/f6c7846d-rs-Admin-npm-paper-0-9-8-package.lock
+86 silly lockFile 46d4f637-dmin-npm-paper-0-9-8-package-tgz tar:///Users/Admin/.npm/paper/0.9.8/package.tgz
+87 verbose lock tar:///Users/Admin/.npm/paper/0.9.8/package.tgz /Users/Admin/.npm/46d4f637-dmin-npm-paper-0-9-8-package-tgz.lock
+88 silly gunzTarPerm modes [ '755', '644' ]
+89 silly gunzTarPerm extractEntry package.json
+90 silly gunzTarPerm extractEntry README.md
+91 silly gunzTarPerm extractEntry AUTHORS.md
+92 silly gunzTarPerm extractEntry LICENSE.txt
+93 silly gunzTarPerm extractEntry dist/paper-node.js
+94 silly gunzTarPerm extractEntry examples/Node.js/AnimatedStar.js
+95 silly gunzTarPerm extractEntry examples/Node.js/Raster.js
+96 silly gunzTarPerm extractEntry examples/Node.js/SVGExport.js
+97 silly gunzTarPerm extractEntry examples/Node.js/SVGImport.js
+98 silly gunzTarPerm extractEntry examples/Node.js/Tadpoles.js
+99 silly gunzTarPerm extractEntry examples/Node.js/Tadpoles.pjs
+100 silly gunzTarPerm extractEntry examples/Node.js/in.svg
+101 verbose read json /Users/Admin/.npm/paper/0.9.8/package/package.json
+102 silly lockFile f6c7846d-rs-Admin-npm-paper-0-9-8-package tar:///Users/Admin/.npm/paper/0.9.8/package
+103 silly lockFile f6c7846d-rs-Admin-npm-paper-0-9-8-package tar:///Users/Admin/.npm/paper/0.9.8/package
+104 silly lockFile 46d4f637-dmin-npm-paper-0-9-8-package-tgz tar:///Users/Admin/.npm/paper/0.9.8/package.tgz
+105 silly lockFile 46d4f637-dmin-npm-paper-0-9-8-package-tgz tar:///Users/Admin/.npm/paper/0.9.8/package.tgz
+106 verbose from cache /Users/Admin/.npm/paper/0.9.8/package/package.json
+107 verbose chmod /Users/Admin/.npm/paper/0.9.8/package.tgz 644
+108 verbose chown /Users/Admin/.npm/paper/0.9.8/package.tgz [ 501, 20 ]
+109 silly lockFile c5621614--npmjs-org-paper-paper-0-9-8-tgz https://registry.npmjs.org/paper/-/paper-0.9.8.tgz
+110 silly lockFile c5621614--npmjs-org-paper-paper-0-9-8-tgz https://registry.npmjs.org/paper/-/paper-0.9.8.tgz
+111 silly lockFile 6f2ace83-paper-0-9-8 paper@0.9.8
+112 silly lockFile 6f2ace83-paper-0-9-8 paper@0.9.8
+113 silly lockFile 087e8815-paper paper@
+114 silly lockFile 087e8815-paper paper@
+115 silly resolved [ { name: 'paper',
+115 silly resolved     version: '0.9.8',
+115 silly resolved     description: 'The Swiss Army Knife of Vector Graphics Scripting',
+115 silly resolved     homepage: 'http://paperjs.org',
+115 silly resolved     repository: { type: 'git', url: 'git://github.com/paperjs/paper.js' },
+115 silly resolved     contributors: [ [Object], [Object] ],
+115 silly resolved     main: './dist/paper-node.js',
+115 silly resolved     files:
+115 silly resolved      [ 'AUTHORS.md',
+115 silly resolved        'dist/paper-node.js',
+115 silly resolved        'examples/Node.js',
+115 silly resolved        'LICENSE.txt',
+115 silly resolved        'README.md' ],
+115 silly resolved     engines: { node: '>= 0.4.0' },
+115 silly resolved     dependencies: { canvas: '>= 0.7.0', jsdom: '>= 0.6.0' },
+115 silly resolved     devDependencies:
+115 silly resolved      { 'uglify-js': '~2.3.6',
+115 silly resolved        prepro: '~0.7.2',
+115 silly resolved        grunt: '~0.4.1',
+115 silly resolved        'grunt-contrib-uglify': '~0.2.2' },
+115 silly resolved     keywords:
+115 silly resolved      [ 'vector',
+115 silly resolved        'graphic',
+115 silly resolved        'graphics',
+115 silly resolved        'bezier',
+115 silly resolved        'curve',
+115 silly resolved        'curves',
+115 silly resolved        'canvas',
+115 silly resolved        'svg',
+115 silly resolved        'paper.js' ],
+115 silly resolved     readme: '# Paper.js - The Swiss Army Knife of Vector Graphics Scripting\n\nIf you want to work with Paper.js, simply download the latest "stable" version from [http://paperjs.org/download/](http://paperjs.org/download/)\n\n- Website: <http://paperjs.org/>\n- Discussion forum: <http://groups.google.com/group/paperjs>\n- Mainline source code: <https://github.com/paperjs/paper.js>\n- Twitter: [@paperjs](http://twitter.com/paperjs)\n- Daily development builds: <http://paperjs.org/download/>\n\n## Installing Paper.js\n\nYou can download prebuilt packages from <http://paperjs.org/download/>.\n\nAs of July 2013, the recommended way to install and maintain Paper.js is through Bower for browsers, and through NPM for Node.js.\n\nSee <http://madebyhoundstooth.com/blog/install-node-with-homebrew-on-os-x/> for a tutorial explaining how to install Node.js, NPM and Bower on OSX.\n\nWith Bower installed, simply type this command in your project folder:\n\n\tbower install paper\n\nUpon execution, you will find a `paper` folder inside the project\'s `component` folder. For more information on Bower and to learn about its features for dependence tracking, see <http://bower.io/>.\n\n## Installing for Node.js\n\nSimilarly you can use NPM to install Paper.js for Node.js. But before doing so, you need the Cairo Graphics library installed, see <http://cairographics.org/>.\n\nThe easiest way to install Cairo on OSX is through Homebrew <http://mxcl.github.io/homebrew/>.\n\n\tbrew install cairo\n\nOnce Homebrew has installed this for you, you can then install the Paper.js module:\n\n\tnpm install paper\n\nNote that currently there is an issue on OSX with Cairo. If the above causes errors, the following will most likely fix it:\n\n\tPKG_CONFIG_PATH=/opt/X11/lib/pkgconfig/ npm insetall paper\n\nAlso, whenever you would like to update the modules, you will need to execute:\n\n\tPKG_CONFIG_PATH=/opt/X11/lib/pkgconfig/ npm update\n\n## Development\n\n**Get the source (for building):**\n\n\tgit clone --recursive git://github.com/paperjs/paper.js.git\n\n**Get the source (for contributing):**\n\nIf you want to contribute to the project you will have to [make a fork](http://help.github.com/forking/). Then do this:\n\n\tgit clone --recursive git@github.com:yourusername/paper.js.git\n\tgit remote add upstream git://github.com/paperjs/paper.js.git\n\n### Refreshing Your Clone\n\nTo fetch changes from origin, run\n\n\tgit fetch origin\n\nIf you are working with a fork and would like to fetch from upstream, run\n\n\tgit fetch upstream\n\nTo update the `jsdoc-toolkit` submodule inside the `build` folder, used to generate the documentation, run\n\n\tgit submodule update --init\n\n### Building the Library\n\nPaper.js has a couple of dependencies as Bower and NPM modules. See <http://madebyhoundstooth.com/blog/install-node-with-homebrew-on-os-x/> for a tutorial explaining how to install Node.js, NPM and Bower on OSX.\n\nIn order to be able to build Paper.js, these dependencies need to be installed first after checking out the repository:\n\n\tnpm install\n\tbower install\n\nNext you need to create minified versions of some of these dependencies. This is handled by the `minify-components.sh` script inside the `build` folder:\n\n\tcd build\n\t./minify-components.sh\n\nThe Paper.js sources are distributed across many separate files, organised in subfolders inside the `src` folder. To compile them all into one distributable file, you can run the `build.sh` script inside the `build` folder:\n\n\tcd build\n\t./build.sh\n\nYou will then find the built library inside the `dist` folder, named `paper.js`.\n\n`build.sh` offer two modes:\n\n\tcommented\t\tPreprocessed but still formated and commented\n\tstripped\t\tFormated but without comments (default)\n\nIn order to minify the resulting built versions, you can run the `minify.sh` script:\n\n\tcd build\n\t./minify.sh\n\n### Building the Documentation\n\nSimilarly to building the library, you can run `docs.sh` inside the `build` folder to build the documentation.\n\n\tcd build\n\t./docs.sh\n\nYour docs will then be located at `dist/docs`.\n\n### Editing and Running Code during Development\n\nAs a handy alternative to building the library after each change to try it out in your scripts, there is a helper script `src/load.js` that loads the library directly from all the separate source files in the `src` folder. The shell script `load.sh` in the `build` folder produces a `paper.js` library in `dist` that does nothing else than loading the source files through `src/load.js`. This means you can switch between loading from sources and loading a built library simply by running `build.sh` or `load.sh` inside the `build` folder.\n\n\tcd build\n\t./load.sh\n\nAnd to go back to a built library\n\n\tcd build\n\t./build.sh\n\nNote that your PaperScripts examples do not need to change, they can simply load `dist/paper.js`, which will always do the right rhing. Note also that `src/load.js` handles both browsers and Node.js, through the handy PrePro library <http://github.com/lehni/prepro.js>.\n\n### Testing\n\nPaper.js was developed and tested from day 1 using proper unit testing through jQuery\'s [Qunit](http://docs.jquery.com/Qunit). To run the tests after any change to the library\'s source, simply open `index.html` inside the `test` folder in your web browser. There should be a green bar at the top, meaning all tests have passed. If the bar is red, some tests have not passed. These will be highlighted and become visible when scrolling down.\n\n### Contributing\n\nThe main Paper.js source tree is hosted on git (a popular [DVCS](http://en.wikipedia.org/wiki/Distributed_revision_control)), thus you should create a fork of the repository in which you perform development. See <http://help.github.com/forking/>.\n\nWe prefer that you send a [*pull request* here on GitHub](http://help.github.com/pull-requests/) which will then be merged into the official main line repository. You need to sign the Paper.js CLA to be able to contribute (see below).\n\nAlso, in your first contribution, add yourself to the end of `AUTHORS.md` (which of course is optional).\n\n#### Creating and Submitting a Patch\n\nAs mentioned earlier in this article, we prefer that you send a [*pull request*](http://help.github.com/pull-requests/) on GitHub.\n\n1. Create a fork of the upstream repository by visiting <https://github.com/paperjs/paper.js/fork>. If you feel insecure, here\'s a great guide: <http://help.github.com/forking/>\n\n2. Clone of your repository: `git clone https://yourusername@github.com/yourusername/paper.js.git`\n\n3. This is important: Create a so-called *topic branch*: `git checkout -tb name-of-my-patch` where "name-of-my-patch" is a short but descriptive name of the patch you\'re about to create. Don\'t worry about the perfect name though -- you can change this name at any time later on.\n\n4. Hack! Make your changes, additions, etc and commit them.\n\n5. Send a pull request to the upstream repository\'s owner by visiting your repository\'s site at github (i.e. https://github.com/yourusername/paper.js) and press the "Pull Request" button. Here\'s a good guide on pull requests: <http://help.github.com/pull-requests/>\n\n**Use one topic branch per feature** -- don\'t mix different kinds of patches in the same branch. Instead, merge them all together into your master branch (or develop everything in your master and then cherry-pick-and-merge into the different topic branches). Git provides for an extremely flexible workflow, which in many ways causes more confusion than it helps you when new to collaborative software development. The guides provided by GitHub at <http://help.github.com/> are a really good starting point and reference.\nIf you are fixing a ticket, a convenient way to name the branch is to use the URL slug from the bug tracker, like this: `git checkout -tb 53-feature-manually-select-language`.\n\n#### Contributor License Agreement\n\nBefore we can accept any contributions to Paper.js, you need to sign this [CLA](http://en.wikipedia.org/wiki/Contributor_License_Agreement):\n\n[Contributor License Agreement](https://spreadsheets.google.com/a/paperjs.org/spreadsheet/embeddedform?formkey=dENxd0JBVDY2REo3THVuRmh4YjdWRlE6MQ)\n\n> The purpose of this agreement is to clearly define the terms under which intellectual property has been contributed to Paper.js and thereby allow us to defend the project should there be a legal dispute regarding the software at some future time.\n\nFor a list of contributors, please see [AUTHORS](https://github.com/paperjs/paper.js/blob/master/AUTHORS.md)\n\n## License\n\nSee the file [LICENSE](https://github.com/paperjs/paper.js/blob/master/LICENSE.txt)\n',
+115 silly resolved     readmeFilename: 'README.md',
+115 silly resolved     bugs: { url: 'https://github.com/paperjs/paper.js/issues' },
+115 silly resolved     _id: 'paper@0.9.8',
+115 silly resolved     dist: { shasum: 'f60fd59cb0b5afb57938000ae1ef8d81dce00023' },
+115 silly resolved     _from: 'paper@',
+115 silly resolved     _resolved: 'https://registry.npmjs.org/paper/-/paper-0.9.8.tgz' } ]
+116 info install paper@0.9.8 into /Users/Admin/Desktop/drawingApp
+117 info installOne paper@0.9.8
+118 verbose from cache /Users/Admin/.npm/paper/0.9.8/package/package.json
+119 info /Users/Admin/Desktop/drawingApp/node_modules/paper unbuild
+120 verbose read json /Users/Admin/Desktop/drawingApp/node_modules/paper/package.json
+121 verbose tar unpack /Users/Admin/.npm/paper/0.9.8/package.tgz
+122 silly lockFile 1baf2b5c-op-drawingApp-node-modules-paper tar:///Users/Admin/Desktop/drawingApp/node_modules/paper
+123 verbose lock tar:///Users/Admin/Desktop/drawingApp/node_modules/paper /Users/Admin/.npm/1baf2b5c-op-drawingApp-node-modules-paper.lock
+124 silly lockFile 46d4f637-dmin-npm-paper-0-9-8-package-tgz tar:///Users/Admin/.npm/paper/0.9.8/package.tgz
+125 verbose lock tar:///Users/Admin/.npm/paper/0.9.8/package.tgz /Users/Admin/.npm/46d4f637-dmin-npm-paper-0-9-8-package-tgz.lock
+126 silly gunzTarPerm modes [ '755', '644' ]
+127 silly gunzTarPerm extractEntry package.json
+128 silly gunzTarPerm extractEntry README.md
+129 silly gunzTarPerm extractEntry AUTHORS.md
+130 silly gunzTarPerm extractEntry LICENSE.txt
+131 silly gunzTarPerm extractEntry dist/paper-node.js
+132 silly gunzTarPerm extractEntry examples/Node.js/AnimatedStar.js
+133 silly gunzTarPerm extractEntry examples/Node.js/Raster.js
+134 silly gunzTarPerm extractEntry examples/Node.js/SVGExport.js
+135 silly gunzTarPerm extractEntry examples/Node.js/SVGImport.js
+136 silly gunzTarPerm extractEntry examples/Node.js/Tadpoles.js
+137 silly gunzTarPerm extractEntry examples/Node.js/Tadpoles.pjs
+138 silly gunzTarPerm extractEntry examples/Node.js/in.svg
+139 verbose read json /Users/Admin/Desktop/drawingApp/node_modules/paper/package.json
+140 silly lockFile 1baf2b5c-op-drawingApp-node-modules-paper tar:///Users/Admin/Desktop/drawingApp/node_modules/paper
+141 silly lockFile 1baf2b5c-op-drawingApp-node-modules-paper tar:///Users/Admin/Desktop/drawingApp/node_modules/paper
+142 silly lockFile 46d4f637-dmin-npm-paper-0-9-8-package-tgz tar:///Users/Admin/.npm/paper/0.9.8/package.tgz
+143 silly lockFile 46d4f637-dmin-npm-paper-0-9-8-package-tgz tar:///Users/Admin/.npm/paper/0.9.8/package.tgz
+144 info preinstall paper@0.9.8
+145 verbose from cache /Users/Admin/Desktop/drawingApp/node_modules/paper/package.json
+146 verbose readDependencies using package.json deps
+147 verbose from cache /Users/Admin/Desktop/drawingApp/node_modules/paper/package.json
+148 verbose readDependencies using package.json deps
+149 verbose cache add [ 'canvas@>= 0.7.0', null ]
+150 verbose cache add name=undefined spec="canvas@>= 0.7.0" args=["canvas@>= 0.7.0",null]
+151 verbose parsed url { protocol: null,
+151 verbose parsed url   slashes: null,
+151 verbose parsed url   auth: null,
+151 verbose parsed url   host: null,
+151 verbose parsed url   port: null,
+151 verbose parsed url   hostname: null,
+151 verbose parsed url   hash: null,
+151 verbose parsed url   search: null,
+151 verbose parsed url   query: null,
+151 verbose parsed url   pathname: 'canvas@%3E=%200.7.0',
+151 verbose parsed url   path: 'canvas@%3E=%200.7.0',
+151 verbose parsed url   href: 'canvas@%3E=%200.7.0' }
+152 verbose cache add name="canvas" spec=">= 0.7.0" args=["canvas",">= 0.7.0"]
+153 verbose parsed url { protocol: null,
+153 verbose parsed url   slashes: null,
+153 verbose parsed url   auth: null,
+153 verbose parsed url   host: null,
+153 verbose parsed url   port: null,
+153 verbose parsed url   hostname: null,
+153 verbose parsed url   hash: null,
+153 verbose parsed url   search: null,
+153 verbose parsed url   query: null,
+153 verbose parsed url   pathname: '%3E=%200.7.0',
+153 verbose parsed url   path: '%3E=%200.7.0',
+153 verbose parsed url   href: '%3E=%200.7.0' }
+154 verbose addNamed [ 'canvas', '>= 0.7.0' ]
+155 verbose addNamed [ null, '>=0.7.0' ]
+156 silly lockFile f77094c3-canvas-0-7-0 canvas@>= 0.7.0
+157 verbose lock canvas@>= 0.7.0 /Users/Admin/.npm/f77094c3-canvas-0-7-0.lock
+158 verbose cache add [ 'jsdom@>= 0.6.0', null ]
+159 verbose cache add name=undefined spec="jsdom@>= 0.6.0" args=["jsdom@>= 0.6.0",null]
+160 verbose parsed url { protocol: null,
+160 verbose parsed url   slashes: null,
+160 verbose parsed url   auth: null,
+160 verbose parsed url   host: null,
+160 verbose parsed url   port: null,
+160 verbose parsed url   hostname: null,
+160 verbose parsed url   hash: null,
+160 verbose parsed url   search: null,
+160 verbose parsed url   query: null,
+160 verbose parsed url   pathname: 'jsdom@%3E=%200.6.0',
+160 verbose parsed url   path: 'jsdom@%3E=%200.6.0',
+160 verbose parsed url   href: 'jsdom@%3E=%200.6.0' }
+161 verbose cache add name="jsdom" spec=">= 0.6.0" args=["jsdom",">= 0.6.0"]
+162 verbose parsed url { protocol: null,
+162 verbose parsed url   slashes: null,
+162 verbose parsed url   auth: null,
+162 verbose parsed url   host: null,
+162 verbose parsed url   port: null,
+162 verbose parsed url   hostname: null,
+162 verbose parsed url   hash: null,
+162 verbose parsed url   search: null,
+162 verbose parsed url   query: null,
+162 verbose parsed url   pathname: '%3E=%200.6.0',
+162 verbose parsed url   path: '%3E=%200.6.0',
+162 verbose parsed url   href: '%3E=%200.6.0' }
+163 verbose addNamed [ 'jsdom', '>= 0.6.0' ]
+164 verbose addNamed [ null, '>=0.6.0' ]
+165 silly lockFile 07fda386-jsdom-0-6-0 jsdom@>= 0.6.0
+166 verbose lock jsdom@>= 0.6.0 /Users/Admin/.npm/07fda386-jsdom-0-6-0.lock
+167 silly addNameRange { name: 'canvas', range: '>=0.7.0', hasData: false }
+168 silly addNameRange { name: 'jsdom', range: '>=0.6.0', hasData: false }
+169 verbose url raw canvas
+170 verbose url resolving [ 'https://registry.npmjs.org/', './canvas' ]
+171 verbose url resolved https://registry.npmjs.org/canvas
+172 info trying registry request attempt 1 at 16:58:08
+173 http GET https://registry.npmjs.org/canvas
+174 verbose url raw jsdom
+175 verbose url resolving [ 'https://registry.npmjs.org/', './jsdom' ]
+176 verbose url resolved https://registry.npmjs.org/jsdom
+177 info trying registry request attempt 1 at 16:58:08
+178 http GET https://registry.npmjs.org/jsdom
+179 http 200 https://registry.npmjs.org/canvas
+180 silly registry.get cb [ 200,
+180 silly registry.get   { vary: 'Accept',
+180 silly registry.get     server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+180 silly registry.get     etag: '"2O6O0H5IU2LP51762XBNWFSJH"',
+180 silly registry.get     date: 'Mon, 15 Jul 2013 20:58:08 GMT',
+180 silly registry.get     'content-type': 'application/json',
+180 silly registry.get     'content-length': '158319' } ]
+181 silly addNameRange number 2 { name: 'canvas', range: '>=0.7.0', hasData: true }
+182 silly addNameRange versions [ 'canvas',
+182 silly addNameRange   [ '0.0.1',
+182 silly addNameRange     '0.0.2',
+182 silly addNameRange     '0.0.3',
+182 silly addNameRange     '0.0.4',
+182 silly addNameRange     '0.0.5',
+182 silly addNameRange     '0.0.6',
+182 silly addNameRange     '0.0.7',
+182 silly addNameRange     '0.0.8',
+182 silly addNameRange     '0.1.0',
+182 silly addNameRange     '0.2.0',
+182 silly addNameRange     '0.2.1',
+182 silly addNameRange     '0.3.0',
+182 silly addNameRange     '0.3.1',
+182 silly addNameRange     '0.3.2',
+182 silly addNameRange     '0.3.3',
+182 silly addNameRange     '0.4.0',
+182 silly addNameRange     '0.4.1',
+182 silly addNameRange     '0.4.2',
+182 silly addNameRange     '0.4.3',
+182 silly addNameRange     '0.5.0',
+182 silly addNameRange     '0.5.1',
+182 silly addNameRange     '0.5.2',
+182 silly addNameRange     '0.5.3',
+182 silly addNameRange     '0.5.4',
+182 silly addNameRange     '0.6.0',
+182 silly addNameRange     '0.7.0',
+182 silly addNameRange     '0.7.1',
+182 silly addNameRange     '0.7.2',
+182 silly addNameRange     '0.7.3',
+182 silly addNameRange     '0.8.0',
+182 silly addNameRange     '0.8.1',
+182 silly addNameRange     '0.8.2',
+182 silly addNameRange     '0.8.3',
+182 silly addNameRange     '0.9.0',
+182 silly addNameRange     '0.10.0',
+182 silly addNameRange     '0.10.1',
+182 silly addNameRange     '0.10.2',
+182 silly addNameRange     '0.10.3',
+182 silly addNameRange     '0.11.0',
+182 silly addNameRange     '0.11.1',
+182 silly addNameRange     '0.11.2',
+182 silly addNameRange     '0.11.3',
+182 silly addNameRange     '0.12.0',
+182 silly addNameRange     '0.12.1',
+182 silly addNameRange     '0.13.0',
+182 silly addNameRange     '0.13.1',
+182 silly addNameRange     '1.0.0',
+182 silly addNameRange     '1.0.1',
+182 silly addNameRange     '1.0.2',
+182 silly addNameRange     '1.0.3' ] ]
+183 verbose addNamed [ 'canvas', '1.0.3' ]
+184 verbose addNamed [ '1.0.3', '1.0.3' ]
+185 silly lockFile 6251add9-canvas-1-0-3 canvas@1.0.3
+186 verbose lock canvas@1.0.3 /Users/Admin/.npm/6251add9-canvas-1-0-3.lock
+187 silly lockFile 60881e69-pmjs-org-canvas-canvas-1-0-3-tgz https://registry.npmjs.org/canvas/-/canvas-1.0.3.tgz
+188 verbose lock https://registry.npmjs.org/canvas/-/canvas-1.0.3.tgz /Users/Admin/.npm/60881e69-pmjs-org-canvas-canvas-1-0-3-tgz.lock
+189 verbose addRemoteTarball [ 'https://registry.npmjs.org/canvas/-/canvas-1.0.3.tgz',
+189 verbose addRemoteTarball   '39aaf1eca76634b3e32546e8cb6084caa4a5ee5b' ]
+190 info retry fetch attempt 1 at 16:58:08
+191 verbose fetch to= /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921888783-0.9537048139609396/tmp.tgz
+192 http GET https://registry.npmjs.org/canvas/-/canvas-1.0.3.tgz
+193 http 200 https://registry.npmjs.org/jsdom
+194 silly registry.get cb [ 200,
+194 silly registry.get   { vary: 'Accept',
+194 silly registry.get     server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+194 silly registry.get     etag: '"6W9T46QWMTDSTJFN1R4FJBQMD"',
+194 silly registry.get     date: 'Mon, 15 Jul 2013 20:58:08 GMT',
+194 silly registry.get     'content-type': 'application/json',
+194 silly registry.get     'content-length': '482420' } ]
+195 silly addNameRange number 2 { name: 'jsdom', range: '>=0.6.0', hasData: true }
+196 silly addNameRange versions [ 'jsdom',
+196 silly addNameRange   [ '0.0.1',
+196 silly addNameRange     '0.1.2',
+196 silly addNameRange     '0.1.4',
+196 silly addNameRange     '0.1.5',
+196 silly addNameRange     '0.1.6',
+196 silly addNameRange     '0.1.7',
+196 silly addNameRange     '0.1.8',
+196 silly addNameRange     '0.1.9',
+196 silly addNameRange     '0.1.10',
+196 silly addNameRange     '0.1.11',
+196 silly addNameRange     '0.1.12',
+196 silly addNameRange     '0.1.13',
+196 silly addNameRange     '0.1.15',
+196 silly addNameRange     '0.1.16',
+196 silly addNameRange     '0.1.17',
+196 silly addNameRange     '0.1.18',
+196 silly addNameRange     '0.1.19',
+196 silly addNameRange     '0.1.20',
+196 silly addNameRange     '0.1.21',
+196 silly addNameRange     '0.1.22',
+196 silly addNameRange     '0.1.23',
+196 silly addNameRange     '0.2.0',
+196 silly addNameRange     '0.2.1',
+196 silly addNameRange     '0.2.2',
+196 silly addNameRange     '0.2.3',
+196 silly addNameRange     '0.2.4',
+196 silly addNameRange     '0.2.5',
+196 silly addNameRange     '0.2.6',
+196 silly addNameRange     '0.2.7',
+196 silly addNameRange     '0.2.8',
+196 silly addNameRange     '0.2.9',
+196 silly addNameRange     '0.2.10',
+196 silly addNameRange     '0.2.11',
+196 silly addNameRange     '0.2.12',
+196 silly addNameRange     '0.2.13',
+196 silly addNameRange     '0.2.14',
+196 silly addNameRange     '0.2.15',
+196 silly addNameRange     '0.2.16',
+196 silly addNameRange     '0.2.17',
+196 silly addNameRange     '0.2.18',
+196 silly addNameRange     '0.2.19',
+196 silly addNameRange     '0.3.0',
+196 silly addNameRange     '0.3.1',
+196 silly addNameRange     '0.3.2',
+196 silly addNameRange     '0.3.3',
+196 silly addNameRange     '0.3.4',
+196 silly addNameRange     '0.4.0',
+196 silly addNameRange     '0.4.1',
+196 silly addNameRange     '0.4.2',
+196 silly addNameRange     '0.5.0',
+196 silly addNameRange     '0.5.1',
+196 silly addNameRange     '0.5.2',
+196 silly addNameRange     '0.5.3',
+196 silly addNameRange     '0.5.4',
+196 silly addNameRange     '0.5.5',
+196 silly addNameRange     '0.5.6',
+196 silly addNameRange     '0.5.7',
+196 silly addNameRange     '0.6.0',
+196 silly addNameRange     '0.6.1',
+196 silly addNameRange     '0.6.2',
+196 silly addNameRange     '0.6.3',
+196 silly addNameRange     '0.6.4',
+196 silly addNameRange     '0.6.5',
+196 silly addNameRange     '0.7.0' ] ]
+197 verbose addNamed [ 'jsdom', '0.7.0' ]
+198 verbose addNamed [ '0.7.0', '0.7.0' ]
+199 silly lockFile 71e268e9-jsdom-0-7-0 jsdom@0.7.0
+200 verbose lock jsdom@0.7.0 /Users/Admin/.npm/71e268e9-jsdom-0-7-0.lock
+201 silly lockFile 8ab45232--npmjs-org-jsdom-jsdom-0-7-0-tgz https://registry.npmjs.org/jsdom/-/jsdom-0.7.0.tgz
+202 verbose lock https://registry.npmjs.org/jsdom/-/jsdom-0.7.0.tgz /Users/Admin/.npm/8ab45232--npmjs-org-jsdom-jsdom-0-7-0-tgz.lock
+203 verbose addRemoteTarball [ 'https://registry.npmjs.org/jsdom/-/jsdom-0.7.0.tgz',
+203 verbose addRemoteTarball   '728649785844f394c0362cff55982b46a5168109' ]
+204 info retry fetch attempt 1 at 16:58:09
+205 verbose fetch to= /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921889095-0.3754831172991544/tmp.tgz
+206 http GET https://registry.npmjs.org/jsdom/-/jsdom-0.7.0.tgz
+207 http 200 https://registry.npmjs.org/canvas/-/canvas-1.0.3.tgz
+208 verbose tar unpack /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921888783-0.9537048139609396/tmp.tgz
+209 silly lockFile 31b67d78-88783-0-9537048139609396-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921888783-0.9537048139609396/package
+210 verbose lock tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921888783-0.9537048139609396/package /Users/Admin/.npm/31b67d78-88783-0-9537048139609396-package.lock
+211 silly lockFile 12c478be-88783-0-9537048139609396-tmp-tgz tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921888783-0.9537048139609396/tmp.tgz
+212 verbose lock tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921888783-0.9537048139609396/tmp.tgz /Users/Admin/.npm/12c478be-88783-0-9537048139609396-tmp-tgz.lock
+213 silly gunzTarPerm modes [ '755', '644' ]
+214 silly gunzTarPerm extractEntry package.json
+215 silly gunzTarPerm extractEntry .npmignore
+216 silly gunzTarPerm extractEntry index.js
+217 silly gunzTarPerm extractEntry install
+218 silly gunzTarPerm extractEntry History.md
+219 silly gunzTarPerm extractEntry .gitmodules
+220 silly gunzTarPerm extractEntry .travis.yml
+221 silly gunzTarPerm extractEntry lib/bindings.js
+222 silly gunzTarPerm extractEntry lib/canvas.js
+223 silly gunzTarPerm extractEntry lib/context2d.js
+224 silly gunzTarPerm extractEntry lib/image.js
+225 silly gunzTarPerm extractEntry lib/jpegstream.js
+226 silly gunzTarPerm extractEntry lib/pixelarray.js
+227 silly gunzTarPerm extractEntry lib/pngstream.js
+228 silly gunzTarPerm extractEntry Makefile
+229 silly gunzTarPerm extractEntry binding.gyp
+230 silly gunzTarPerm extractEntry Readme.md
+231 silly gunzTarPerm extractEntry src/FontFace.cc
+232 silly gunzTarPerm extractEntry src/Canvas.cc
+233 silly gunzTarPerm extractEntry src/CanvasGradient.cc
+234 silly gunzTarPerm extractEntry src/CanvasGradient.h
+235 silly gunzTarPerm extractEntry src/CanvasPattern.cc
+236 silly gunzTarPerm extractEntry src/CanvasPattern.h
+237 silly gunzTarPerm extractEntry src/CanvasRenderingContext2d.cc
+238 silly gunzTarPerm extractEntry src/CanvasRenderingContext2d.h
+239 silly gunzTarPerm extractEntry src/closure.h
+240 silly gunzTarPerm extractEntry src/color.cc
+241 silly gunzTarPerm extractEntry src/color.h
+242 silly gunzTarPerm extractEntry src/Canvas.h
+243 silly gunzTarPerm extractEntry src/FontFace.h
+244 silly gunzTarPerm extractEntry src/Image.cc
+245 silly gunzTarPerm extractEntry src/Image.h
+246 silly gunzTarPerm extractEntry src/ImageData.cc
+247 silly gunzTarPerm extractEntry src/ImageData.h
+248 silly gunzTarPerm extractEntry src/init.cc
+249 silly gunzTarPerm extractEntry src/JPEGStream.h
+250 silly gunzTarPerm extractEntry src/PixelArray.cc
+251 silly gunzTarPerm extractEntry src/PixelArray.h
+252 silly gunzTarPerm extractEntry src/Point.h
+253 silly gunzTarPerm extractEntry util/cairo_include.sh
+254 silly gunzTarPerm extractEntry util/has_cairo_freetype.sh
+255 silly gunzTarPerm extractEntry util/has_lib.sh
+256 silly gunzTarPerm extractEntry util/lib_lookup.sh
+257 verbose read json /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921888783-0.9537048139609396/package/package.json
+258 silly lockFile 31b67d78-88783-0-9537048139609396-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921888783-0.9537048139609396/package
+259 silly lockFile 31b67d78-88783-0-9537048139609396-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921888783-0.9537048139609396/package
+260 silly lockFile 12c478be-88783-0-9537048139609396-tmp-tgz tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921888783-0.9537048139609396/tmp.tgz
+261 silly lockFile 12c478be-88783-0-9537048139609396-tmp-tgz tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921888783-0.9537048139609396/tmp.tgz
+262 verbose from cache /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921888783-0.9537048139609396/package/package.json
+263 verbose tar pack [ '/Users/Admin/.npm/canvas/1.0.3/package.tgz',
+263 verbose tar pack   '/var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921888783-0.9537048139609396/package' ]
+264 verbose tarball /Users/Admin/.npm/canvas/1.0.3/package.tgz
+265 verbose folder /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921888783-0.9537048139609396/package
+266 silly lockFile 31b67d78-88783-0-9537048139609396-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921888783-0.9537048139609396/package
+267 verbose lock tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921888783-0.9537048139609396/package /Users/Admin/.npm/31b67d78-88783-0-9537048139609396-package.lock
+268 silly lockFile 537d5ff4-min-npm-canvas-1-0-3-package-tgz tar:///Users/Admin/.npm/canvas/1.0.3/package.tgz
+269 verbose lock tar:///Users/Admin/.npm/canvas/1.0.3/package.tgz /Users/Admin/.npm/537d5ff4-min-npm-canvas-1-0-3-package-tgz.lock
+270 silly lockFile 31b67d78-88783-0-9537048139609396-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921888783-0.9537048139609396/package
+271 silly lockFile 31b67d78-88783-0-9537048139609396-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921888783-0.9537048139609396/package
+272 silly lockFile 537d5ff4-min-npm-canvas-1-0-3-package-tgz tar:///Users/Admin/.npm/canvas/1.0.3/package.tgz
+273 silly lockFile 537d5ff4-min-npm-canvas-1-0-3-package-tgz tar:///Users/Admin/.npm/canvas/1.0.3/package.tgz
+274 silly lockFile 99a76d6b-s-Admin-npm-canvas-1-0-3-package /Users/Admin/.npm/canvas/1.0.3/package
+275 verbose lock /Users/Admin/.npm/canvas/1.0.3/package /Users/Admin/.npm/99a76d6b-s-Admin-npm-canvas-1-0-3-package.lock
+276 silly lockFile 99a76d6b-s-Admin-npm-canvas-1-0-3-package /Users/Admin/.npm/canvas/1.0.3/package
+277 silly lockFile 99a76d6b-s-Admin-npm-canvas-1-0-3-package /Users/Admin/.npm/canvas/1.0.3/package
+278 verbose tar unpack /Users/Admin/.npm/canvas/1.0.3/package.tgz
+279 silly lockFile 17fc203d-s-Admin-npm-canvas-1-0-3-package tar:///Users/Admin/.npm/canvas/1.0.3/package
+280 verbose lock tar:///Users/Admin/.npm/canvas/1.0.3/package /Users/Admin/.npm/17fc203d-s-Admin-npm-canvas-1-0-3-package.lock
+281 silly lockFile 537d5ff4-min-npm-canvas-1-0-3-package-tgz tar:///Users/Admin/.npm/canvas/1.0.3/package.tgz
+282 verbose lock tar:///Users/Admin/.npm/canvas/1.0.3/package.tgz /Users/Admin/.npm/537d5ff4-min-npm-canvas-1-0-3-package-tgz.lock
+283 silly gunzTarPerm modes [ '755', '644' ]
+284 silly gunzTarPerm extractEntry package.json
+285 silly gunzTarPerm extractEntry .npmignore
+286 silly gunzTarPerm extractEntry index.js
+287 silly gunzTarPerm extractEntry binding.gyp
+288 silly gunzTarPerm extractEntry Makefile
+289 silly gunzTarPerm extractEntry Readme.md
+290 silly gunzTarPerm extractEntry .gitmodules
+291 silly gunzTarPerm extractEntry .travis.yml
+292 silly gunzTarPerm extractEntry install
+293 silly gunzTarPerm extractEntry lib/bindings.js
+294 silly gunzTarPerm extractEntry lib/canvas.js
+295 silly gunzTarPerm extractEntry lib/context2d.js
+296 silly gunzTarPerm extractEntry lib/image.js
+297 silly gunzTarPerm extractEntry lib/jpegstream.js
+298 silly gunzTarPerm extractEntry lib/pixelarray.js
+299 silly gunzTarPerm extractEntry lib/pngstream.js
+300 silly gunzTarPerm extractEntry History.md
+301 silly gunzTarPerm extractEntry src/Image.h
+302 silly gunzTarPerm extractEntry src/Canvas.cc
+303 silly gunzTarPerm extractEntry src/CanvasGradient.cc
+304 silly gunzTarPerm extractEntry src/CanvasGradient.h
+305 silly gunzTarPerm extractEntry src/CanvasPattern.cc
+306 silly gunzTarPerm extractEntry src/CanvasPattern.h
+307 silly gunzTarPerm extractEntry src/CanvasRenderingContext2d.cc
+308 silly gunzTarPerm extractEntry src/CanvasRenderingContext2d.h
+309 silly gunzTarPerm extractEntry src/FontFace.cc
+310 silly gunzTarPerm extractEntry src/FontFace.h
+311 silly gunzTarPerm extractEntry src/Image.cc
+312 silly gunzTarPerm extractEntry src/Canvas.h
+313 silly gunzTarPerm extractEntry src/ImageData.cc
+314 silly gunzTarPerm extractEntry src/ImageData.h
+315 silly gunzTarPerm extractEntry src/JPEGStream.h
+316 silly gunzTarPerm extractEntry src/PixelArray.cc
+317 silly gunzTarPerm extractEntry src/PixelArray.h
+318 silly gunzTarPerm extractEntry src/Point.h
+319 silly gunzTarPerm extractEntry src/closure.h
+320 silly gunzTarPerm extractEntry src/color.cc
+321 silly gunzTarPerm extractEntry src/color.h
+322 silly gunzTarPerm extractEntry src/init.cc
+323 silly gunzTarPerm extractEntry util/cairo_include.sh
+324 silly gunzTarPerm extractEntry util/has_cairo_freetype.sh
+325 silly gunzTarPerm extractEntry util/has_lib.sh
+326 silly gunzTarPerm extractEntry util/lib_lookup.sh
+327 http 200 https://registry.npmjs.org/jsdom/-/jsdom-0.7.0.tgz
+328 verbose read json /Users/Admin/.npm/canvas/1.0.3/package/package.json
+329 silly lockFile 17fc203d-s-Admin-npm-canvas-1-0-3-package tar:///Users/Admin/.npm/canvas/1.0.3/package
+330 silly lockFile 17fc203d-s-Admin-npm-canvas-1-0-3-package tar:///Users/Admin/.npm/canvas/1.0.3/package
+331 silly lockFile 537d5ff4-min-npm-canvas-1-0-3-package-tgz tar:///Users/Admin/.npm/canvas/1.0.3/package.tgz
+332 silly lockFile 537d5ff4-min-npm-canvas-1-0-3-package-tgz tar:///Users/Admin/.npm/canvas/1.0.3/package.tgz
+333 verbose from cache /Users/Admin/.npm/canvas/1.0.3/package/package.json
+334 verbose chmod /Users/Admin/.npm/canvas/1.0.3/package.tgz 644
+335 verbose chown /Users/Admin/.npm/canvas/1.0.3/package.tgz [ 501, 20 ]
+336 silly lockFile 60881e69-pmjs-org-canvas-canvas-1-0-3-tgz https://registry.npmjs.org/canvas/-/canvas-1.0.3.tgz
+337 silly lockFile 60881e69-pmjs-org-canvas-canvas-1-0-3-tgz https://registry.npmjs.org/canvas/-/canvas-1.0.3.tgz
+338 silly lockFile 6251add9-canvas-1-0-3 canvas@1.0.3
+339 silly lockFile 6251add9-canvas-1-0-3 canvas@1.0.3
+340 silly lockFile f77094c3-canvas-0-7-0 canvas@>= 0.7.0
+341 silly lockFile f77094c3-canvas-0-7-0 canvas@>= 0.7.0
+342 verbose tar unpack /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921889095-0.3754831172991544/tmp.tgz
+343 silly lockFile 5d2151b0-89095-0-3754831172991544-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921889095-0.3754831172991544/package
+344 verbose lock tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921889095-0.3754831172991544/package /Users/Admin/.npm/5d2151b0-89095-0-3754831172991544-package.lock
+345 silly lockFile a6a07d30-89095-0-3754831172991544-tmp-tgz tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921889095-0.3754831172991544/tmp.tgz
+346 verbose lock tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921889095-0.3754831172991544/tmp.tgz /Users/Admin/.npm/a6a07d30-89095-0-3754831172991544-tmp-tgz.lock
+347 silly gunzTarPerm modes [ '755', '644' ]
+348 silly gunzTarPerm extractEntry package.json
+349 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+350 silly gunzTarPerm extractEntry README.md
+351 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+352 silly gunzTarPerm extractEntry lib/jsdom.js
+353 silly gunzTarPerm modified mode [ 'lib/jsdom.js', 438, 420 ]
+354 silly gunzTarPerm extractEntry lib/jsdom/utils.js
+355 silly gunzTarPerm modified mode [ 'lib/jsdom/utils.js', 438, 420 ]
+356 silly gunzTarPerm extractEntry lib/jsdom/browser/documentfeatures.js
+357 silly gunzTarPerm modified mode [ 'lib/jsdom/browser/documentfeatures.js', 438, 420 ]
+358 silly gunzTarPerm extractEntry lib/jsdom/browser/domtohtml.js
+359 silly gunzTarPerm modified mode [ 'lib/jsdom/browser/domtohtml.js', 438, 420 ]
+360 silly gunzTarPerm extractEntry lib/jsdom/browser/htmlencoding.js
+361 silly gunzTarPerm modified mode [ 'lib/jsdom/browser/htmlencoding.js', 438, 420 ]
+362 silly gunzTarPerm extractEntry lib/jsdom/browser/htmltodom.js
+363 silly gunzTarPerm modified mode [ 'lib/jsdom/browser/htmltodom.js', 438, 420 ]
+364 silly gunzTarPerm extractEntry lib/jsdom/browser/index.js
+365 silly gunzTarPerm modified mode [ 'lib/jsdom/browser/index.js', 438, 420 ]
+366 silly gunzTarPerm extractEntry lib/jsdom/level1/core.js
+367 silly gunzTarPerm modified mode [ 'lib/jsdom/level1/core.js', 438, 420 ]
+368 silly gunzTarPerm extractEntry lib/jsdom/level2/core.js
+369 silly gunzTarPerm modified mode [ 'lib/jsdom/level2/core.js', 438, 420 ]
+370 silly gunzTarPerm extractEntry lib/jsdom/level2/events.js
+371 silly gunzTarPerm modified mode [ 'lib/jsdom/level2/events.js', 438, 420 ]
+372 silly gunzTarPerm extractEntry lib/jsdom/level2/html.js
+373 silly gunzTarPerm modified mode [ 'lib/jsdom/level2/html.js', 438, 420 ]
+374 silly gunzTarPerm extractEntry lib/jsdom/level2/index.js
+375 silly gunzTarPerm modified mode [ 'lib/jsdom/level2/index.js', 438, 420 ]
+376 silly gunzTarPerm extractEntry lib/jsdom/level2/style.js
+377 silly gunzTarPerm modified mode [ 'lib/jsdom/level2/style.js', 438, 420 ]
+378 silly gunzTarPerm extractEntry lib/jsdom/level2/languages/javascript.js
+379 silly gunzTarPerm modified mode [ 'lib/jsdom/level2/languages/javascript.js', 438, 420 ]
+380 silly gunzTarPerm extractEntry lib/jsdom/level3/core.js
+381 silly gunzTarPerm modified mode [ 'lib/jsdom/level3/core.js', 438, 420 ]
+382 silly gunzTarPerm extractEntry lib/jsdom/level3/events.js
+383 silly gunzTarPerm modified mode [ 'lib/jsdom/level3/events.js', 438, 420 ]
+384 silly gunzTarPerm extractEntry lib/jsdom/level3/html.js
+385 silly gunzTarPerm modified mode [ 'lib/jsdom/level3/html.js', 438, 420 ]
+386 silly gunzTarPerm extractEntry lib/jsdom/level3/index.js
+387 silly gunzTarPerm modified mode [ 'lib/jsdom/level3/index.js', 438, 420 ]
+388 silly gunzTarPerm extractEntry lib/jsdom/level3/ls.js
+389 silly gunzTarPerm modified mode [ 'lib/jsdom/level3/ls.js', 438, 420 ]
+390 silly gunzTarPerm extractEntry lib/jsdom/level3/xpath.js
+391 silly gunzTarPerm modified mode [ 'lib/jsdom/level3/xpath.js', 438, 420 ]
+392 silly gunzTarPerm extractEntry lib/jsdom/selectors/index.js
+393 silly gunzTarPerm modified mode [ 'lib/jsdom/selectors/index.js', 438, 420 ]
+394 silly gunzTarPerm extractEntry LICENSE.txt
+395 silly gunzTarPerm modified mode [ 'LICENSE.txt', 438, 420 ]
+396 verbose read json /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921889095-0.3754831172991544/package/package.json
+397 silly lockFile 5d2151b0-89095-0-3754831172991544-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921889095-0.3754831172991544/package
+398 silly lockFile 5d2151b0-89095-0-3754831172991544-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921889095-0.3754831172991544/package
+399 silly lockFile a6a07d30-89095-0-3754831172991544-tmp-tgz tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921889095-0.3754831172991544/tmp.tgz
+400 silly lockFile a6a07d30-89095-0-3754831172991544-tmp-tgz tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921889095-0.3754831172991544/tmp.tgz
+401 verbose from cache /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921889095-0.3754831172991544/package/package.json
+402 verbose tar pack [ '/Users/Admin/.npm/jsdom/0.7.0/package.tgz',
+402 verbose tar pack   '/var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921889095-0.3754831172991544/package' ]
+403 verbose tarball /Users/Admin/.npm/jsdom/0.7.0/package.tgz
+404 verbose folder /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921889095-0.3754831172991544/package
+405 silly lockFile 5d2151b0-89095-0-3754831172991544-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921889095-0.3754831172991544/package
+406 verbose lock tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921889095-0.3754831172991544/package /Users/Admin/.npm/5d2151b0-89095-0-3754831172991544-package.lock
+407 silly lockFile c0196bdf-dmin-npm-jsdom-0-7-0-package-tgz tar:///Users/Admin/.npm/jsdom/0.7.0/package.tgz
+408 verbose lock tar:///Users/Admin/.npm/jsdom/0.7.0/package.tgz /Users/Admin/.npm/c0196bdf-dmin-npm-jsdom-0-7-0-package-tgz.lock
+409 silly lockFile 5d2151b0-89095-0-3754831172991544-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921889095-0.3754831172991544/package
+410 silly lockFile 5d2151b0-89095-0-3754831172991544-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921889095-0.3754831172991544/package
+411 silly lockFile c0196bdf-dmin-npm-jsdom-0-7-0-package-tgz tar:///Users/Admin/.npm/jsdom/0.7.0/package.tgz
+412 silly lockFile c0196bdf-dmin-npm-jsdom-0-7-0-package-tgz tar:///Users/Admin/.npm/jsdom/0.7.0/package.tgz
+413 silly lockFile 2756ec16-rs-Admin-npm-jsdom-0-7-0-package /Users/Admin/.npm/jsdom/0.7.0/package
+414 verbose lock /Users/Admin/.npm/jsdom/0.7.0/package /Users/Admin/.npm/2756ec16-rs-Admin-npm-jsdom-0-7-0-package.lock
+415 silly lockFile 2756ec16-rs-Admin-npm-jsdom-0-7-0-package /Users/Admin/.npm/jsdom/0.7.0/package
+416 silly lockFile 2756ec16-rs-Admin-npm-jsdom-0-7-0-package /Users/Admin/.npm/jsdom/0.7.0/package
+417 verbose tar unpack /Users/Admin/.npm/jsdom/0.7.0/package.tgz
+418 silly lockFile c585fcec-rs-Admin-npm-jsdom-0-7-0-package tar:///Users/Admin/.npm/jsdom/0.7.0/package
+419 verbose lock tar:///Users/Admin/.npm/jsdom/0.7.0/package /Users/Admin/.npm/c585fcec-rs-Admin-npm-jsdom-0-7-0-package.lock
+420 silly lockFile c0196bdf-dmin-npm-jsdom-0-7-0-package-tgz tar:///Users/Admin/.npm/jsdom/0.7.0/package.tgz
+421 verbose lock tar:///Users/Admin/.npm/jsdom/0.7.0/package.tgz /Users/Admin/.npm/c0196bdf-dmin-npm-jsdom-0-7-0-package-tgz.lock
+422 silly gunzTarPerm modes [ '755', '644' ]
+423 silly gunzTarPerm extractEntry package.json
+424 silly gunzTarPerm extractEntry README.md
+425 silly gunzTarPerm extractEntry LICENSE.txt
+426 silly gunzTarPerm extractEntry lib/jsdom.js
+427 silly gunzTarPerm extractEntry lib/jsdom/utils.js
+428 silly gunzTarPerm extractEntry lib/jsdom/browser/documentfeatures.js
+429 silly gunzTarPerm extractEntry lib/jsdom/browser/domtohtml.js
+430 silly gunzTarPerm extractEntry lib/jsdom/browser/htmlencoding.js
+431 silly gunzTarPerm extractEntry lib/jsdom/browser/htmltodom.js
+432 silly gunzTarPerm extractEntry lib/jsdom/browser/index.js
+433 silly gunzTarPerm extractEntry lib/jsdom/level1/core.js
+434 silly gunzTarPerm extractEntry lib/jsdom/level2/core.js
+435 silly gunzTarPerm extractEntry lib/jsdom/level2/events.js
+436 silly gunzTarPerm extractEntry lib/jsdom/level2/html.js
+437 silly gunzTarPerm extractEntry lib/jsdom/level2/index.js
+438 silly gunzTarPerm extractEntry lib/jsdom/level2/style.js
+439 silly gunzTarPerm extractEntry lib/jsdom/level2/languages/javascript.js
+440 silly gunzTarPerm extractEntry lib/jsdom/level3/core.js
+441 silly gunzTarPerm extractEntry lib/jsdom/level3/events.js
+442 silly gunzTarPerm extractEntry lib/jsdom/level3/html.js
+443 silly gunzTarPerm extractEntry lib/jsdom/level3/index.js
+444 silly gunzTarPerm extractEntry lib/jsdom/level3/ls.js
+445 silly gunzTarPerm extractEntry lib/jsdom/level3/xpath.js
+446 silly gunzTarPerm extractEntry lib/jsdom/selectors/index.js
+447 verbose read json /Users/Admin/.npm/jsdom/0.7.0/package/package.json
+448 silly lockFile c585fcec-rs-Admin-npm-jsdom-0-7-0-package tar:///Users/Admin/.npm/jsdom/0.7.0/package
+449 silly lockFile c585fcec-rs-Admin-npm-jsdom-0-7-0-package tar:///Users/Admin/.npm/jsdom/0.7.0/package
+450 silly lockFile c0196bdf-dmin-npm-jsdom-0-7-0-package-tgz tar:///Users/Admin/.npm/jsdom/0.7.0/package.tgz
+451 silly lockFile c0196bdf-dmin-npm-jsdom-0-7-0-package-tgz tar:///Users/Admin/.npm/jsdom/0.7.0/package.tgz
+452 verbose from cache /Users/Admin/.npm/jsdom/0.7.0/package/package.json
+453 verbose chmod /Users/Admin/.npm/jsdom/0.7.0/package.tgz 644
+454 verbose chown /Users/Admin/.npm/jsdom/0.7.0/package.tgz [ 501, 20 ]
+455 silly lockFile 8ab45232--npmjs-org-jsdom-jsdom-0-7-0-tgz https://registry.npmjs.org/jsdom/-/jsdom-0.7.0.tgz
+456 silly lockFile 8ab45232--npmjs-org-jsdom-jsdom-0-7-0-tgz https://registry.npmjs.org/jsdom/-/jsdom-0.7.0.tgz
+457 silly lockFile 71e268e9-jsdom-0-7-0 jsdom@0.7.0
+458 silly lockFile 71e268e9-jsdom-0-7-0 jsdom@0.7.0
+459 silly lockFile 07fda386-jsdom-0-6-0 jsdom@>= 0.6.0
+460 silly lockFile 07fda386-jsdom-0-6-0 jsdom@>= 0.6.0
+461 silly resolved [ { name: 'canvas',
+461 silly resolved     description: 'Canvas graphics API backed by Cairo',
+461 silly resolved     version: '1.0.3',
+461 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@learnboost.com' },
+461 silly resolved     keywords:
+461 silly resolved      [ 'canvas',
+461 silly resolved        'graphic',
+461 silly resolved        'graphics',
+461 silly resolved        'pixman',
+461 silly resolved        'cairo',
+461 silly resolved        'image',
+461 silly resolved        'images',
+461 silly resolved        'pdf' ],
+461 silly resolved     homepage: 'https://github.com/learnboost/node-canvas',
+461 silly resolved     repository: { type: 'git', url: 'git://github.com/learnboost/node-canvas' },
+461 silly resolved     scripts: { test: 'make test', install: 'node-gyp rebuild' },
+461 silly resolved     devDependencies: { express: '3.0', jade: '0.28.1', mocha: '*', should: '*' },
+461 silly resolved     engines: { node: '>= 0.6.0' },
+461 silly resolved     main: './lib/canvas.js',
+461 silly resolved     gypfile: true,
+461 silly resolved     readme: '# node-canvas\n\n Node canvas is a [Cairo](http://cairographics.org/) backed Canvas implementation for [NodeJS](http://nodejs.org).\n\n## Authors\n\n  - TJ Holowaychuk ([visionmedia](http://github.com/visionmedia))\n\n## Installation\n\n    $ npm install canvas\n\nUnless previously installed you\'ll _need_ __Cairo__. For system-specific installation view the [Wiki](https://github.com/LearnBoost/node-canvas/wiki/_pages).\n\n## Screencasts\n\n  - [Introduction](http://screenr.com/CTk)\n\n## Example\n\n```javascript\nvar Canvas = require(\'canvas\')\n  , canvas = new Canvas(200,200)\n  , ctx = canvas.getContext(\'2d\');\n\nctx.font = \'30px Impact\';\nctx.rotate(.1);\nctx.fillText("Awesome!", 50, 100);\n\nvar te = ctx.measureText(\'Awesome!\');\nctx.strokeStyle = \'rgba(0,0,0,0.5)\';\nctx.beginPath();\nctx.lineTo(50, 102);\nctx.lineTo(50 + te.width, 102);\nctx.stroke();\n\nconsole.log(\'<img src="\' + canvas.toDataURL() + \'" />\');\n```\n\n## Non-Standard API\n\n node-canvas extends the canvas API to provide interfacing with node, for example streaming PNG data, converting to a `Buffer` instance, etc. Among the interfacing API, in some cases the drawing API has been extended for SSJS image manipulation / creation usage, however keep in mind these additions may fail to render properly within browsers.\n\n### Image#src=Buffer\n\n node-canvas adds `Image#src=Buffer` support, allowing you to read images from disc, redis, etc and apply them via `ctx.drawImage()`. Below we draw scaled down squid png by reading it from the disk with node\'s I/O.\n\n```javascript\nfs.readFile(__dirname + \'/images/squid.png\', function(err, squid){\n  if (err) throw err;\n  img = new Image;\n  img.src = squid;\n  ctx.drawImage(img, 0, 0, img.width / 4, img.height / 4);\n});\n```\n\n Below is an example of a canvas drawing it-self as the source several time:\n\n```javascript\nvar img = new Image;\nimg.src = canvas.toBuffer();\nctx.drawImage(img, 0, 0, 50, 50);\nctx.drawImage(img, 50, 0, 50, 50);\nctx.drawImage(img, 100, 0, 50, 50);\n```\n\n### Image#dataMode\n\nnode-canvas adds `Image#dataMode` support, which can be used to opt-in to mime data tracking of images (currently only JPEGs).\n\nWhen mime data is tracked, in PDF mode JPEGs can be embedded directly into the output, rather than being re-encoded into PNG. This can drastically reduce filesize, and speed up rendering.\n\n```javascript\nvar img = new Image;\nimg.dataMode = Image.MODE_IMAGE; // Only image data tracked\nimg.dataMode = Image.MODE_MIME; // Only mime data tracked\nimg.dataMode = Image.MODE_MIME | Image.MODE_IMAGE; // Both are tracked\n```\n\nIf image data is not tracked, and the Image is drawn to an image rather than a PDF canvas, the output will be junk. Enabling mime data tracking has no benefits (only a slow down) unless you are generating a PDF.\n\n### Canvas#pngStream()\n\n  To create a `PNGStream` simply call `canvas.pngStream()`, and the stream will start to emit _data_ events, finally emitting _end_ when finished. If an exception occurs the _error_ event is emitted.\n\n```javascript\nvar fs = require(\'fs\')\n  , out = fs.createWriteStream(__dirname + \'/text.png\')\n  , stream = canvas.pngStream();\n\nstream.on(\'data\', function(chunk){\n  out.write(chunk);\n});\n\nstream.on(\'end\', function(){\n  console.log(\'saved png\');\n});\n```\n\nCurrently _only_ sync streaming is supported, however we plan on supporting async streaming as well (of course :) ). Until then the `Canvas#toBuffer(callback)` alternative is async utilizing `eio_custom()`.\n\n### Canvas#jpegStream()\n\nYou can likewise create a `JPEGStream` by calling `canvas.jpegStream()` with some optional parameters; functionality is otherwise identical to `pngStream()`. See `examples/crop.js` for an example.\n\n### Canvas#toBuffer()\n\nA call to `Canvas#toBuffer()` will return a node `Buffer` instance containing all of the PNG data.\n\n```javascript\ncanvas.toBuffer();\n```\n\n### Canvas#toBuffer() async\n\nOptionally we may pass a callback function to `Canvas#toBuffer()`, and this process will be performed asynchronously, and will `callback(err, buf)`.\n\n```javascript\ncanvas.toBuffer(function(err, buf){\n\n});\n```\n\n### Canvas#toDataURL() async\n\nOptionally we may pass a callback function to `Canvas#toDataURL()`, and this process will be performed asynchronously, and will `callback(err, str)`.\n\n```javascript\ncanvas.toDataURL(function(err, str){\n\n});\n```\n\nor specify the mime type:\n\n```javascript\ncanvas.toDataURL(\'image/png\', function(err, str){\n\n});\n```\n\n### CanvasRenderingContext2d#patternQuality\n\nGiven one of the values below will alter pattern (gradients, images, etc) render quality, defaults to _good_.\n\n  - fast\n  - good\n  - best\n  - nearest\n  - bilinear\n\n### CanvasRenderingContext2d#textDrawingMode\n\nCan be either `path` or `glyph`. Using `glyph` is much faster than `path` for drawing, and when using a PDF context will embed the text natively, so will be selectable and lower filesize. The downside is that cairo does not have any subpixel precision for `glyph`, so this will be noticeably lower quality for text positioning in cases such as rotated text. Also, strokeText in `glyph` will act the same as fillText, except using the stroke style for the fill.\n\nDefaults to _path_.\n\nThis property is tracked as part of the canvas state in save/restore.\n\n### CanvasRenderingContext2d#filter\n\nLike `patternQuality`, but applies to transformations effecting more than just patterns. Defaults to _good_.\n\n  - fast\n  - good\n  - best\n  - nearest\n  - bilinear\n\n### Global Composite Operations\n\nIn addition to those specified and commonly implemented by browsers, the following have been added:\n\n  - multiply\n  - screen\n  - overlay\n  - hard-light\n  - soft-light\n  - hsl-hue\n  - hsl-saturation\n  - hsl-color\n  - hsl-luminosity\n\n## Anti-Aliasing\n\n Set anti-aliasing mode\n\n - default\n - none\n - gray\n - subpixel\n\n For example:\n\n```javascript\nctx.antialias = \'none\';\n```\n\n## PDF Support\n\n  Basic PDF support was added in 0.11.0. Make sure to install cairo with `--enable-pdf=yes` for the PDF backend. node-canvas must know that it is creating\n  a PDF on initialization, using the "pdf" string:\n\n```js\nvar canvas = new Canvas(200, 500, \'pdf\');\n```\n\n An additional method `.addPage()` is then available to create \n multiple page PDFs:\n\n```js\nctx.font = \'22px Helvetica\';\nctx.fillText(\'Hello World\', 50, 80);\nctx.addPage();\n\nctx.font = \'22px Helvetica\';\nctx.fillText(\'Hello World 2\', 50, 80);\nctx.addPage();\n\nctx.font = \'22px Helvetica\';\nctx.fillText(\'Hello World 3\', 50, 80);\nctx.addPage();\n```\n\n## Benchmarks\n\n Although node-canvas is extremely new, and we have not even begun optimization yet it is already quite fast. For benchmarks vs other node canvas implementations view this [gist](https://gist.github.com/664922), or update the submodules and run `$ make benchmark` yourself.\n\n## Contribute\n\n Want to contribute to node-canvas? patches for features, bug fixes, documentation, examples and others are certainly welcome. Take a look at the [issue queue](https://github.com/LearnBoost/node-canvas/issues) for existing issues.\n\n## Examples\n\n Examples are placed in _./examples_, be sure to check them out! most produce a png image of the same name, and others such as _live-clock.js_ launch an http server to be viewed in the browser.\n\n## Testing\n\nIf you have not previously, init git submodules:\n\n    $ git submodule update --init\n\nBuild node-canvas:\n\n    $ node-waf configure build\n\nUnit tests:\n\n    $ make test\n\nVisual tests:\n\n    $ make test-server\n\n## Versions\n\nTested with and designed for:\n\n  - node 0.4.2\n  - cairo 1.8.6\n\nFor node 0.2.x `node-canvas` <= 0.4.3 may be used,\n0.5.0 and above are designed for node 0.4.x only.\n\n## Contributors\n\n```\nproject  : node-canvas\n repo age : 1 year, 11 months\n active   : 120 days\n commits  : 963\n files    : 72\n authors  : \n   816\tTj Holowaychuk          84.7%\n    58\tTJ Holowaychuk          6.0%\n    23\tc-spencer               2.4%\n    16\tNathan Rajlich          1.7%\n    12\tatomizer                1.2%\n     6\tElijah Hamovitz         0.6%\n     5\tLuigi Pinca             0.5%\n     5\tRobert Sköld            0.5%\n     4\tobarthel                0.4%\n     3\tDon Park                0.3%\n     2\tAndreas Botsikas        0.2%\n     2\tGabriel Falcao          0.2%\n     1\tBrian McKinney          0.1%\n     1\tSeiya Konno             0.1%\n     1\tSyoyo Fujita            0.1%\n     1\tMarcello Bastea-Forte   0.1%\n     1\tTharit                  0.1%\n     1\tKonstantin Käfer        0.1%\n     1\tTom Carden              0.1%\n     1\tWalt Lin                0.1%\n     1\tDavid Björklund         0.1%\n     1\tBrian White             0.1%\n     1\tPhilippe Plantier       0.1%\n```\n\n## License\n\n(The MIT License)\n\nCopyright (c) 2010 LearnBoost &lt;dev@learnboost.ca&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n',
+461 silly resolved     readmeFilename: 'Readme.md',
+461 silly resolved     bugs: { url: 'https://github.com/learnboost/node-canvas/issues' },
+461 silly resolved     _id: 'canvas@1.0.3',
+461 silly resolved     dist: { shasum: '9164ffd2941bf6e7a9b935b0314a8e4ac8e1849a' },
+461 silly resolved     _from: 'canvas@>= 0.7.0',
+461 silly resolved     _resolved: 'https://registry.npmjs.org/canvas/-/canvas-1.0.3.tgz' },
+461 silly resolved   { name: 'jsdom',
+461 silly resolved     version: '0.7.0',
+461 silly resolved     description: 'A JavaScript implementation of the W3C DOM',
+461 silly resolved     keywords: [ 'dom', 'w3c', 'html' ],
+461 silly resolved     maintainers: [ [Object], [Object] ],
+461 silly resolved     contributors:
+461 silly resolved      [ [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object],
+461 silly resolved        [Object] ],
+461 silly resolved     bugs:
+461 silly resolved      { url: 'http://github.com/tmpvar/jsdom/issues',
+461 silly resolved        email: 'tmpvar@gmail.com' },
+461 silly resolved     licenses: [ [Object] ],
+461 silly resolved     repository: { type: 'git', url: 'git://github.com/tmpvar/jsdom.git' },
+461 silly resolved     implements: [ 'http://www.w3.org/TR/REC-DOM-Level-1' ],
+461 silly resolved     dependencies:
+461 silly resolved      { htmlparser2: '3.x',
+461 silly resolved        nwmatcher: '~1.3.1',
+461 silly resolved        request: '2.x',
+461 silly resolved        cssom: '~0.2.5',
+461 silly resolved        cssstyle: '~0.2.3',
+461 silly resolved        contextify: '~0.1.5' },
+461 silly resolved     devDependencies: { nodeunit: '~0.8.0', optimist: '*', urlmaster: '>=0.2.15' },
+461 silly resolved     directories: { lib: './lib/jsdom' },
+461 silly resolved     scripts: { test: 'node ./test/runner' },
+461 silly resolved     main: './lib/jsdom',
+461 silly resolved     readme: '# jsdom\n\nA JavaScript implementation of the W3C DOM.\n\n## Install\n\n```bash\n$ npm install jsdom\n```\n\nIf this gives you trouble with errors about installing Contextify, especially on Windows, see [below](#contextify).\n\n## Human contact\n\nsee: [mailing list](http://groups.google.com/group/jsdom)\n\n## Easymode\n\nBootstrapping a DOM is generally a difficult process involving many error prone steps. We didn\'t want jsdom to fall into the same trap and that is why a new method, `jsdom.env()`, has been added in jsdom 0.2.0 which should make everyone\'s lives easier.\n\nYou can use it with a URL\n\n```js\n// Count all of the links from the Node.js build page\nvar jsdom = require("jsdom");\n\njsdom.env(\n  "http://nodejs.org/dist/",\n  ["http://code.jquery.com/jquery.js"],\n  function (errors, window) {\n    console.log("there have been", window.$("a").length, "nodejs releases!");\n  }\n);\n```\n\nor with raw HTML\n\n```js\n// Run some jQuery on a html fragment\nvar jsdom = require("jsdom");\n\njsdom.env(\n  \'<p><a class="the-link" href="https://github.com/tmpvar/jsdom">jsdom\\\'s Homepage</a></p>\',\n  ["http://code.jquery.com/jquery.js"],\n  function (errors, window) {\n    console.log("contents of a.the-link:", window.$("a.the-link").text());\n  }\n);\n```\n\nor with a configuration object\n\n```js\n// Print all of the news items on hackernews\nvar jsdom = require("jsdom");\n\njsdom.env({\n  url: "http://news.ycombinator.com/",\n  scripts: ["http://code.jquery.com/jquery.js"],\n  done: function (errors, window) {\n    var $ = window.$;\n    console.log("HN Links");\n    $("td.title:not(:last) a").each(function() {\n      console.log(" -", $(this).text());\n    });\n  }\n});\n```\n\nor with raw JavaScript source\n\n```js\n// Print all of the news items on hackernews\nvar jsdom = require("jsdom");\nvar fs = require("fs");\nvar jquery = fs.readFileSync("./jquery.js", "utf-8");\n\njsdom.env({\n  url: "http://news.ycombinator.com/",\n  src: [jquery],\n  done: function (errors, window) {\n    var $ = window.$;\n    console.log("HN Links");\n    $("td.title:not(:last) a").each(function () {\n      console.log(" -", $(this).text());\n    });\n  }\n});\n```\n\n### How it works\n`jsdom.env` is built for ease of use, which is rare in the world of the DOM! Since the web has some absolutely horrible JavaScript on it, as of jsdom 0.2.0 `jsdom.env` will not process external resources (scripts, images, etc).  If you want to process the JavaScript use one of the methods below (`jsdom.jsdom` or `jsdom.jQueryify`)\n\n```js\njsdom.env(string, [scripts], [config], callback);\n```\n\nThe arguments are:\n\n- `string`: may be a URL, file name, or HTML fragment\n- `scripts`: a string or array of strings, containing file names or URLs that will be inserted as `<script>` tags\n- `config`: see below\n- `callback`: takes two arguments\n  - `error`: either an `Error` object if something failed initializing the window, or an array of error messages from the DOM if there were script errors\n  - `window`: a brand new `window`\n\n_Example:_\n\n```js\njsdom.env(html, function (errors, window) {\n  // free memory associated with the window\n  window.close();\n});\n```\n\nIf you would like to specify a configuration object only:\n\n```js\njsdom.env(config);\n```\n\n- `config.html`: a HTML fragment\n- `config.file`: a file which jsdom will load HTML from; the resulting window\'s `location.href` will be a `file://` URL.\n- `config.url`: sets the resulting window\'s `location.href`; if `config.html` and `config.file` are not provided, jsdom will load HTML from this URL.\n- `config.scripts`: see `scripts` above.\n- `config.src`: an array of JavaScript strings that will be evaluated against the resulting document. Similar to `scripts`, but it accepts JavaScript instead of paths/URLs.\n- `config.done`: see `callback` above.\n- `config.document`:\n  - `referer`: the new document will have this referer\n  - `cookie`: manually set a cookie value, e.g. `\'key=value; expires=Wed, Sep 21 2011 12:00:00 GMT; path=/\'`\n- `config.features` : see `Flexibility` section below. **Note**: the default feature set for jsdom.env does _not_ include fetching remote JavaScript and executing it. This is something that you will need to **carefully** enable yourself.\n\nNote that `config.done` is required, as is one of `config.html`, `config.file`, or `config.url`.\n\n## For the hardcore\n\nIf you want to spawn a document/window and specify all sorts of options this is the section for you. This section covers the `jsdom.jsdom` method:\n\n```js\nvar jsdom = require("jsdom").jsdom;\nvar doc = jsdom(markup, level, options);\nvar window = doc.createWindow();\n```\n\n- `markup` is an HTML/XML document to be parsed. You can also pass `null` or an undefined value to get a basic document with empty `<head>` and `<body>` tags. Document fragments are also supported (including `""`), and will behave as sanely as possible (e.g. the resulting document will lack the `head`, `body` and `documentElement` properties if the corresponding elements aren\'t included).\n\n- `level` is `null` (which means level3) by default, but you can pass another level if you\'d like.\n\n  ```js\n  var jsdom = require("jsdom");\n  var doc = jsdom.jsdom("<html><body></body></html>", jsdom.level(1, "core"));\n  ```\n\n- `options` see the **Flexibility** section below.\n\n### Flexibility\n\nOne of the goals of jsdom is to be as minimal and light as possible. This section details how someone can change the behavior of `Document`s on the fly.  These features are baked into the `DOMImplementation` that every `Document` has, and may be tweaked in two ways:\n\n1. When you create a new `Document` using the jsdom builder (`require("jsdom").jsdom()`)\n\n  ```js\n  var jsdom = require("jsdom").jsdom;\n  var doc = jsdom("<html><body></body></html>", null, {\n      features: {\n        FetchExternalResources : ["img"]\n      }\n  });\n  ```\n\n  Do note, that this will only affect the document that is currently being created. All other documents will use the defaults specified below (see: Default Features).\n\n2. Before creating any documents, you can modify the defaults for all future documents:\n\n  ```js\n  require("jsdom").defaultDocumentFeatures = {\n      FetchExternalResources: ["script"],\n      ProcessExternalResources: false\n  };\n  ```\n\n#### Default Features\n\nDefault features are extremely important for jsdom as they lower the configuration requirement and present developers a set of consistent default behaviors. The following sections detail the available features, their defaults, and the values that jsdom uses.\n\n\n`FetchExternalResources`\n\n- _Default_: `["script"]`\n- _Allowed_: `["script", "img", "css", "frame", "iframe", "link"]` or `false`\n\nEnables/disables fetching files over the file system/HTTP.\n\n`ProcessExternalResources`\n\n- _Default_: `["script"]`\n- _Allowed_: `["script"]` or `false`\n\nDisabling this will disable script execution (currently only JavaScript).\n\n`SkipExternalResources`\n\n- _Default_: `false`\n- _Allowed_: `/url to be skipped/` or `false`\n- _Example_: `/http:\\/\\/example.org/js/bad\\.js/`\n\nDo not download and process resources with url matching a regular expression.\n\n### Canvas\n\njsdom includes support for using the [canvas](https://npmjs.org/package/canvas) package to extend any `<canvas>` elements with the canvas API. To make this work, you need to include canvas as a dependency in your project, as a peer of jsdom. If jsdom can find the canvas package, it will use it, but if it\'s not present, then `<canvas>` elements will behave like `<div>`s.\n\n## More Examples\n\n### Creating a document-less window\n\n```js\nvar jsdom = require("jsdom");\nvar window = jsdom.createWindow();\n\nconsole.log(window.document); // output: undefined\n```\n\n### Creating a document\n\n```js\nvar jsdom = require("jsdom");\nvar doc = new (jsdom.level(1, "core").Document)();\n\nconsole.log(doc.nodeName); // outputs: #document\n```\n\n### Creating a browser-like BOM/DOM/Window\n\n```js\nvar jsdom = require("jsdom").jsdom;\nvar document = jsdom("<html><head></head><body>hello world</body></html>");\nvar window = document.createWindow();\n\nconsole.log(window.document.innerHTML);\n// output: "<html><head></head><body>hello world</body></html>"\n\nconsole.log(window.innerWidth);\n// output: 1024\n\nconsole.log(typeof window.document.getElementsByClassName);\n// outputs: function\n```\n\n### jQueryify\n\n```js\nvar jsdom = require("jsdom");\nvar window = jsdom.jsdom().createWindow();\n\njsdom.jQueryify(window, "http://code.jquery.com/jquery.js", function () {\n  window.$("body").append(\'<div class="testing">Hello World, It works</div>\');\n\n  console.log(window.$(".testing").text());\n});\n```\n\n### Passing objects to scripts inside the page\n\n```js\nvar jsdom = require("jsdom").jsdom;\nvar window = jsdom().createWindow();\n\nwindow.__myObject = { foo: "bar" };\n\nvar scriptEl = window.document.createElement("script");\nscriptEl.src = "anotherScript.js";\nwindow.document.body.appendChild(scriptEl);\n\n// anotherScript.js will have the ability to read `window.__myObject`, even\n// though it originated in Node!\n```\n\n## Test Compliance:\n\n```\n level1/core                        535/535      100%\n level1/html                        238/238      100%\n level1/svg                         527/527      100%\n level2/core                        283/283      100%\n level2/html                        706/706      100%\n level2/style                         15/15      100%\n level2/extra                           4/4      100%\n level2/events                        24/24      100%\n level3/xpath                         93/93      100%\n window/index                           7/7      100%\n window/script                        10/10      100%\n window/frame                         16/16      100%\n sizzle/index                         14/14      100%\n jsdom/index                          87/87      100%\n jsdom/parsing                          8/8      100%\n jsdom/env                            13/13      100%\n jsonp/jsonp                            1/1      100%\n browser/contextifyReplacement          4/4      100%\n browser/index                        34/34      100%\n------------------------------------------------------\nTOTALS: 0/2619 failed; 100% success\n```\n\n### Running the tests\n\nFirst you\'ll want to `npm install`. To run all the tests, use `npm test`, which just calls `node test/runner`.\n\nUsing `test/runner` directly, you can slice and dice which tests your want to run from different levels. Usage is as follows:\n\n```\ntest/runner --help\nRun the jsdom test suite\n\nOptions:\n-s, --suites     suites that you want to run. ie: -s level1/core,1/html,html [string]\n-f, --fail-fast  stop on the first failed test\n-h, --help       show the help\n-t, --tests      choose the test cases to run. ie: -t jquery\n```\n\n## Contextify\n\n[Contextify](https://npmjs.org/package/contextify) is a dependency of jsdom, used for running `<script>` tags within the\npage. In other words, it allows jsdom, which is run in Node.js, to run strings of JavaScript in an isolated environment\nthat pretends to be a browser environment instead of a server. You can see how this is an important feature.\n\nUnfortunately, doing this kind of magic requires C++. And in Node.js, using C++ from JavaScript means using "native\nmodules." Native modules are compiled at installation time so that they work precisely for your machine; that is, you\ndon\'t download a contextify binary from npm, but instead build one locally after downloading the source from npm.\n\nFor Mac and Linux users, this is usually fine. Their systems come preinstalled with the necessaries for compiling C++.\nFor Windows users, however, things can be tricky. Thus, one of the most common problems with jsdom is trying to use it\non Windows without the proper compilation tools installed. Here\'s what you need to compile Contextify, and thus to\ninstall jsdom, on Windows:\n\n* A recent copy of the *x86* version of [Node.js for Windows](http://nodejs.org/download/), *not* the x64 version.\n* A copy of [Visual C++ 2010 Express](http://www.microsoft.com/visualstudio/eng/downloads#d-2010-express).\n* A copy of [Python 2.7](http://www.python.org/download/), installed in the default location of `C:\\Python27`.\n\nThere are some slight modifications to this that can work; for example full versions of Visual Studio usually work, and\nsometimes you can even get an x64 version of Node.js working too. But it\'s tricky, so start with the basics!\n',
+461 silly resolved     readmeFilename: 'README.md',
+461 silly resolved     _id: 'jsdom@0.7.0',
+461 silly resolved     dist: { shasum: '7228a49386a42d7fb3823ab89d02e57231ccd1bc' },
+461 silly resolved     _from: 'jsdom@>= 0.6.0',
+461 silly resolved     _resolved: 'https://registry.npmjs.org/jsdom/-/jsdom-0.7.0.tgz' } ]
+462 info install canvas@1.0.3 into /Users/Admin/Desktop/drawingApp/node_modules/paper
+463 info install jsdom@0.7.0 into /Users/Admin/Desktop/drawingApp/node_modules/paper
+464 info installOne canvas@1.0.3
+465 info installOne jsdom@0.7.0
+466 verbose from cache /Users/Admin/.npm/canvas/1.0.3/package/package.json
+467 info /Users/Admin/Desktop/drawingApp/node_modules/paper/node_modules/canvas unbuild
+468 verbose read json /Users/Admin/Desktop/drawingApp/node_modules/paper/node_modules/canvas/package.json
+469 verbose from cache /Users/Admin/.npm/jsdom/0.7.0/package/package.json
+470 info /Users/Admin/Desktop/drawingApp/node_modules/paper/node_modules/jsdom unbuild
+471 verbose read json /Users/Admin/Desktop/drawingApp/node_modules/paper/node_modules/jsdom/package.json
+472 verbose tar unpack /Users/Admin/.npm/canvas/1.0.3/package.tgz
+473 silly lockFile 5b2d7c74-odules-paper-node-modules-canvas tar:///Users/Admin/Desktop/drawingApp/node_modules/paper/node_modules/canvas
+474 verbose lock tar:///Users/Admin/Desktop/drawingApp/node_modules/paper/node_modules/canvas /Users/Admin/.npm/5b2d7c74-odules-paper-node-modules-canvas.lock
+475 silly lockFile 537d5ff4-min-npm-canvas-1-0-3-package-tgz tar:///Users/Admin/.npm/canvas/1.0.3/package.tgz
+476 verbose lock tar:///Users/Admin/.npm/canvas/1.0.3/package.tgz /Users/Admin/.npm/537d5ff4-min-npm-canvas-1-0-3-package-tgz.lock
+477 verbose tar unpack /Users/Admin/.npm/jsdom/0.7.0/package.tgz
+478 silly lockFile 2f525e15-modules-paper-node-modules-jsdom tar:///Users/Admin/Desktop/drawingApp/node_modules/paper/node_modules/jsdom
+479 verbose lock tar:///Users/Admin/Desktop/drawingApp/node_modules/paper/node_modules/jsdom /Users/Admin/.npm/2f525e15-modules-paper-node-modules-jsdom.lock
+480 silly lockFile c0196bdf-dmin-npm-jsdom-0-7-0-package-tgz tar:///Users/Admin/.npm/jsdom/0.7.0/package.tgz
+481 verbose lock tar:///Users/Admin/.npm/jsdom/0.7.0/package.tgz /Users/Admin/.npm/c0196bdf-dmin-npm-jsdom-0-7-0-package-tgz.lock
+482 silly gunzTarPerm modes [ '755', '644' ]
+483 silly gunzTarPerm modes [ '755', '644' ]
+484 silly gunzTarPerm extractEntry package.json
+485 silly gunzTarPerm extractEntry package.json
+486 silly gunzTarPerm extractEntry .npmignore
+487 silly gunzTarPerm extractEntry index.js
+488 silly gunzTarPerm extractEntry README.md
+489 silly gunzTarPerm extractEntry LICENSE.txt
+490 silly gunzTarPerm extractEntry binding.gyp
+491 silly gunzTarPerm extractEntry Makefile
+492 silly gunzTarPerm extractEntry lib/jsdom.js
+493 silly gunzTarPerm extractEntry lib/jsdom/utils.js
+494 silly gunzTarPerm extractEntry Readme.md
+495 silly gunzTarPerm extractEntry .gitmodules
+496 silly gunzTarPerm extractEntry .travis.yml
+497 silly gunzTarPerm extractEntry install
+498 silly gunzTarPerm extractEntry lib/bindings.js
+499 silly gunzTarPerm extractEntry lib/canvas.js
+500 silly gunzTarPerm extractEntry lib/context2d.js
+501 silly gunzTarPerm extractEntry lib/image.js
+502 silly gunzTarPerm extractEntry lib/jpegstream.js
+503 silly gunzTarPerm extractEntry lib/pixelarray.js
+504 silly gunzTarPerm extractEntry lib/pngstream.js
+505 silly gunzTarPerm extractEntry History.md
+506 silly gunzTarPerm extractEntry src/Image.h
+507 silly gunzTarPerm extractEntry src/Canvas.cc
+508 silly gunzTarPerm extractEntry src/CanvasGradient.cc
+509 silly gunzTarPerm extractEntry src/CanvasGradient.h
+510 silly gunzTarPerm extractEntry src/CanvasPattern.cc
+511 silly gunzTarPerm extractEntry src/CanvasPattern.h
+512 silly gunzTarPerm extractEntry src/CanvasRenderingContext2d.cc
+513 silly gunzTarPerm extractEntry src/CanvasRenderingContext2d.h
+514 silly gunzTarPerm extractEntry src/FontFace.cc
+515 silly gunzTarPerm extractEntry src/FontFace.h
+516 silly gunzTarPerm extractEntry src/Image.cc
+517 silly gunzTarPerm extractEntry src/Canvas.h
+518 silly gunzTarPerm extractEntry src/ImageData.cc
+519 silly gunzTarPerm extractEntry src/ImageData.h
+520 silly gunzTarPerm extractEntry src/JPEGStream.h
+521 silly gunzTarPerm extractEntry src/PixelArray.cc
+522 silly gunzTarPerm extractEntry src/PixelArray.h
+523 silly gunzTarPerm extractEntry src/Point.h
+524 silly gunzTarPerm extractEntry src/closure.h
+525 silly gunzTarPerm extractEntry src/color.cc
+526 silly gunzTarPerm extractEntry src/color.h
+527 silly gunzTarPerm extractEntry src/init.cc
+528 silly gunzTarPerm extractEntry util/cairo_include.sh
+529 silly gunzTarPerm extractEntry util/has_cairo_freetype.sh
+530 silly gunzTarPerm extractEntry util/has_lib.sh
+531 silly gunzTarPerm extractEntry util/lib_lookup.sh
+532 silly gunzTarPerm extractEntry lib/jsdom/browser/documentfeatures.js
+533 silly gunzTarPerm extractEntry lib/jsdom/browser/domtohtml.js
+534 silly gunzTarPerm extractEntry lib/jsdom/browser/htmlencoding.js
+535 silly gunzTarPerm extractEntry lib/jsdom/browser/htmltodom.js
+536 silly gunzTarPerm extractEntry lib/jsdom/browser/index.js
+537 silly gunzTarPerm extractEntry lib/jsdom/level1/core.js
+538 silly gunzTarPerm extractEntry lib/jsdom/level2/core.js
+539 silly gunzTarPerm extractEntry lib/jsdom/level2/events.js
+540 silly gunzTarPerm extractEntry lib/jsdom/level2/html.js
+541 silly gunzTarPerm extractEntry lib/jsdom/level2/index.js
+542 silly gunzTarPerm extractEntry lib/jsdom/level2/style.js
+543 silly gunzTarPerm extractEntry lib/jsdom/level2/languages/javascript.js
+544 silly gunzTarPerm extractEntry lib/jsdom/level3/core.js
+545 silly gunzTarPerm extractEntry lib/jsdom/level3/events.js
+546 silly gunzTarPerm extractEntry lib/jsdom/level3/html.js
+547 silly gunzTarPerm extractEntry lib/jsdom/level3/index.js
+548 silly gunzTarPerm extractEntry lib/jsdom/level3/ls.js
+549 silly gunzTarPerm extractEntry lib/jsdom/level3/xpath.js
+550 silly gunzTarPerm extractEntry lib/jsdom/selectors/index.js
+551 verbose read json /Users/Admin/Desktop/drawingApp/node_modules/paper/node_modules/canvas/package.json
+552 verbose read json /Users/Admin/Desktop/drawingApp/node_modules/paper/node_modules/jsdom/package.json
+553 silly lockFile 5b2d7c74-odules-paper-node-modules-canvas tar:///Users/Admin/Desktop/drawingApp/node_modules/paper/node_modules/canvas
+554 silly lockFile 5b2d7c74-odules-paper-node-modules-canvas tar:///Users/Admin/Desktop/drawingApp/node_modules/paper/node_modules/canvas
+555 silly lockFile 537d5ff4-min-npm-canvas-1-0-3-package-tgz tar:///Users/Admin/.npm/canvas/1.0.3/package.tgz
+556 silly lockFile 537d5ff4-min-npm-canvas-1-0-3-package-tgz tar:///Users/Admin/.npm/canvas/1.0.3/package.tgz
+557 info preinstall canvas@1.0.3
+558 verbose from cache /Users/Admin/Desktop/drawingApp/node_modules/paper/node_modules/canvas/package.json
+559 verbose readDependencies using package.json deps
+560 verbose from cache /Users/Admin/Desktop/drawingApp/node_modules/paper/node_modules/canvas/package.json
+561 verbose readDependencies using package.json deps
+562 silly resolved []
+563 verbose about to build /Users/Admin/Desktop/drawingApp/node_modules/paper/node_modules/canvas
+564 info build /Users/Admin/Desktop/drawingApp/node_modules/paper/node_modules/canvas
+565 verbose from cache /Users/Admin/Desktop/drawingApp/node_modules/paper/node_modules/canvas/package.json
+566 verbose linkStuff [ false,
+566 verbose linkStuff   false,
+566 verbose linkStuff   false,
+566 verbose linkStuff   '/Users/Admin/Desktop/drawingApp/node_modules/paper/node_modules' ]
+567 info linkStuff canvas@1.0.3
+568 verbose read json /Users/Admin/Desktop/drawingApp/public/package.json
+569 verbose linkBins canvas@1.0.3
+570 verbose linkMans canvas@1.0.3
+571 verbose rebuildBundles canvas@1.0.3
+572 info install canvas@1.0.3
+573 verbose unsafe-perm in lifecycle true
+574 silly lockFile 2f525e15-modules-paper-node-modules-jsdom tar:///Users/Admin/Desktop/drawingApp/node_modules/paper/node_modules/jsdom
+575 silly lockFile 2f525e15-modules-paper-node-modules-jsdom tar:///Users/Admin/Desktop/drawingApp/node_modules/paper/node_modules/jsdom
+576 silly lockFile c0196bdf-dmin-npm-jsdom-0-7-0-package-tgz tar:///Users/Admin/.npm/jsdom/0.7.0/package.tgz
+577 silly lockFile c0196bdf-dmin-npm-jsdom-0-7-0-package-tgz tar:///Users/Admin/.npm/jsdom/0.7.0/package.tgz
+578 info preinstall jsdom@0.7.0
+579 verbose from cache /Users/Admin/Desktop/drawingApp/node_modules/paper/node_modules/jsdom/package.json
+580 verbose readDependencies using package.json deps
+581 verbose from cache /Users/Admin/Desktop/drawingApp/node_modules/paper/node_modules/jsdom/package.json
+582 verbose readDependencies using package.json deps
+583 verbose cache add [ 'htmlparser2@3.x', null ]
+584 verbose cache add name=undefined spec="htmlparser2@3.x" args=["htmlparser2@3.x",null]
+585 verbose parsed url { protocol: null,
+585 verbose parsed url   slashes: null,
+585 verbose parsed url   auth: null,
+585 verbose parsed url   host: null,
+585 verbose parsed url   port: null,
+585 verbose parsed url   hostname: null,
+585 verbose parsed url   hash: null,
+585 verbose parsed url   search: null,
+585 verbose parsed url   query: null,
+585 verbose parsed url   pathname: 'htmlparser2@3.x',
+585 verbose parsed url   path: 'htmlparser2@3.x',
+585 verbose parsed url   href: 'htmlparser2@3.x' }
+586 verbose cache add name="htmlparser2" spec="3.x" args=["htmlparser2","3.x"]
+587 verbose parsed url { protocol: null,
+587 verbose parsed url   slashes: null,
+587 verbose parsed url   auth: null,
+587 verbose parsed url   host: null,
+587 verbose parsed url   port: null,
+587 verbose parsed url   hostname: null,
+587 verbose parsed url   hash: null,
+587 verbose parsed url   search: null,
+587 verbose parsed url   query: null,
+587 verbose parsed url   pathname: '3.x',
+587 verbose parsed url   path: '3.x',
+587 verbose parsed url   href: '3.x' }
+588 verbose addNamed [ 'htmlparser2', '3.x' ]
+589 verbose addNamed [ null, '>=3.0.0- <4.0.0-' ]
+590 silly lockFile 15f5f727-htmlparser2-3-x htmlparser2@3.x
+591 verbose lock htmlparser2@3.x /Users/Admin/.npm/15f5f727-htmlparser2-3-x.lock
+592 verbose cache add [ 'nwmatcher@~1.3.1', null ]
+593 verbose cache add name=undefined spec="nwmatcher@~1.3.1" args=["nwmatcher@~1.3.1",null]
+594 verbose parsed url { protocol: null,
+594 verbose parsed url   slashes: null,
+594 verbose parsed url   auth: null,
+594 verbose parsed url   host: null,
+594 verbose parsed url   port: null,
+594 verbose parsed url   hostname: null,
+594 verbose parsed url   hash: null,
+594 verbose parsed url   search: null,
+594 verbose parsed url   query: null,
+594 verbose parsed url   pathname: 'nwmatcher@~1.3.1',
+594 verbose parsed url   path: 'nwmatcher@~1.3.1',
+594 verbose parsed url   href: 'nwmatcher@~1.3.1' }
+595 verbose cache add name="nwmatcher" spec="~1.3.1" args=["nwmatcher","~1.3.1"]
+596 verbose parsed url { protocol: null,
+596 verbose parsed url   slashes: null,
+596 verbose parsed url   auth: null,
+596 verbose parsed url   host: null,
+596 verbose parsed url   port: null,
+596 verbose parsed url   hostname: null,
+596 verbose parsed url   hash: null,
+596 verbose parsed url   search: null,
+596 verbose parsed url   query: null,
+596 verbose parsed url   pathname: '~1.3.1',
+596 verbose parsed url   path: '~1.3.1',
+596 verbose parsed url   href: '~1.3.1' }
+597 verbose addNamed [ 'nwmatcher', '~1.3.1' ]
+598 verbose addNamed [ null, '>=1.3.1- <1.4.0-' ]
+599 silly lockFile 315a8aad-nwmatcher-1-3-1 nwmatcher@~1.3.1
+600 verbose lock nwmatcher@~1.3.1 /Users/Admin/.npm/315a8aad-nwmatcher-1-3-1.lock
+601 silly addNameRange { name: 'htmlparser2',
+601 silly addNameRange   range: '>=3.0.0- <4.0.0-',
+601 silly addNameRange   hasData: false }
+602 verbose cache add [ 'request@2.x', null ]
+603 verbose cache add name=undefined spec="request@2.x" args=["request@2.x",null]
+604 verbose parsed url { protocol: null,
+604 verbose parsed url   slashes: null,
+604 verbose parsed url   auth: null,
+604 verbose parsed url   host: null,
+604 verbose parsed url   port: null,
+604 verbose parsed url   hostname: null,
+604 verbose parsed url   hash: null,
+604 verbose parsed url   search: null,
+604 verbose parsed url   query: null,
+604 verbose parsed url   pathname: 'request@2.x',
+604 verbose parsed url   path: 'request@2.x',
+604 verbose parsed url   href: 'request@2.x' }
+605 verbose cache add name="request" spec="2.x" args=["request","2.x"]
+606 verbose parsed url { protocol: null,
+606 verbose parsed url   slashes: null,
+606 verbose parsed url   auth: null,
+606 verbose parsed url   host: null,
+606 verbose parsed url   port: null,
+606 verbose parsed url   hostname: null,
+606 verbose parsed url   hash: null,
+606 verbose parsed url   search: null,
+606 verbose parsed url   query: null,
+606 verbose parsed url   pathname: '2.x',
+606 verbose parsed url   path: '2.x',
+606 verbose parsed url   href: '2.x' }
+607 verbose addNamed [ 'request', '2.x' ]
+608 verbose addNamed [ null, '>=2.0.0- <3.0.0-' ]
+609 silly lockFile c23ecae0-request-2-x request@2.x
+610 verbose lock request@2.x /Users/Admin/.npm/c23ecae0-request-2-x.lock
+611 silly addNameRange { name: 'nwmatcher', range: '>=1.3.1- <1.4.0-', hasData: false }
+612 verbose url raw htmlparser2
+613 verbose url resolving [ 'https://registry.npmjs.org/', './htmlparser2' ]
+614 verbose url resolved https://registry.npmjs.org/htmlparser2
+615 info trying registry request attempt 1 at 16:58:09
+616 http GET https://registry.npmjs.org/htmlparser2
+617 verbose cache add [ 'cssom@~0.2.5', null ]
+618 verbose cache add name=undefined spec="cssom@~0.2.5" args=["cssom@~0.2.5",null]
+619 verbose parsed url { protocol: null,
+619 verbose parsed url   slashes: null,
+619 verbose parsed url   auth: null,
+619 verbose parsed url   host: null,
+619 verbose parsed url   port: null,
+619 verbose parsed url   hostname: null,
+619 verbose parsed url   hash: null,
+619 verbose parsed url   search: null,
+619 verbose parsed url   query: null,
+619 verbose parsed url   pathname: 'cssom@~0.2.5',
+619 verbose parsed url   path: 'cssom@~0.2.5',
+619 verbose parsed url   href: 'cssom@~0.2.5' }
+620 verbose cache add name="cssom" spec="~0.2.5" args=["cssom","~0.2.5"]
+621 verbose parsed url { protocol: null,
+621 verbose parsed url   slashes: null,
+621 verbose parsed url   auth: null,
+621 verbose parsed url   host: null,
+621 verbose parsed url   port: null,
+621 verbose parsed url   hostname: null,
+621 verbose parsed url   hash: null,
+621 verbose parsed url   search: null,
+621 verbose parsed url   query: null,
+621 verbose parsed url   pathname: '~0.2.5',
+621 verbose parsed url   path: '~0.2.5',
+621 verbose parsed url   href: '~0.2.5' }
+622 verbose addNamed [ 'cssom', '~0.2.5' ]
+623 verbose addNamed [ null, '>=0.2.5- <0.3.0-' ]
+624 silly lockFile ff3f1f9f-cssom-0-2-5 cssom@~0.2.5
+625 verbose lock cssom@~0.2.5 /Users/Admin/.npm/ff3f1f9f-cssom-0-2-5.lock
+626 verbose cache add [ 'cssstyle@~0.2.3', null ]
+627 verbose cache add name=undefined spec="cssstyle@~0.2.3" args=["cssstyle@~0.2.3",null]
+628 verbose parsed url { protocol: null,
+628 verbose parsed url   slashes: null,
+628 verbose parsed url   auth: null,
+628 verbose parsed url   host: null,
+628 verbose parsed url   port: null,
+628 verbose parsed url   hostname: null,
+628 verbose parsed url   hash: null,
+628 verbose parsed url   search: null,
+628 verbose parsed url   query: null,
+628 verbose parsed url   pathname: 'cssstyle@~0.2.3',
+628 verbose parsed url   path: 'cssstyle@~0.2.3',
+628 verbose parsed url   href: 'cssstyle@~0.2.3' }
+629 verbose cache add name="cssstyle" spec="~0.2.3" args=["cssstyle","~0.2.3"]
+630 verbose parsed url { protocol: null,
+630 verbose parsed url   slashes: null,
+630 verbose parsed url   auth: null,
+630 verbose parsed url   host: null,
+630 verbose parsed url   port: null,
+630 verbose parsed url   hostname: null,
+630 verbose parsed url   hash: null,
+630 verbose parsed url   search: null,
+630 verbose parsed url   query: null,
+630 verbose parsed url   pathname: '~0.2.3',
+630 verbose parsed url   path: '~0.2.3',
+630 verbose parsed url   href: '~0.2.3' }
+631 verbose addNamed [ 'cssstyle', '~0.2.3' ]
+632 verbose addNamed [ null, '>=0.2.3- <0.3.0-' ]
+633 silly lockFile 4c95b135-cssstyle-0-2-3 cssstyle@~0.2.3
+634 verbose lock cssstyle@~0.2.3 /Users/Admin/.npm/4c95b135-cssstyle-0-2-3.lock
+635 verbose cache add [ 'contextify@~0.1.5', null ]
+636 verbose cache add name=undefined spec="contextify@~0.1.5" args=["contextify@~0.1.5",null]
+637 verbose parsed url { protocol: null,
+637 verbose parsed url   slashes: null,
+637 verbose parsed url   auth: null,
+637 verbose parsed url   host: null,
+637 verbose parsed url   port: null,
+637 verbose parsed url   hostname: null,
+637 verbose parsed url   hash: null,
+637 verbose parsed url   search: null,
+637 verbose parsed url   query: null,
+637 verbose parsed url   pathname: 'contextify@~0.1.5',
+637 verbose parsed url   path: 'contextify@~0.1.5',
+637 verbose parsed url   href: 'contextify@~0.1.5' }
+638 verbose cache add name="contextify" spec="~0.1.5" args=["contextify","~0.1.5"]
+639 verbose parsed url { protocol: null,
+639 verbose parsed url   slashes: null,
+639 verbose parsed url   auth: null,
+639 verbose parsed url   host: null,
+639 verbose parsed url   port: null,
+639 verbose parsed url   hostname: null,
+639 verbose parsed url   hash: null,
+639 verbose parsed url   search: null,
+639 verbose parsed url   query: null,
+639 verbose parsed url   pathname: '~0.1.5',
+639 verbose parsed url   path: '~0.1.5',
+639 verbose parsed url   href: '~0.1.5' }
+640 verbose addNamed [ 'contextify', '~0.1.5' ]
+641 verbose addNamed [ null, '>=0.1.5- <0.2.0-' ]
+642 silly lockFile 39127fdc-contextify-0-1-5 contextify@~0.1.5
+643 verbose lock contextify@~0.1.5 /Users/Admin/.npm/39127fdc-contextify-0-1-5.lock
+644 silly addNameRange { name: 'request', range: '>=2.0.0- <3.0.0-', hasData: false }
+645 verbose url raw nwmatcher
+646 verbose url resolving [ 'https://registry.npmjs.org/', './nwmatcher' ]
+647 verbose url resolved https://registry.npmjs.org/nwmatcher
+648 info trying registry request attempt 1 at 16:58:09
+649 http GET https://registry.npmjs.org/nwmatcher
+650 silly addNameRange { name: 'cssom', range: '>=0.2.5- <0.3.0-', hasData: false }
+651 silly addNameRange { name: 'cssstyle', range: '>=0.2.3- <0.3.0-', hasData: false }
+652 silly addNameRange { name: 'contextify', range: '>=0.1.5- <0.2.0-', hasData: false }
+653 verbose url raw cssom
+654 verbose url resolving [ 'https://registry.npmjs.org/', './cssom' ]
+655 verbose url resolved https://registry.npmjs.org/cssom
+656 info trying registry request attempt 1 at 16:58:09
+657 http GET https://registry.npmjs.org/cssom
+658 verbose url raw cssstyle
+659 verbose url resolving [ 'https://registry.npmjs.org/', './cssstyle' ]
+660 verbose url resolved https://registry.npmjs.org/cssstyle
+661 info trying registry request attempt 1 at 16:58:09
+662 http GET https://registry.npmjs.org/cssstyle
+663 verbose url raw contextify
+664 verbose url resolving [ 'https://registry.npmjs.org/', './contextify' ]
+665 verbose url resolved https://registry.npmjs.org/contextify
+666 info trying registry request attempt 1 at 16:58:09
+667 http GET https://registry.npmjs.org/contextify
+668 verbose url raw request
+669 verbose url resolving [ 'https://registry.npmjs.org/', './request' ]
+670 verbose url resolved https://registry.npmjs.org/request
+671 info trying registry request attempt 1 at 16:58:09
+672 verbose etag "EB6OEHUA8G572IZEN473FW6KL"
+673 http GET https://registry.npmjs.org/request
+674 http 200 https://registry.npmjs.org/cssom
+675 silly registry.get cb [ 200,
+675 silly registry.get   { vary: 'Accept',
+675 silly registry.get     server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+675 silly registry.get     etag: '"BMFSR13IJW1EYG610SU963J6J"',
+675 silly registry.get     date: 'Mon, 15 Jul 2013 20:58:10 GMT',
+675 silly registry.get     'content-type': 'application/json',
+675 silly registry.get     'content-length': '7117' } ]
+676 silly addNameRange number 2 { name: 'cssom', range: '>=0.2.5- <0.3.0-', hasData: true }
+677 silly addNameRange versions [ 'cssom',
+677 silly addNameRange   [ '0.2.0', '0.2.1', '0.2.2', '0.2.3', '0.2.4', '0.2.5' ] ]
+678 verbose addNamed [ 'cssom', '0.2.5' ]
+679 verbose addNamed [ '0.2.5', '0.2.5' ]
+680 silly lockFile 452affd3-cssom-0-2-5 cssom@0.2.5
+681 verbose lock cssom@0.2.5 /Users/Admin/.npm/452affd3-cssom-0-2-5.lock
+682 silly lockFile c6f46bfa--npmjs-org-cssom-cssom-0-2-5-tgz https://registry.npmjs.org/cssom/-/cssom-0.2.5.tgz
+683 verbose lock https://registry.npmjs.org/cssom/-/cssom-0.2.5.tgz /Users/Admin/.npm/c6f46bfa--npmjs-org-cssom-cssom-0-2-5-tgz.lock
+684 verbose addRemoteTarball [ 'https://registry.npmjs.org/cssom/-/cssom-0.2.5.tgz',
+684 verbose addRemoteTarball   '2682709b5902e7212df529116ff788cd5b254894' ]
+685 info retry fetch attempt 1 at 16:58:10
+686 verbose fetch to= /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890217-0.0267225569114089/tmp.tgz
+687 http GET https://registry.npmjs.org/cssom/-/cssom-0.2.5.tgz
+688 http 200 https://registry.npmjs.org/nwmatcher
+689 silly registry.get cb [ 200,
+689 silly registry.get   { vary: 'Accept',
+689 silly registry.get     server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+689 silly registry.get     etag: '"AYWOK6ROTWJIC961BPH82Z6KF"',
+689 silly registry.get     date: 'Mon, 15 Jul 2013 20:58:10 GMT',
+689 silly registry.get     'content-type': 'application/json',
+689 silly registry.get     'content-length': '4097' } ]
+690 silly addNameRange number 2 { name: 'nwmatcher', range: '>=1.3.1- <1.4.0-', hasData: true }
+691 silly addNameRange versions [ 'nwmatcher', [ '1.2.5', '1.3.0', '1.3.1' ] ]
+692 verbose addNamed [ 'nwmatcher', '1.3.1' ]
+693 verbose addNamed [ '1.3.1', '1.3.1' ]
+694 silly lockFile 3606fc87-nwmatcher-1-3-1 nwmatcher@1.3.1
+695 verbose lock nwmatcher@1.3.1 /Users/Admin/.npm/3606fc87-nwmatcher-1-3-1.lock
+696 http 200 https://registry.npmjs.org/cssstyle
+697 silly registry.get cb [ 200,
+697 silly registry.get   { vary: 'Accept',
+697 silly registry.get     server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+697 silly registry.get     etag: '"8SGYX4V4FJ0AMW1BBOSVR85C0"',
+697 silly registry.get     date: 'Mon, 15 Jul 2013 20:58:10 GMT',
+697 silly registry.get     'content-type': 'application/json',
+697 silly registry.get     'content-length': '11674' } ]
+698 silly lockFile 898016f2-rg-nwmatcher-nwmatcher-1-3-1-tgz https://registry.npmjs.org/nwmatcher/-/nwmatcher-1.3.1.tgz
+699 verbose lock https://registry.npmjs.org/nwmatcher/-/nwmatcher-1.3.1.tgz /Users/Admin/.npm/898016f2-rg-nwmatcher-nwmatcher-1-3-1-tgz.lock
+700 verbose addRemoteTarball [ 'https://registry.npmjs.org/nwmatcher/-/nwmatcher-1.3.1.tgz',
+700 verbose addRemoteTarball   'ef7d4e2120c9232d0c017b356a1a66dbc1e3b9b3' ]
+701 info retry fetch attempt 1 at 16:58:10
+702 verbose fetch to= /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890261-0.32269736658781767/tmp.tgz
+703 http GET https://registry.npmjs.org/nwmatcher/-/nwmatcher-1.3.1.tgz
+704 silly addNameRange number 2 { name: 'cssstyle', range: '>=0.2.3- <0.3.0-', hasData: true }
+705 silly addNameRange versions [ 'cssstyle', [ '0.1.0', '0.2.0', '0.2.1', '0.2.2', '0.2.3' ] ]
+706 verbose addNamed [ 'cssstyle', '0.2.3' ]
+707 verbose addNamed [ '0.2.3', '0.2.3' ]
+708 silly lockFile 8a9b7d6a-cssstyle-0-2-3 cssstyle@0.2.3
+709 verbose lock cssstyle@0.2.3 /Users/Admin/.npm/8a9b7d6a-cssstyle-0-2-3.lock
+710 silly lockFile 95516cee--org-cssstyle-cssstyle-0-2-3-tgz https://registry.npmjs.org/cssstyle/-/cssstyle-0.2.3.tgz
+711 verbose lock https://registry.npmjs.org/cssstyle/-/cssstyle-0.2.3.tgz /Users/Admin/.npm/95516cee--org-cssstyle-cssstyle-0-2-3-tgz.lock
+712 verbose addRemoteTarball [ 'https://registry.npmjs.org/cssstyle/-/cssstyle-0.2.3.tgz',
+712 verbose addRemoteTarball   'fc6a0cb8c72b99f10b17d2028adcdb9bcc73cb49' ]
+713 info retry fetch attempt 1 at 16:58:10
+714 verbose fetch to= /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890264-0.39401179552078247/tmp.tgz
+715 http GET https://registry.npmjs.org/cssstyle/-/cssstyle-0.2.3.tgz
+716 http 304 https://registry.npmjs.org/request
+717 silly registry.get cb [ 304,
+717 silly registry.get   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+717 silly registry.get     etag: '"EB6OEHUA8G572IZEN473FW6KL"',
+717 silly registry.get     date: 'Mon, 15 Jul 2013 20:58:10 GMT',
+717 silly registry.get     'content-length': '0' } ]
+718 verbose etag request from cache
+719 silly addNameRange number 2 { name: 'request', range: '>=2.0.0- <3.0.0-', hasData: true }
+720 silly addNameRange versions [ 'request',
+720 silly addNameRange   [ '0.10.0',
+720 silly addNameRange     '0.8.3',
+720 silly addNameRange     '0.9.0',
+720 silly addNameRange     '0.9.1',
+720 silly addNameRange     '0.9.5',
+720 silly addNameRange     '1.0.0',
+720 silly addNameRange     '1.1.0',
+720 silly addNameRange     '1.1.1',
+720 silly addNameRange     '1.2.0',
+720 silly addNameRange     '1.9.0',
+720 silly addNameRange     '1.9.1',
+720 silly addNameRange     '1.9.2',
+720 silly addNameRange     '1.9.3',
+720 silly addNameRange     '1.9.5',
+720 silly addNameRange     '1.9.7',
+720 silly addNameRange     '1.9.8',
+720 silly addNameRange     '1.9.9',
+720 silly addNameRange     '2.0.0',
+720 silly addNameRange     '2.0.1',
+720 silly addNameRange     '2.0.2',
+720 silly addNameRange     '2.0.3',
+720 silly addNameRange     '2.0.4',
+720 silly addNameRange     '2.0.5',
+720 silly addNameRange     '2.1.0',
+720 silly addNameRange     '2.1.1',
+720 silly addNameRange     '2.2.0',
+720 silly addNameRange     '2.2.5',
+720 silly addNameRange     '2.2.6',
+720 silly addNameRange     '2.2.9',
+720 silly addNameRange     '2.9.0',
+720 silly addNameRange     '2.9.1',
+720 silly addNameRange     '2.9.2',
+720 silly addNameRange     '2.9.3',
+720 silly addNameRange     '2.9.100',
+720 silly addNameRange     '2.9.150',
+720 silly addNameRange     '2.9.151',
+720 silly addNameRange     '2.9.152',
+720 silly addNameRange     '2.9.153',
+720 silly addNameRange     '2.9.200',
+720 silly addNameRange     '2.9.201',
+720 silly addNameRange     '2.9.202',
+720 silly addNameRange     '2.9.203',
+720 silly addNameRange     '2.10.0',
+720 silly addNameRange     '2.11.0',
+720 silly addNameRange     '2.11.1',
+720 silly addNameRange     '2.11.2',
+720 silly addNameRange     '2.11.3',
+720 silly addNameRange     '2.11.4',
+720 silly addNameRange     '2.12.0',
+720 silly addNameRange     '2.14.0',
+720 silly addNameRange     '2.16.0',
+720 silly addNameRange     '2.16.2',
+720 silly addNameRange     '2.16.4',
+720 silly addNameRange     '2.16.6',
+720 silly addNameRange     '2.18.0',
+720 silly addNameRange     '2.19.0',
+720 silly addNameRange     '2.20.0',
+720 silly addNameRange     '2.21.0',
+720 silly addNameRange     '2.22.0' ] ]
+721 verbose addNamed [ 'request', '2.22.0' ]
+722 verbose addNamed [ '2.22.0', '2.22.0' ]
+723 silly lockFile 73e614df-request-2-22-0 request@2.22.0
+724 verbose lock request@2.22.0 /Users/Admin/.npm/73e614df-request-2-22-0.lock
+725 silly lockFile 11bcd40c-s-org-request-request-2-22-0-tgz https://registry.npmjs.org/request/-/request-2.22.0.tgz
+726 verbose lock https://registry.npmjs.org/request/-/request-2.22.0.tgz /Users/Admin/.npm/11bcd40c-s-org-request-request-2-22-0-tgz.lock
+727 verbose addRemoteTarball [ 'https://registry.npmjs.org/request/-/request-2.22.0.tgz',
+727 verbose addRemoteTarball   'b883a769cc4a909571eb5004b344c43cf7e51592' ]
+728 info retry fetch attempt 1 at 16:58:10
+729 verbose fetch to= /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890281-0.14155217655934393/tmp.tgz
+730 http GET https://registry.npmjs.org/request/-/request-2.22.0.tgz
+731 http 200 https://registry.npmjs.org/contextify
+732 silly registry.get cb [ 200,
+732 silly registry.get   { vary: 'Accept',
+732 silly registry.get     server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+732 silly registry.get     etag: '"DEGHMAWM77UEO2TDJT9WION99"',
+732 silly registry.get     date: 'Mon, 15 Jul 2013 20:58:10 GMT',
+732 silly registry.get     'content-type': 'application/json',
+732 silly registry.get     'content-length': '43338' } ]
+733 silly addNameRange number 2 { name: 'contextify', range: '>=0.1.5- <0.2.0-', hasData: true }
+734 silly addNameRange versions [ 'contextify',
+734 silly addNameRange   [ '0.0.2',
+734 silly addNameRange     '0.0.3',
+734 silly addNameRange     '0.0.4',
+734 silly addNameRange     '0.0.5',
+734 silly addNameRange     '0.0.6',
+734 silly addNameRange     '0.0.7',
+734 silly addNameRange     '0.1.0',
+734 silly addNameRange     '0.1.1',
+734 silly addNameRange     '0.1.2',
+734 silly addNameRange     '0.1.3',
+734 silly addNameRange     '0.1.4',
+734 silly addNameRange     '0.1.5',
+734 silly addNameRange     '0.1.6' ] ]
+735 verbose addNamed [ 'contextify', '0.1.6' ]
+736 verbose addNamed [ '0.1.6', '0.1.6' ]
+737 silly lockFile aa4e5e79-contextify-0-1-6 contextify@0.1.6
+738 verbose lock contextify@0.1.6 /Users/Admin/.npm/aa4e5e79-contextify-0-1-6.lock
+739 silly lockFile 7a8ff851--contextify-contextify-0-1-6-tgz https://registry.npmjs.org/contextify/-/contextify-0.1.6.tgz
+740 verbose lock https://registry.npmjs.org/contextify/-/contextify-0.1.6.tgz /Users/Admin/.npm/7a8ff851--contextify-contextify-0-1-6-tgz.lock
+741 verbose addRemoteTarball [ 'https://registry.npmjs.org/contextify/-/contextify-0.1.6.tgz',
+741 verbose addRemoteTarball   '86bb9db169072cf7254f563abfc6e24a34ec6620' ]
+742 info retry fetch attempt 1 at 16:58:10
+743 verbose fetch to= /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890289-0.6193387119565159/tmp.tgz
+744 http GET https://registry.npmjs.org/contextify/-/contextify-0.1.6.tgz
+745 http 200 https://registry.npmjs.org/htmlparser2
+746 silly registry.get cb [ 200,
+746 silly registry.get   { vary: 'Accept',
+746 silly registry.get     server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+746 silly registry.get     etag: '"1BKIJZO0IGMH8VAL2JIC4BE9U"',
+746 silly registry.get     date: 'Mon, 15 Jul 2013 20:58:10 GMT',
+746 silly registry.get     'content-type': 'application/json',
+746 silly registry.get     'content-length': '110021' } ]
+747 silly addNameRange number 2 { name: 'htmlparser2', range: '>=3.0.0- <4.0.0-', hasData: true }
+748 silly addNameRange versions [ 'htmlparser2',
+748 silly addNameRange   [ '1.0.0',
+748 silly addNameRange     '1.1.0',
+748 silly addNameRange     '1.5.0',
+748 silly addNameRange     '2.0.0',
+748 silly addNameRange     '2.0.1',
+748 silly addNameRange     '2.1.0',
+748 silly addNameRange     '2.1.1',
+748 silly addNameRange     '2.1.2',
+748 silly addNameRange     '2.1.3',
+748 silly addNameRange     '2.2.0',
+748 silly addNameRange     '2.2.2',
+748 silly addNameRange     '2.2.3',
+748 silly addNameRange     '2.2.4',
+748 silly addNameRange     '2.2.5',
+748 silly addNameRange     '2.2.6',
+748 silly addNameRange     '2.2.7',
+748 silly addNameRange     '2.2.8',
+748 silly addNameRange     '2.2.9',
+748 silly addNameRange     '2.3.0',
+748 silly addNameRange     '2.5.0',
+748 silly addNameRange     '2.5.1',
+748 silly addNameRange     '2.5.2',
+748 silly addNameRange     '2.6.0',
+748 silly addNameRange     '3.0.0',
+748 silly addNameRange     '3.0.1',
+748 silly addNameRange     '3.0.2',
+748 silly addNameRange     '3.0.3',
+748 silly addNameRange     '3.0.4',
+748 silly addNameRange     '3.0.5',
+748 silly addNameRange     '3.1.1',
+748 silly addNameRange     '3.1.2',
+748 silly addNameRange     '3.1.3',
+748 silly addNameRange     '3.1.4' ] ]
+749 verbose addNamed [ 'htmlparser2', '3.1.4' ]
+750 verbose addNamed [ '3.1.4', '3.1.4' ]
+751 silly lockFile d8542df4-htmlparser2-3-1-4 htmlparser2@3.1.4
+752 verbose lock htmlparser2@3.1.4 /Users/Admin/.npm/d8542df4-htmlparser2-3-1-4.lock
+753 silly lockFile 0c038cd2-tmlparser2-htmlparser2-3-1-4-tgz https://registry.npmjs.org/htmlparser2/-/htmlparser2-3.1.4.tgz
+754 verbose lock https://registry.npmjs.org/htmlparser2/-/htmlparser2-3.1.4.tgz /Users/Admin/.npm/0c038cd2-tmlparser2-htmlparser2-3-1-4-tgz.lock
+755 verbose addRemoteTarball [ 'https://registry.npmjs.org/htmlparser2/-/htmlparser2-3.1.4.tgz',
+755 verbose addRemoteTarball   '72cbe7d5d56c01acf61fcf7b933331f4e45b36f0' ]
+756 info retry fetch attempt 1 at 16:58:10
+757 verbose fetch to= /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890410-0.3723245528526604/tmp.tgz
+758 http GET https://registry.npmjs.org/htmlparser2/-/htmlparser2-3.1.4.tgz
+759 http 200 https://registry.npmjs.org/cssom/-/cssom-0.2.5.tgz
+760 http 200 https://registry.npmjs.org/cssstyle/-/cssstyle-0.2.3.tgz
+761 verbose tar unpack /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890217-0.0267225569114089/tmp.tgz
+762 silly lockFile 1ebe77e9-90217-0-0267225569114089-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890217-0.0267225569114089/package
+763 verbose lock tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890217-0.0267225569114089/package /Users/Admin/.npm/1ebe77e9-90217-0-0267225569114089-package.lock
+764 silly lockFile c715cf3a-90217-0-0267225569114089-tmp-tgz tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890217-0.0267225569114089/tmp.tgz
+765 verbose lock tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890217-0.0267225569114089/tmp.tgz /Users/Admin/.npm/c715cf3a-90217-0-0267225569114089-tmp-tgz.lock
+766 silly gunzTarPerm modes [ '755', '644' ]
+767 silly gunzTarPerm extractEntry package.json
+768 silly gunzTarPerm extractEntry .npmignore
+769 silly gunzTarPerm extractEntry .gitmodules
+770 silly gunzTarPerm extractEntry lib/clone.js
+771 silly gunzTarPerm extractEntry lib/CSSKeyframeRule.js
+772 silly gunzTarPerm extractEntry lib/CSSKeyframesRule.js
+773 silly gunzTarPerm extractEntry lib/CSSMediaRule.js
+774 silly gunzTarPerm extractEntry lib/CSSRule.js
+775 silly gunzTarPerm extractEntry lib/CSSImportRule.js
+776 silly gunzTarPerm extractEntry lib/CSSStyleRule.js
+777 silly gunzTarPerm extractEntry lib/CSSStyleSheet.js
+778 silly gunzTarPerm extractEntry lib/index.js
+779 silly gunzTarPerm extractEntry lib/MediaList.js
+780 silly gunzTarPerm extractEntry lib/parse.js
+781 http 200 https://registry.npmjs.org/request/-/request-2.22.0.tgz
+782 silly gunzTarPerm extractEntry lib/CSSFontFaceRule.js
+783 silly gunzTarPerm extractEntry lib/StyleSheet.js
+784 http 200 https://registry.npmjs.org/nwmatcher/-/nwmatcher-1.3.1.tgz
+785 silly gunzTarPerm extractEntry lib/CSSStyleDeclaration.js
+786 silly gunzTarPerm extractEntry README.mdown
+787 http 200 https://registry.npmjs.org/contextify/-/contextify-0.1.6.tgz
+788 verbose read json /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890217-0.0267225569114089/package/package.json
+789 silly lockFile 1ebe77e9-90217-0-0267225569114089-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890217-0.0267225569114089/package
+790 silly lockFile 1ebe77e9-90217-0-0267225569114089-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890217-0.0267225569114089/package
+791 silly lockFile c715cf3a-90217-0-0267225569114089-tmp-tgz tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890217-0.0267225569114089/tmp.tgz
+792 silly lockFile c715cf3a-90217-0-0267225569114089-tmp-tgz tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890217-0.0267225569114089/tmp.tgz
+793 verbose from cache /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890217-0.0267225569114089/package/package.json
+794 verbose tar pack [ '/Users/Admin/.npm/cssom/0.2.5/package.tgz',
+794 verbose tar pack   '/var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890217-0.0267225569114089/package' ]
+795 verbose tarball /Users/Admin/.npm/cssom/0.2.5/package.tgz
+796 verbose folder /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890217-0.0267225569114089/package
+797 silly lockFile 1ebe77e9-90217-0-0267225569114089-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890217-0.0267225569114089/package
+798 verbose lock tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890217-0.0267225569114089/package /Users/Admin/.npm/1ebe77e9-90217-0-0267225569114089-package.lock
+799 silly lockFile 8079e521-dmin-npm-cssom-0-2-5-package-tgz tar:///Users/Admin/.npm/cssom/0.2.5/package.tgz
+800 verbose lock tar:///Users/Admin/.npm/cssom/0.2.5/package.tgz /Users/Admin/.npm/8079e521-dmin-npm-cssom-0-2-5-package-tgz.lock
+801 http 200 https://registry.npmjs.org/htmlparser2/-/htmlparser2-3.1.4.tgz
+802 verbose tar unpack /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890289-0.6193387119565159/tmp.tgz
+803 silly lockFile 0365d103-90289-0-6193387119565159-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890289-0.6193387119565159/package
+804 verbose lock tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890289-0.6193387119565159/package /Users/Admin/.npm/0365d103-90289-0-6193387119565159-package.lock
+805 silly lockFile f6c98fb4-90289-0-6193387119565159-tmp-tgz tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890289-0.6193387119565159/tmp.tgz
+806 verbose lock tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890289-0.6193387119565159/tmp.tgz /Users/Admin/.npm/f6c98fb4-90289-0-6193387119565159-tmp-tgz.lock
+807 silly gunzTarPerm modes [ '755', '644' ]
+808 silly gunzTarPerm extractEntry package.json
+809 silly gunzTarPerm extractEntry .npmignore
+810 silly gunzTarPerm extractEntry README.md
+811 silly gunzTarPerm extractEntry LICENSE.txt
+812 silly gunzTarPerm extractEntry binding.gyp
+813 silly gunzTarPerm extractEntry changelog
+814 silly gunzTarPerm extractEntry lib/contextify.js
+815 silly gunzTarPerm extractEntry src/contextify.cc
+816 silly gunzTarPerm extractEntry test/contextify.js
+817 silly gunzTarPerm extractEntry wscript
+818 verbose read json /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890289-0.6193387119565159/package/package.json
+819 silly lockFile 1ebe77e9-90217-0-0267225569114089-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890217-0.0267225569114089/package
+820 silly lockFile 1ebe77e9-90217-0-0267225569114089-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890217-0.0267225569114089/package
+821 silly lockFile 8079e521-dmin-npm-cssom-0-2-5-package-tgz tar:///Users/Admin/.npm/cssom/0.2.5/package.tgz
+822 silly lockFile 8079e521-dmin-npm-cssom-0-2-5-package-tgz tar:///Users/Admin/.npm/cssom/0.2.5/package.tgz
+823 silly lockFile 89456caa-rs-Admin-npm-cssom-0-2-5-package /Users/Admin/.npm/cssom/0.2.5/package
+824 verbose lock /Users/Admin/.npm/cssom/0.2.5/package /Users/Admin/.npm/89456caa-rs-Admin-npm-cssom-0-2-5-package.lock
+825 silly lockFile 89456caa-rs-Admin-npm-cssom-0-2-5-package /Users/Admin/.npm/cssom/0.2.5/package
+826 silly lockFile 89456caa-rs-Admin-npm-cssom-0-2-5-package /Users/Admin/.npm/cssom/0.2.5/package
+827 verbose tar unpack /Users/Admin/.npm/cssom/0.2.5/package.tgz
+828 silly lockFile 33dc4c60-rs-Admin-npm-cssom-0-2-5-package tar:///Users/Admin/.npm/cssom/0.2.5/package
+829 verbose lock tar:///Users/Admin/.npm/cssom/0.2.5/package /Users/Admin/.npm/33dc4c60-rs-Admin-npm-cssom-0-2-5-package.lock
+830 silly lockFile 8079e521-dmin-npm-cssom-0-2-5-package-tgz tar:///Users/Admin/.npm/cssom/0.2.5/package.tgz
+831 verbose lock tar:///Users/Admin/.npm/cssom/0.2.5/package.tgz /Users/Admin/.npm/8079e521-dmin-npm-cssom-0-2-5-package-tgz.lock
+832 silly gunzTarPerm modes [ '755', '644' ]
+833 silly lockFile 0365d103-90289-0-6193387119565159-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890289-0.6193387119565159/package
+834 silly lockFile 0365d103-90289-0-6193387119565159-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890289-0.6193387119565159/package
+835 silly lockFile f6c98fb4-90289-0-6193387119565159-tmp-tgz tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890289-0.6193387119565159/tmp.tgz
+836 silly lockFile f6c98fb4-90289-0-6193387119565159-tmp-tgz tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890289-0.6193387119565159/tmp.tgz
+837 silly gunzTarPerm extractEntry package.json
+838 verbose from cache /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890289-0.6193387119565159/package/package.json
+839 verbose tar pack [ '/Users/Admin/.npm/contextify/0.1.6/package.tgz',
+839 verbose tar pack   '/var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890289-0.6193387119565159/package' ]
+840 verbose tarball /Users/Admin/.npm/contextify/0.1.6/package.tgz
+841 verbose folder /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890289-0.6193387119565159/package
+842 silly lockFile 0365d103-90289-0-6193387119565159-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890289-0.6193387119565159/package
+843 verbose lock tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890289-0.6193387119565159/package /Users/Admin/.npm/0365d103-90289-0-6193387119565159-package.lock
+844 silly lockFile 49b2fd7c-npm-contextify-0-1-6-package-tgz tar:///Users/Admin/.npm/contextify/0.1.6/package.tgz
+845 verbose lock tar:///Users/Admin/.npm/contextify/0.1.6/package.tgz /Users/Admin/.npm/49b2fd7c-npm-contextify-0-1-6-package-tgz.lock
+846 silly gunzTarPerm extractEntry .npmignore
+847 silly gunzTarPerm extractEntry .gitmodules
+848 verbose tar unpack /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890264-0.39401179552078247/tmp.tgz
+849 silly lockFile fa4760e7-0264-0-39401179552078247-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890264-0.39401179552078247/package
+850 verbose lock tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890264-0.39401179552078247/package /Users/Admin/.npm/fa4760e7-0264-0-39401179552078247-package.lock
+851 silly lockFile 3488ba57-0264-0-39401179552078247-tmp-tgz tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890264-0.39401179552078247/tmp.tgz
+852 verbose lock tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890264-0.39401179552078247/tmp.tgz /Users/Admin/.npm/3488ba57-0264-0-39401179552078247-tmp-tgz.lock
+853 silly gunzTarPerm modes [ '755', '644' ]
+854 silly gunzTarPerm extractEntry README.mdown
+855 silly gunzTarPerm extractEntry lib/CSSFontFaceRule.js
+856 silly gunzTarPerm extractEntry package.json
+857 silly gunzTarPerm extractEntry .npmignore
+858 silly gunzTarPerm extractEntry README.md
+859 silly gunzTarPerm extractEntry lib/CSSKeyframesRule.js
+860 silly gunzTarPerm extractEntry lib/CSSMediaRule.js
+861 silly gunzTarPerm extractEntry lib/CSSStyleDeclaration.js
+862 silly gunzTarPerm extractEntry lib/CSSRule.js
+863 silly gunzTarPerm extractEntry lib/CSSStyleDeclaration.js
+864 silly gunzTarPerm extractEntry lib/properties/alignmentBaseline.js
+865 silly gunzTarPerm extractEntry lib/properties/top.js
+866 silly gunzTarPerm extractEntry lib/properties/unicodeBidi.js
+867 silly gunzTarPerm extractEntry lib/CSSKeyframeRule.js
+868 silly gunzTarPerm extractEntry lib/properties/unicodeRange.js
+869 silly gunzTarPerm extractEntry lib/properties/vectorEffect.js
+870 verbose tar unpack /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890410-0.3723245528526604/tmp.tgz
+871 silly lockFile fb7571b9-90410-0-3723245528526604-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890410-0.3723245528526604/package
+872 verbose lock tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890410-0.3723245528526604/package /Users/Admin/.npm/fb7571b9-90410-0-3723245528526604-package.lock
+873 silly lockFile a52bb7ef-90410-0-3723245528526604-tmp-tgz tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890410-0.3723245528526604/tmp.tgz
+874 verbose lock tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890410-0.3723245528526604/tmp.tgz /Users/Admin/.npm/a52bb7ef-90410-0-3723245528526604-tmp-tgz.lock
+875 silly gunzTarPerm modes [ '755', '644' ]
+876 silly gunzTarPerm extractEntry lib/CSSStyleSheet.js
+877 silly gunzTarPerm extractEntry lib/MediaList.js
+878 silly gunzTarPerm extractEntry package.json
+879 silly gunzTarPerm extractEntry lib/StyleSheet.js
+880 silly gunzTarPerm extractEntry lib/clone.js
+881 silly gunzTarPerm extractEntry README.md
+882 silly gunzTarPerm extractEntry LICENSE
+883 silly gunzTarPerm extractEntry .travis.yml
+884 silly gunzTarPerm extractEntry lib/CollectingHandler.js
+885 silly gunzTarPerm extractEntry lib/index.js
+886 silly gunzTarPerm extractEntry lib/CSSImportRule.js
+887 verbose tar unpack /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890261-0.32269736658781767/tmp.tgz
+888 silly lockFile 48348fb8-0261-0-32269736658781767-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890261-0.32269736658781767/package
+889 verbose lock tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890261-0.32269736658781767/package /Users/Admin/.npm/48348fb8-0261-0-32269736658781767-package.lock
+890 silly lockFile d788753a-0261-0-32269736658781767-tmp-tgz tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890261-0.32269736658781767/tmp.tgz
+891 verbose lock tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890261-0.32269736658781767/tmp.tgz /Users/Admin/.npm/d788753a-0261-0-32269736658781767-tmp-tgz.lock
+892 silly gunzTarPerm modes [ '755', '644' ]
+893 silly gunzTarPerm extractEntry lib/parse.js
+894 silly gunzTarPerm extractEntry lib/CSSStyleRule.js
+895 silly gunzTarPerm extractEntry package.json
+896 silly gunzTarPerm extractEntry lib/FeedHandler.js
+897 silly gunzTarPerm extractEntry lib/Parser.js
+898 silly gunzTarPerm extractEntry .npmignore
+899 silly gunzTarPerm extractEntry README
+900 silly gunzTarPerm extractEntry lib/ProxyHandler.js
+901 silly gunzTarPerm extractEntry README.md
+902 silly gunzTarPerm extractEntry LICENSE
+903 silly gunzTarPerm extractEntry lib/Stream.js
+904 silly gunzTarPerm extractEntry lib/Tokenizer.js
+905 silly gunzTarPerm extractEntry dist/lint.log
+906 silly gunzTarPerm extractEntry lib/ender/bridge.js
+907 silly gunzTarPerm extractEntry lib/WritableStream.js
+908 silly gunzTarPerm extractEntry lib/index.js
+909 silly gunzTarPerm extractEntry lib/prototype/selector_engine.js
+910 silly gunzTarPerm extractEntry src/nwmatcher-base.js
+911 silly gunzTarPerm extractEntry src/nwmatcher-noqsa.js
+912 silly gunzTarPerm extractEntry tests/00-runtests.js
+913 silly gunzTarPerm extractEntry tests/02-stream.js
+914 silly gunzTarPerm extractEntry src/nwmatcher.js
+915 silly gunzTarPerm extractEntry src/modules/nwmatcher-cache.js
+916 silly lockFile 0365d103-90289-0-6193387119565159-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890289-0.6193387119565159/package
+917 silly lockFile 0365d103-90289-0-6193387119565159-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890289-0.6193387119565159/package
+918 silly lockFile 49b2fd7c-npm-contextify-0-1-6-package-tgz tar:///Users/Admin/.npm/contextify/0.1.6/package.tgz
+919 silly lockFile 49b2fd7c-npm-contextify-0-1-6-package-tgz tar:///Users/Admin/.npm/contextify/0.1.6/package.tgz
+920 silly gunzTarPerm extractEntry tests/03-feed.js
+921 silly gunzTarPerm extractEntry tests/99-benchmark.js
+922 silly lockFile 96ca061e-min-npm-contextify-0-1-6-package /Users/Admin/.npm/contextify/0.1.6/package
+923 verbose lock /Users/Admin/.npm/contextify/0.1.6/package /Users/Admin/.npm/96ca061e-min-npm-contextify-0-1-6-package.lock
+924 silly gunzTarPerm extractEntry src/modules/nwmatcher-jquery.js
+925 silly gunzTarPerm extractEntry src/modules/nwmatcher-pseudos.js
+926 silly lockFile 96ca061e-min-npm-contextify-0-1-6-package /Users/Admin/.npm/contextify/0.1.6/package
+927 silly lockFile 96ca061e-min-npm-contextify-0-1-6-package /Users/Admin/.npm/contextify/0.1.6/package
+928 verbose tar unpack /Users/Admin/.npm/contextify/0.1.6/package.tgz
+929 silly lockFile ce6f78be-min-npm-contextify-0-1-6-package tar:///Users/Admin/.npm/contextify/0.1.6/package
+930 verbose lock tar:///Users/Admin/.npm/contextify/0.1.6/package /Users/Admin/.npm/ce6f78be-min-npm-contextify-0-1-6-package.lock
+931 silly lockFile 49b2fd7c-npm-contextify-0-1-6-package-tgz tar:///Users/Admin/.npm/contextify/0.1.6/package.tgz
+932 verbose lock tar:///Users/Admin/.npm/contextify/0.1.6/package.tgz /Users/Admin/.npm/49b2fd7c-npm-contextify-0-1-6-package-tgz.lock
+933 silly gunzTarPerm modes [ '755', '644' ]
+934 silly gunzTarPerm extractEntry tests/01-events.js
+935 silly gunzTarPerm extractEntry tests/bench.js
+936 silly gunzTarPerm extractEntry tests/test-helper.js
+937 silly gunzTarPerm extractEntry tests/Feeds/01-rss.js
+938 silly gunzTarPerm extractEntry src/modules/nwmatcher-shortcuts.js
+939 silly gunzTarPerm extractEntry src/modules/nwmatcher-traversal.js
+940 silly gunzTarPerm extractEntry package.json
+941 silly gunzTarPerm extractEntry lib/properties/textUnderlineWidth.js
+942 silly gunzTarPerm extractEntry lib/properties/visibility.js
+943 silly gunzTarPerm extractEntry .npmignore
+944 silly gunzTarPerm extractEntry README.md
+945 silly gunzTarPerm extractEntry src/modules/nwmatcher-webforms.js
+946 silly gunzTarPerm extractEntry lib/properties/voiceFamily.js
+947 silly gunzTarPerm extractEntry lib/properties/volume.js
+948 silly gunzTarPerm extractEntry LICENSE.txt
+949 silly gunzTarPerm extractEntry binding.gyp
+950 silly gunzTarPerm extractEntry lib/properties/webkitAnimation.js
+951 silly gunzTarPerm extractEntry lib/properties/webkitAnimationDelay.js
+952 silly gunzTarPerm extractEntry changelog
+953 silly gunzTarPerm extractEntry lib/contextify.js
+954 silly gunzTarPerm extractEntry lib/properties/textUnderlineStyle.js
+955 silly gunzTarPerm extractEntry lib/properties/webkitAnimationDirection.js
+956 verbose read json /Users/Admin/.npm/cssom/0.2.5/package/package.json
+957 silly gunzTarPerm extractEntry tests/Feeds/02-atom.js
+958 silly gunzTarPerm extractEntry tests/Feeds/03-rdf.js
+959 silly gunzTarPerm extractEntry lib/properties/textUnderlineMode.js
+960 silly gunzTarPerm extractEntry lib/properties/webkitAnimationDuration.js
+961 silly gunzTarPerm extractEntry src/contextify.cc
+962 silly gunzTarPerm extractEntry test/contextify.js
+963 silly gunzTarPerm extractEntry wscript
+964 silly gunzTarPerm extractEntry tests/Stream/01-basic.json
+965 silly gunzTarPerm extractEntry tests/Stream/02-RSS.json
+966 silly gunzTarPerm extractEntry lib/properties/textUnderlineColor.js
+967 silly gunzTarPerm extractEntry lib/properties/webkitAnimationFillMode.js
+968 silly gunzTarPerm extractEntry tests/Stream/03-Atom.json
+969 silly gunzTarPerm extractEntry tests/Stream/04-RDF.json
+970 silly lockFile 33dc4c60-rs-Admin-npm-cssom-0-2-5-package tar:///Users/Admin/.npm/cssom/0.2.5/package
+971 silly lockFile 33dc4c60-rs-Admin-npm-cssom-0-2-5-package tar:///Users/Admin/.npm/cssom/0.2.5/package
+972 silly gunzTarPerm extractEntry lib/properties/textUnderline.js
+973 silly gunzTarPerm extractEntry lib/properties/webkitAnimationIterationCount.js
+974 silly lockFile 8079e521-dmin-npm-cssom-0-2-5-package-tgz tar:///Users/Admin/.npm/cssom/0.2.5/package.tgz
+975 silly lockFile 8079e521-dmin-npm-cssom-0-2-5-package-tgz tar:///Users/Admin/.npm/cssom/0.2.5/package.tgz
+976 verbose from cache /Users/Admin/.npm/cssom/0.2.5/package/package.json
+977 verbose chmod /Users/Admin/.npm/cssom/0.2.5/package.tgz 644
+978 verbose chown /Users/Admin/.npm/cssom/0.2.5/package.tgz [ 501, 20 ]
+979 silly lockFile c6f46bfa--npmjs-org-cssom-cssom-0-2-5-tgz https://registry.npmjs.org/cssom/-/cssom-0.2.5.tgz
+980 silly lockFile c6f46bfa--npmjs-org-cssom-cssom-0-2-5-tgz https://registry.npmjs.org/cssom/-/cssom-0.2.5.tgz
+981 silly gunzTarPerm extractEntry tests/Stream/05-Attributes.json
+982 silly gunzTarPerm extractEntry tests/Events/08-implicit-close-tags.json
+983 silly gunzTarPerm extractEntry lib/properties/textTransform.js
+984 silly gunzTarPerm extractEntry lib/properties/webkitAnimationName.js
+985 silly lockFile 452affd3-cssom-0-2-5 cssom@0.2.5
+986 silly lockFile 452affd3-cssom-0-2-5 cssom@0.2.5
+987 silly lockFile ff3f1f9f-cssom-0-2-5 cssom@~0.2.5
+988 silly lockFile ff3f1f9f-cssom-0-2-5 cssom@~0.2.5
+989 silly gunzTarPerm extractEntry tests/Events/01-simple.json
+990 silly gunzTarPerm extractEntry tests/Events/03-lowercase_tags.json
+991 silly gunzTarPerm extractEntry lib/properties/textShadow.js
+992 silly gunzTarPerm extractEntry lib/properties/webkitAnimationPlayState.js
+993 silly gunzTarPerm extractEntry tests/Events/04-cdata.json
+994 silly gunzTarPerm extractEntry tests/Events/05-cdata-special.json
+995 silly gunzTarPerm extractEntry lib/properties/textRendering.js
+996 silly gunzTarPerm extractEntry lib/properties/webkitAnimationTimingFunction.js
+997 silly gunzTarPerm extractEntry lib/properties/textOverlineWidth.js
+998 silly gunzTarPerm extractEntry lib/properties/webkitAppearance.js
+999 silly gunzTarPerm extractEntry tests/Events/06-leading-lt.json
+1000 silly gunzTarPerm extractEntry tests/Events/07-self-closing.json
+1001 silly gunzTarPerm extractEntry lib/properties/textOverlineStyle.js
+1002 silly gunzTarPerm extractEntry lib/properties/webkitAspectRatio.js
+1003 silly gunzTarPerm extractEntry tests/Events/02-template.json
+1004 silly gunzTarPerm extractEntry tests/Events/09-attributes.json
+1005 silly gunzTarPerm extractEntry lib/properties/textOverlineMode.js
+1006 silly gunzTarPerm extractEntry lib/properties/webkitBackfaceVisibility.js
+1007 silly gunzTarPerm extractEntry tests/Events/10-crazy-attrib.json
+1008 silly gunzTarPerm extractEntry tests/Events/11-script_in_script.json
+1009 silly gunzTarPerm extractEntry lib/properties/textOverlineColor.js
+1010 silly gunzTarPerm extractEntry lib/properties/webkitBackgroundClip.js
+1011 silly gunzTarPerm extractEntry tests/Events/12-long-comment-end.json
+1012 silly gunzTarPerm extractEntry tests/Events/13-long-cdata-end.json
+1013 silly gunzTarPerm extractEntry lib/properties/textOverline.js
+1014 silly gunzTarPerm extractEntry lib/properties/webkitBackgroundComposite.js
+1015 silly gunzTarPerm extractEntry lib/properties/textOverflow.js
+1016 silly gunzTarPerm extractEntry lib/properties/webkitBackgroundOrigin.js
+1017 silly gunzTarPerm extractEntry tests/Events/14-implicit-open-tags.json
+1018 silly gunzTarPerm extractEntry tests/Documents/Atom_Example.xml
+1019 silly gunzTarPerm extractEntry lib/properties/textLineThroughWidth.js
+1020 silly gunzTarPerm extractEntry lib/properties/webkitBackgroundSize.js
+1021 silly gunzTarPerm extractEntry tests/Documents/Attributes.html
+1022 silly gunzTarPerm extractEntry tests/Documents/Basic.html
+1023 verbose tar unpack /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890281-0.14155217655934393/tmp.tgz
+1024 silly lockFile 34d2a2c8-0281-0-14155217655934393-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890281-0.14155217655934393/package
+1025 verbose lock tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890281-0.14155217655934393/package /Users/Admin/.npm/34d2a2c8-0281-0-14155217655934393-package.lock
+1026 silly lockFile 5f94914e-0281-0-14155217655934393-tmp-tgz tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890281-0.14155217655934393/tmp.tgz
+1027 verbose lock tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890281-0.14155217655934393/tmp.tgz /Users/Admin/.npm/5f94914e-0281-0-14155217655934393-tmp-tgz.lock
+1028 silly gunzTarPerm modes [ '755', '644' ]
+1029 silly gunzTarPerm extractEntry lib/properties/textLineThroughStyle.js
+1030 silly gunzTarPerm extractEntry lib/properties/webkitBorderAfter.js
+1031 silly gunzTarPerm extractEntry tests/Documents/RDF_Example.xml
+1032 silly gunzTarPerm extractEntry tests/Documents/RSS_Example.xml
+1033 silly gunzTarPerm extractEntry package.json
+1034 verbose read json /Users/Admin/.npm/contextify/0.1.6/package/package.json
+1035 silly gunzTarPerm extractEntry README.md
+1036 silly gunzTarPerm extractEntry LICENSE
+1037 silly gunzTarPerm extractEntry lib/properties/textLineThroughMode.js
+1038 silly gunzTarPerm extractEntry lib/properties/webkitBorderAfterColor.js
+1039 silly gunzTarPerm extractEntry lib/properties/textLineThroughColor.js
+1040 silly gunzTarPerm extractEntry lib/properties/webkitBorderAfterStyle.js
+1041 silly gunzTarPerm extractEntry index.js
+1042 silly lockFile ce6f78be-min-npm-contextify-0-1-6-package tar:///Users/Admin/.npm/contextify/0.1.6/package
+1043 silly lockFile ce6f78be-min-npm-contextify-0-1-6-package tar:///Users/Admin/.npm/contextify/0.1.6/package
+1044 silly gunzTarPerm extractEntry lib/properties/textLineThrough.js
+1045 silly gunzTarPerm extractEntry lib/properties/webkitBorderAfterWidth.js
+1046 silly lockFile 49b2fd7c-npm-contextify-0-1-6-package-tgz tar:///Users/Admin/.npm/contextify/0.1.6/package.tgz
+1047 silly lockFile 49b2fd7c-npm-contextify-0-1-6-package-tgz tar:///Users/Admin/.npm/contextify/0.1.6/package.tgz
+1048 verbose from cache /Users/Admin/.npm/contextify/0.1.6/package/package.json
+1049 verbose chmod /Users/Admin/.npm/contextify/0.1.6/package.tgz 644
+1050 verbose chown /Users/Admin/.npm/contextify/0.1.6/package.tgz [ 501, 20 ]
+1051 silly lockFile 7a8ff851--contextify-contextify-0-1-6-tgz https://registry.npmjs.org/contextify/-/contextify-0.1.6.tgz
+1052 silly lockFile 7a8ff851--contextify-contextify-0-1-6-tgz https://registry.npmjs.org/contextify/-/contextify-0.1.6.tgz
+1053 silly gunzTarPerm extractEntry lib/properties/textIndent.js
+1054 silly gunzTarPerm extractEntry lib/properties/webkitBorderBefore.js
+1055 silly lockFile aa4e5e79-contextify-0-1-6 contextify@0.1.6
+1056 silly lockFile aa4e5e79-contextify-0-1-6 contextify@0.1.6
+1057 silly lockFile 39127fdc-contextify-0-1-5 contextify@~0.1.5
+1058 silly lockFile 39127fdc-contextify-0-1-5 contextify@~0.1.5
+1059 silly gunzTarPerm extractEntry lib/properties/textDecoration.js
+1060 silly gunzTarPerm extractEntry lib/properties/webkitBorderBeforeColor.js
+1061 silly gunzTarPerm extractEntry tests/test-httpModule.js
+1062 silly gunzTarPerm extractEntry tests/test-headers.js
+1063 silly gunzTarPerm extractEntry lib/properties/textAnchor.js
+1064 silly gunzTarPerm extractEntry lib/properties/webkitBorderBeforeStyle.js
+1065 silly gunzTarPerm extractEntry lib/properties/textAlign.js
+1066 silly gunzTarPerm extractEntry lib/properties/webkitBorderBeforeWidth.js
+1067 silly gunzTarPerm extractEntry lib/properties/tableLayout.js
+1068 silly gunzTarPerm extractEntry lib/properties/webkitBorderEnd.js
+1069 silly gunzTarPerm extractEntry tests/test-http-signature.js
+1070 silly gunzTarPerm extractEntry tests/run.js
+1071 silly gunzTarPerm extractEntry lib/properties/strokeWidth.js
+1072 silly gunzTarPerm extractEntry lib/properties/webkitBorderEndColor.js
+1073 silly gunzTarPerm extractEntry lib/properties/strokeOpacity.js
+1074 silly gunzTarPerm extractEntry lib/properties/webkitBorderEndStyle.js
+1075 silly gunzTarPerm extractEntry lib/properties/strokeMiterlimit.js
+1076 silly gunzTarPerm extractEntry lib/properties/webkitBorderEndWidth.js
+1077 silly gunzTarPerm extractEntry lib/properties/strokeLinejoin.js
+1078 silly gunzTarPerm extractEntry lib/properties/webkitBorderFit.js
+1079 silly gunzTarPerm extractEntry lib/properties/strokeLinecap.js
+1080 silly gunzTarPerm extractEntry lib/properties/webkitBorderHorizontalSpacing.js
+1081 silly gunzTarPerm extractEntry lib/properties/strokeDashoffset.js
+1082 silly gunzTarPerm extractEntry lib/properties/webkitBorderImage.js
+1083 silly gunzTarPerm extractEntry lib/properties/strokeDasharray.js
+1084 silly gunzTarPerm extractEntry lib/properties/webkitBorderRadius.js
+1085 silly gunzTarPerm extractEntry lib/properties/stroke.js
+1086 silly gunzTarPerm extractEntry lib/properties/webkitBorderStart.js
+1087 silly gunzTarPerm extractEntry lib/properties/stress.js
+1088 silly gunzTarPerm extractEntry lib/properties/webkitBorderStartColor.js
+1089 silly gunzTarPerm extractEntry tests/test-hawk.js
+1090 silly gunzTarPerm extractEntry tests/test-https.js
+1091 silly gunzTarPerm extractEntry lib/properties/stopOpacity.js
+1092 silly gunzTarPerm extractEntry lib/properties/webkitBorderStartStyle.js
+1093 verbose read json /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890261-0.32269736658781767/package/package.json
+1094 silly gunzTarPerm extractEntry lib/properties/stopColor.js
+1095 silly gunzTarPerm extractEntry lib/properties/webkitBorderStartWidth.js
+1096 silly gunzTarPerm extractEntry tests/test-localAddress.js
+1097 silly gunzTarPerm extractEntry tests/test-oauth.js
+1098 silly gunzTarPerm extractEntry lib/properties/src.js
+1099 silly gunzTarPerm extractEntry lib/properties/webkitBorderVerticalSpacing.js
+1100 warn package.json nwmatcher@1.3.1 No readme data.
+1101 silly lockFile 48348fb8-0261-0-32269736658781767-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890261-0.32269736658781767/package
+1102 silly lockFile 48348fb8-0261-0-32269736658781767-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890261-0.32269736658781767/package
+1103 silly lockFile d788753a-0261-0-32269736658781767-tmp-tgz tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890261-0.32269736658781767/tmp.tgz
+1104 silly lockFile d788753a-0261-0-32269736658781767-tmp-tgz tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890261-0.32269736658781767/tmp.tgz
+1105 silly gunzTarPerm extractEntry tests/test-onelineproxy.js
+1106 silly gunzTarPerm extractEntry tests/test-params.js
+1107 verbose from cache /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890261-0.32269736658781767/package/package.json
+1108 verbose tar pack [ '/Users/Admin/.npm/nwmatcher/1.3.1/package.tgz',
+1108 verbose tar pack   '/var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890261-0.32269736658781767/package' ]
+1109 verbose tarball /Users/Admin/.npm/nwmatcher/1.3.1/package.tgz
+1110 verbose folder /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890261-0.32269736658781767/package
+1111 silly lockFile 48348fb8-0261-0-32269736658781767-package tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890261-0.32269736658781767/package
+1112 verbose lock tar:///var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890261-0.32269736658781767/package /Users/Admin/.npm/48348fb8-0261-0-32269736658781767-package.lock
+1113 silly lockFile 4b1e747d--npm-nwmatcher-1-3-1-package-tgz tar:///Users/Admin/.npm/nwmatcher/1.3.1/package.tgz
+1114 verbose lock tar:///Users/Admin/.npm/nwmatcher/1.3.1/package.tgz /Users/Admin/.npm/4b1e747d--npm-nwmatcher-1-3-1-package-tgz.lock
+1115 silly gunzTarPerm extractEntry lib/properties/speechRate.js
+1116 silly gunzTarPerm extractEntry lib/properties/webkitBoxAlign.js
+1117 silly gunzTarPerm extractEntry lib/properties/speakPunctuation.js
+1118 silly gunzTarPerm extractEntry lib/properties/webkitBoxDirection.js
+1119 silly gunzTarPerm extractEntry tests/test-form.js
+1120 silly gunzTarPerm extractEntry tests/test-piped-redirect.js
+1121 info canvas@1.0.3 Failed to exec install script
+1122 info /Users/Admin/Desktop/drawingApp/node_modules/paper/node_modules/canvas unbuild
+1123 verbose from cache /Users/Admin/Desktop/drawingApp/node_modules/paper/node_modules/canvas/package.json
+1124 info preuninstall canvas@1.0.3
+1125 silly gunzTarPerm extractEntry lib/properties/speakNumeral.js
+1126 silly gunzTarPerm extractEntry lib/properties/webkitBoxFlex.js
+1127 info uninstall canvas@1.0.3
+1128 verbose false,/Users/Admin/Desktop/drawingApp/node_modules,/Users/Admin/Desktop/drawingApp/node_modules/paper/node_modules unbuild canvas@1.0.3
+1129 info postuninstall canvas@1.0.3
+1130 silly gunzTarPerm extractEntry tests/test-follow-all.js
+1131 silly gunzTarPerm extractEntry tests/test-pipes.js
+1132 silly gunzTarPerm extractEntry lib/properties/speakHeader.js
+1133 silly gunzTarPerm extractEntry lib/properties/webkitBoxFlexGroup.js
+1134 silly gunzTarPerm extractEntry tests/test-follow-all-303.js
+1135 silly gunzTarPerm extractEntry tests/test-pool.js
+1136 verbose about to build /Users/Admin/Desktop/drawingApp/node_modules/paper
+1137 info /Users/Admin/Desktop/drawingApp/node_modules/paper unbuild
+1138 verbose from cache /Users/Admin/Desktop/drawingApp/node_modules/paper/package.json
+1139 info preuninstall paper@0.9.8
+1140 info uninstall paper@0.9.8
+1141 silly gunzTarPerm extractEntry lib/properties/speak.js
+1142 silly gunzTarPerm extractEntry lib/properties/webkitBoxLines.js
+1143 verbose true,/Users/Admin/Desktop/drawingApp/node_modules,/Users/Admin/Desktop/drawingApp/node_modules unbuild paper@0.9.8
+1144 info postuninstall paper@0.9.8
+1145 silly gunzTarPerm extractEntry tests/test-errors.js
+1146 silly gunzTarPerm extractEntry tests/test-protocol-changing-redirect.js
+1147 silly gunzTarPerm extractEntry lib/properties/size.js
+1148 silly gunzTarPerm extractEntry lib/properties/webkitBoxOrdinalGroup.js
+1149 silly gunzTarPerm extractEntry tests/test-emptyBody.js
+1150 silly gunzTarPerm extractEntry tests/test-proxy.js
+1151 silly gunzTarPerm extractEntry lib/properties/shapeRendering.js
+1152 silly gunzTarPerm extractEntry lib/properties/webkitBoxOrient.js
+1153 silly gunzTarPerm extractEntry lib/properties/right.js
+1154 silly gunzTarPerm extractEntry lib/properties/webkitBoxPack.js
+1155 silly gunzTarPerm extractEntry tests/test-digest-auth.js
+1156 silly gunzTarPerm extractEntry tests/test-qs.js
+1157 error weird error 1
+1158 verbose exit [ 1, true ]
+1159 silly gunzTarPerm extractEntry lib/properties/richness.js
+1160 silly gunzTarPerm extractEntry lib/properties/webkitBoxReflect.js
+1161 silly gunzTarPerm extractEntry tests/test-defaults.js
+1162 silly gunzTarPerm extractEntry tests/test-redirect.js
+1163 silly gunzTarPerm extractEntry lib/properties/resize.js
+1164 silly gunzTarPerm extractEntry lib/properties/webkitBoxShadow.js
+1165 error Error: ENOENT, lstat '/var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890281-0.14155217655934393/package/tests/test-params.js'
+1166 error If you need help, you may report this log at:
+1166 error     <http://github.com/isaacs/npm/issues>
+1166 error or email it to:
+1166 error     <npm-@googlegroups.com>
+1167 error System Darwin 12.4.0
+1168 error command "node" "/usr/local/bin/npm" "install" "paper"
+1169 error cwd /Users/Admin/Desktop/drawingApp/public
+1170 error node -v v0.10.12
+1171 error npm -v 1.2.32
+1172 error path /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890281-0.14155217655934393/package/tests/test-params.js
+1173 error fstream_path /var/folders/lt/z6f77qd134d1lxg8vzhj3z340000gn/T/npm-37549/1373921890281-0.14155217655934393/package/tests/test-params.js
+1174 error fstream_type File
+1175 error fstream_class FileWriter
+1176 error code ENOENT
+1177 error errno 34
+1178 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/writer.js:284:26
+1178 error fstream_stack Object.oncomplete (fs.js:107:15)
+1179 verbose exit [ 34, true ]
