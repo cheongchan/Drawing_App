@@ -1,0 +1,71 @@
+<html>
+<head>
+<script src="http://localhost:8888/socket.io/socket.io.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
+<script type="text/javascript" src="paper.js"></script>
+<script type="text/paperscript" canvas="myCanvas">
+
+// connect to websockets
+var socket = io.connect('http://localhost:8888');
+
+// init a new line
+var myPath;
+
+// starts to draw
+function onMouseDown(event) {
+  myPath = new Path();
+  myPath.strokeColor = 'black';
+  console.log(event);
+  myPath.add(event.point);
+   var newpoint = {
+            x: event.point.x,
+            y: event.point.y,
+            "drawing":true
+};
+  socket.emit('newpoint', {point: newpoint});
+console.log(event.point.x);
+}
+
+
+socket.on('broadcastnewpoint', function(data) {
+  myPath = new Path();
+  myPath.strokeColor = 'black';
+  console.log(data.new.point.x);
+});
+
+function onMouseDrag(event) {
+   var newpoint = {
+            x: event.point.x,
+            y: event.point.y
+    };
+  socket.emit('newpoint', {point:newpoint});
+  myPath.add(event.point);
+
+}
+
+function onMouseUp(event) {
+  myPath.add(event.point);
+}
+
+function S4() {
+      return (((1+Math.random())*0x10000)|0).toString(16).substring(1); 
+}
+
+// then to call it, plus stitch in '4' in the third group
+guid = (S4() + S4() + "-" + S4() + "-4" + S4().substr(0,3) + "-" + S4() + "-" + S4() + S4() + S4()).toLowerCase();
+
+
+</script>
+<style>
+#myCanvas {
+  border:solid black 1px;
+}
+</style>
+</head>
+<body>
+ <h1>Adding points to lines : Half the battle</h2>
+   <canvas id="myCanvas" resize="true"></canvas>
+
+
+</body>
+</html>
