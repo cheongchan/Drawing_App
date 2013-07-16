@@ -1,3 +1,36 @@
+.drawing {
+	position: absolute;
+	left: 0px;
+	top:0px;
+	background-color: #FF8C62;
+	margin-width: 0px;
+	padding: 0px;
+	border: 0px;
+	width:25%;
+	min-width: 250px;
+}
+
+#title {
+	left: 50px;
+}
+
+#title a:link {
+	color: #432449;
+	text-decoration: none;
+	font-family: cursive;
+}
+
+#title a:visited {
+	color: #432449; 
+}
+
+#title a:hover {
+	color: #F5C396;
+	text-decoration: none;
+}
+
 #myCanvas {
   border:solid black 1px;
+  background-color: white;
+  bottom: 0px;
 }
