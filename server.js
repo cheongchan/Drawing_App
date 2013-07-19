@@ -8,13 +8,14 @@ var drawing_room = io.listen(app);
 
 drawing_room.sockets.on('connection', function(socket) {
 
-  console.log(socket.id);
-
-  socket.on('newpoint', function(data) {
-    socket.broadcast.emit('broadcastnewpoint', {new: data});
+  socket.on('onMouseDown', function(data) {
+    socket.broadcast.emit('onMouseDown', data);
   });
-
-  socket.on('disconnect', function() {
+  socket.on('onMouseDrag', function(data) {
+    socket.broadcast.emit('onMouseDrag', data);
+  });
+  socket.on('onMouseUp', function(data) {
+    socket.broadcast.emit('onMouseUp', data);
   });
 
 });

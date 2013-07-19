@@ -4,57 +4,118 @@
   <title>Drawing</title>
   <%= stylesheet_link_tag "application", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-<script type="text/paperscript", canvas="myCanvas">
-var socket = io.connect('http://localhost:8888');
+  <script type="text/paperscript", canvas="myCanvas">
 
-// init a new line
-var myPath;
 
-// starts to draw
-function onMouseDown(event) {
-  myPath = new Path();
-  myPath.strokeColor = 'black';
-  console.log(event);
-  myPath.add(event.point);
-   var newpoint = {
-            x: event.point.x,
-            y: event.point.y,
-            drawing:true
-};
-  socket.emit('newpoint', {point: newpoint});
-console.log(event.point.x);
+//
+// Initiate socket.io
+var socket = io.connect('172.27.129.91:8888');
+
+
+//
+// Define global variables
+//
+var currentPaths = [];
+var userId = Math.round($.now()*Math.random());
+
+
+//
+// Define reusable application wide functions
+//
+function extractPoints(event) {
+  return [event.point.x, event.point.y];
+}
+
+function filterPaths(userId) {
+  var results = currentPaths.filter( function(path) {
+    return (path.userId == userId && (path.drawing == 0 || path.drawing == 1));
+  });
+    return results[0];
+}
+
+function drawEvent(data) {
+  if (data.drawing == 0) {
+    var path = new Path();
+    path.strokeColor = 'black';
+    currentPaths.push({
+      userId: data.userId,
+      drawing: data.drawing,
+      path: path,
+      pathId: data.pathId
+    });
+  }
+  else if (data.drawing == 1) {
+
+    var userDrawObject = filterPaths(data.userId);
+    var path = userDrawObject.path;
+    path.strokeColor = 'black';
+    path.add(new Point(data.points));
+    view.draw();
+
+    userDrawObject.drawing = data.drawing;
+  }
+  else if (data.drawing == 2) {
+    var userDrawObject = filterPaths(data.userId);
+    var path = userDrawObject.path;
+    userDrawObject.drawing = data.drawing;
+  }
+}
+
+function emitPoint(eventName, data) {
+   socket.emit(eventName, data);
 }
 
 
-var mySecondPath = new Path();
+//
+// Define local event functions
+//
+function onMouseDown(event) {
 
-socket.on('broadcastnewpoint', function(data) {
-  mySecondPath.strokeColor = 'black';
-  console.log("x: " + data.new.point.x + " y: " + data.new.point.y );
-  mySecondPath.add([data.new.point.x, data.new.point.y]);
-  view.draw();
-});
+  var uniquePath = Math.round($.now()*Math.random());
+  var points = extractPoints(event);
+  var drawing = 0;
+
+  var data = {
+    userId: userId,
+    drawing: drawing,
+    points: points,
+    pathId: uniquePath
+  };
+
+  drawEvent(data);
+  emitPoint('onMouseDown', data);
+
+}
 
 function onMouseDrag(event) {
-   var newpoint = {
-            x: event.point.x,
-            y: event.point.y
-    };
-  socket.emit('newpoint', {point:newpoint});
-  myPath.add(event.point);
+  var points = extractPoints(event);
+  var data = { drawing: 1, points: points, userId: userId};
 
+  drawEvent(data);
+  emitPoint('onMouseDrag', data);
 }
 
 function onMouseUp(event) {
-  myPath.add(event.point);
+  var data = { drawing: 2, userId: userId };
+  drawEvent(data);
+  emitPoint('onMouseUp', data);
 }
 
-function S4() {
-      return (((1+Math.random())*0x10000)|0).toString(16).substring(1); 
-}
 
-// then to call it, plus stitch in '4' in the third group
-guid = (S4() + S4() + "-" + S4() + "-4" + S4().substr(0,3) + "-" + S4() + "-" + S4() + S4() + S4()).toLowerCase();
+//
+// All emiter functions
+//
+socket.on('onMouseDown', function(data){
+  drawEvent(data);
+});
+
+socket.on('onMouseDrag', function(data){
+  drawEvent(data);
+});
+
+socket.on('onMouseUp', function(data){
+  drawEvent(data);
+});
 
 </script>
   <%= csrf_meta_tags %>
