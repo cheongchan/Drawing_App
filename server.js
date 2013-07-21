@@ -1,6 +1,6 @@
 var io = require('socket.io'),
   connect = require('connect');
-var paper = require('paper');
+  //var paper = require('paper');
 
 var app = connect().use(connect.static('public')).listen(8888);
 
