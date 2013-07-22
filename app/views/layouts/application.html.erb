@@ -9,7 +9,7 @@
 
 //
 // Initiate socket.io
-var socket = io.connect('172.27.82.165:8888');
+var socket = io.connect('172.27.82.165:8888/drawing1');
 
 
 //
@@ -99,6 +99,9 @@ function onMouseUp(event) {
   var data = { drawing: 2, userId: userId };
   drawEvent(data);
   emitPoint('onMouseUp', data);
+  picture1 = project.exportJSON();
+  console.log(picture1);
+  emitPoint('export', picture1);
 }
 
 
@@ -117,7 +120,140 @@ socket.on('onMouseUp', function(data){
   drawEvent(data);
 });
 
+socket.on('import', function(data){
+  project.importJSON(data);
+  console.log('IMPORT_____');
+  console.log(project);
+});
+
 </script>
+
+<!-- //BREAK -->
+
+<script type="text/paperscript", canvas="myCanvas2">
+
+//
+// Initiate socket.io
+var socket = io.connect('172.27.82.165:8888/drawing2');
+
+
+//
+// Define global variables
+//
+var currentPaths = [];
+var userId = Math.round($.now()*Math.random());
+
+
+//
+// Define reusable application wide functions
+//
+function extractPoints(event) {
+  return [event.point.x, event.point.y];
+}
+
+function filterPaths(userId) {
+  var results = currentPaths.filter( function(path) {
+    return (path.userId == userId && (path.drawing == 0 || path.drawing == 1));
+  });
+    return results[0];
+}
+
+function drawEvent(data) {
+  if (data.drawing == 0) {
+    var path = new Path();
+    path.strokeColor = 'black';
+    currentPaths.push({
+      userId: data.userId,
+      drawing: data.drawing,
+      path: path,
+      pathId: data.pathId
+    });
+  }
+  else if (data.drawing == 1) {
+
+    var userDrawObject = filterPaths(data.userId);
+    var path = userDrawObject.path;
+    path.strokeColor = 'black';
+    path.add(new Point(data.points));
+    view.draw();
+
+    userDrawObject.drawing = data.drawing;
+  }
+  else if (data.drawing == 2) {
+    var userDrawObject = filterPaths(data.userId);
+    var path = userDrawObject.path;
+    userDrawObject.drawing = data.drawing;
+  }
+}
+
+function emitPoint(eventName, data) {
+   socket.emit(eventName, data);
+}
+
+
+//
+// Define local event functions
+//
+function onMouseDown(event) {
+
+  var uniquePath = Math.round($.now()*Math.random());
+  var points = extractPoints(event);
+  var drawing = 0;
+
+  var data = {
+    userId: userId,
+    drawing: drawing,
+    points: points,
+    pathId: uniquePath
+  };
+
+  drawEvent(data);
+  emitPoint('onMouseDown', data);
+
+}
+
+function onMouseDrag(event) {
+  var points = extractPoints(event);
+  var data = { drawing: 1, points: points, userId: userId};
+
+  drawEvent(data);
+  emitPoint('onMouseDrag', data);
+}
+
+function onMouseUp(event) {
+  var data = { drawing: 2, userId: userId };
+  drawEvent(data);
+  emitPoint('onMouseUp', data);
+  var picture2 = project.exportJSON();
+  console.log(picture2);
+  emitPoint('export', picture2);
+}
+
+
+//
+// All emiter functions
+//
+socket.on('onMouseDown', function(data){
+  drawEvent(data);
+});
+
+socket.on('onMouseDrag', function(data){
+  drawEvent(data);
+});
+
+socket.on('onMouseUp', function(data){
+  drawEvent(data);
+});
+
+socket.on('import', function(data){
+  project.importJSON(data);
+  console.log('IMPORT_____');
+  console.log(project);
+});
+
+
+</script>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
