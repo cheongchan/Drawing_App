@@ -4,7 +4,6 @@
   // Initiate socket.io
   var socket = io.connect('http://localhost:8888');
   socket.emit('channel', channel_id);
-  console.log(channel_id);
 
   //
   // Define global variables
@@ -16,6 +15,12 @@
 
     var canvas = document.getElementById(channel_id);
     paper.setup(canvas);
+
+    socket.on('import', function(data){
+      paper.project.importJSON(data);
+      //not sure if this is working
+      paper.view.draw;    
+    });
  
 
     var tool = new paper.Tool();
@@ -106,14 +111,10 @@
       var data = { channel: channel_id, drawing: 2, userId: userId };
       drawEvent(data);
       emitPoint("onMouseUp", data);
-    }
-
-
-    //function for exporting jason and sending to server
-    function exportJASON() {
-      console.log(paper.project.exportJSON());
-      var picture = paper.project.exportJSON();
-      socket.emit("export", picture);
+      //testing export
+      var pictureJSON = paper.project.exportJSON();
+      var picture = {channel: channel_id, JSON: pictureJSON}
+      socket.emit("update", picture);
     }
 
     //
