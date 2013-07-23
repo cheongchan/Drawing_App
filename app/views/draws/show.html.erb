@@ -1,19 +1,148 @@
-<p id="notice"><%= notice %></p>
+<script type="text/javascript">
+  var channel_id = <%= @draw.id %>
+  //
+  // Initiate socket.io
+  var socket = io.connect('http://localhost:8888');
+  socket.emit('channel', channel_id);
+  console.log(channel_id);
 
-<p>
-  <strong>Drawing url:</strong>
-  <%= @draw.drawing_url %>
-</p>
+  //
+  // Define global variables
+  //
+  var currentPaths = [];
+  var userId = Math.round($.now()*Math.random());
 
-<p>
-  <strong>Privacy:</strong>
-  <%= @draw.privacy %>
-</p>
+  $(document).ready(function(){
 
-<p>
-  <strong>Views:</strong>
-  <%= @draw.views %>
-</p>
+    var canvas = document.getElementById(channel_id);
+    paper.setup(canvas);
+ 
 
-<%= link_to 'Edit', edit_draw_path(@draw) %> |
+    var tool = new paper.Tool();
+
+    //
+    // Define reusable application wide functions
+    //
+    function extractPoints(event) {
+      return [event.point.x, event.point.y];
+    }
+
+    //function to find the valid path to add to
+    function filterPaths(userId) {
+      var results = currentPaths.filter( function(path) {
+        return (path.userId == userId && (path.drawing == 0 || path.drawing == 1));
+      });
+        return results[0];
+    }
+
+    //function that keeps track of which path it is adding to
+    //updates current paths locally
+    function drawEvent(data) {
+      if (data.drawing == 0) {
+        var path = new paper.Path();
+        path.strokeColor = 'black';
+        paper.view.draw();
+        currentPaths.push({
+          userId: data.userId,
+          drawing: data.drawing,
+          path: path,
+          pathId: data.pathId
+        });
+      }
+      else if (data.drawing == 1) {
+
+        var userDrawObject = filterPaths(data.userId);
+        var path = userDrawObject.path;
+        path.strokeColor = 'black';
+        paper.view.draw();
+
+        path.add(new paper.Point(data.points));
+        paper.view.draw();
+
+        userDrawObject.drawing = data.drawing;
+      }
+      else if (data.drawing == 2) {
+        var userDrawObject = filterPaths(data.userId);
+        var path = userDrawObject.path;
+        userDrawObject.drawing = data.drawing;
+      }
+    }
+
+    function emitPoint(eventName, data) {
+       socket.emit(eventName, data);
+    }
+
+
+    //
+    // Define local event functions
+    //
+    tool.onMouseDown = function (event) {
+
+      var uniquePath = Math.round($.now()*Math.random());
+      var points = extractPoints(event);
+      var drawing = 0;
+
+      var data = {
+        channel: channel_id,
+        userId: userId,
+        drawing: drawing,
+        points: points,
+        pathId: uniquePath
+      };
+
+      drawEvent(data);
+      emitPoint("onMouseDown", data);
+
+    }
+
+    tool.onMouseDrag = function (event) {
+      var points = extractPoints(event);
+      var data = { channel: channel_id,drawing: 1, points: points, userId: userId};
+      drawEvent(data);
+      emitPoint("onMouseDrag", data);
+    }
+
+    tool.onMouseUp = function(event) {
+      var data = { channel: channel_id, drawing: 2, userId: userId };
+      drawEvent(data);
+      emitPoint("onMouseUp", data);
+    }
+
+
+    //function for exporting jason and sending to server
+    function exportJASON() {
+      console.log(paper.project.exportJSON());
+      var picture = paper.project.exportJSON();
+      socket.emit("export", picture);
+    }
+
+    //
+    // All emiter functions
+    //
+    socket.on("onMouseDown"+channel_id, function(data){
+      drawEvent(data);
+    });
+
+    socket.on("onMouseDrag"+channel_id, function(data){
+      drawEvent(data);
+    });
+
+    socket.on("onMouseUp"+channel_id, function(data){
+      drawEvent(data);
+    });
+
+});
+
+</script>
+<div class="drawing">
+	<div class="top-bar">
+		<div id="title">
+			<h1><%= link_to("Gestalt Illusion", root_path) %></h1>
+		</div>	
+	</div>
+</div>
+<div class="canvas">
+   <canvas id=<%=@draw.id%>  width="2000" height="1000"></canvas>
+</div>
+
 <%= link_to 'Back', draws_path %>

@@ -1,26 +1,25 @@
-<h1>Listing draws</h1>
+<div class="drawing">
+  <div class="top-bar">
+    <div id="title">
+      <h1><%= link_to("Gestalt Illusion", root_path) %></h1>
+    </div>  
+  </div>
+</div>  
 
+
+<div class="list">
 <table>
   <thead>
     <tr>
-      <th>Drawing url</th>
-      <th>Privacy</th>
-      <th>Views</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Canvas</th>
     </tr>
   </thead>
 
   <tbody>
     <% @draws.each do |draw| %>
       <tr>
-        <td><%= draw.drawing_url %></td>
-        <td><%= draw.privacy %></td>
-        <td><%= draw.views %></td>
+        <td><%= draw.canvas_name %></td>
         <td><%= link_to 'Show', draw %></td>
-        <td><%= link_to 'Edit', edit_draw_path(draw) %></td>
-        <td><%= link_to 'Destroy', draw, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -29,3 +28,4 @@
 <br>
 
 <%= link_to 'New Draw', new_draw_path %>
+</div>

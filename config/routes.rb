@@ -3,7 +3,7 @@ Drawing::Application.routes.draw do
   resources :users
 
   resources :draws
-  root to: 'draws#draws'
+  root to: 'draws#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

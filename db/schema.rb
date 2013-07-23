@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130716034149) do
+ActiveRecord::Schema.define(version: 20130723191522) do
 
   create_table "draws", force: true do |t|
     t.string   "drawing_url"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20130716034149) do
     t.integer  "views"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "canvas_name"
   end
 
   create_table "users", force: true do |t|

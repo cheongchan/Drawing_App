@@ -72,6 +72,6 @@ class DrawsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def draw_params
-      params.require(:draw).permit(:drawing_url, :privacy, :views)
+      params.require(:draw).permit(:drawing_url, :privacy, :views, :canvas_name)
     end
 end

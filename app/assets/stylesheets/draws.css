@@ -10,6 +10,12 @@
 	min-width: 250px;
 }
 
+.list {
+	position: absolute;
+	left: 50px;
+	top:100px;
+}
+
 #title {
 	left: 50px;
 }
@@ -29,8 +35,7 @@
 	text-decoration: none;
 }
 
-#myCanvas {
-  border:solid black 1px;
+.canvas {
   background-color: white;
   bottom: 0px;
 }
