@@ -2,7 +2,13 @@
   var channel_id = <%= @draw.id %>
   //
   // Initiate socket.io
-  var socket = io.connect('http://localhost:8888');
+  var socket = io.connect('http://172.27.129.91:8888');
+
+
+  // Define all tools globally
+  var gradientTool = new paper.Tool();
+  var hueChanger = new paper.Tool();
+  var tool = new paper.Tool();
 
   //
   // Define global variables
@@ -16,11 +22,8 @@
     paper.setup(canvas);
 
     socket.on('import', function(data){
-      paper.project.importJSON(data);    
+      paper.project.importJSON(data);
     });
- 
-
-    var tool = new paper.Tool();
 
     //
     // Define reusable application wide functions
@@ -37,13 +40,53 @@
         return results[0];
     }
 
+    function returnProperPathVariable(data) {
+      switch (data.tool)
+      {
+        case 1:
+          var path = new paper.Path();
+          path.strokeColor = 'black';
+          return path;
+        case 2:
+           var path = new paper.Path();
+           path.strokeColor = {
+                  hue: Math.random() * 360,
+                  saturation: 1,
+                  brightness: 1
+           };
+           path.strokeWidth = 20;
+           path.strokeCap = 'round';
+           return path;
+        case 3:
+          var path = new paper.Path();
+
+          var topLeft = [(data.points[0] - (Math.random() * 180)), (data.points[1] - (Math.random() * 180))];
+          var bottomRight = [(data.points[0] + (Math.random() * 180)), (data.points[1] + (Math.random() * 180))];
+
+
+          path.strokeColor = {
+              gradient: {
+              stops: ['yellow', 'red', 'blue']
+              },
+          origin: topLeft,
+          destination: bottomRight
+          };
+
+          path.strokeWidth = 30;
+          path.strokeCap = 'round';
+          return path;
+      }
+    }
+
     //function that keeps track of which path it is adding to
     //updates current paths locally
     function drawEvent(data) {
       if (data.drawing == 0) {
-        var path = new paper.Path();
-        path.strokeColor = 'black';
+
+        var path = returnProperPathVariable(data);
+
         paper.view.draw();
+
         currentPaths.push({
           userId: data.userId,
           drawing: data.drawing,
@@ -55,7 +98,6 @@
 
         var userDrawObject = filterPaths(data.userId);
         var path = userDrawObject.path;
-        path.strokeColor = 'black';
         paper.view.draw();
 
         path.add(new paper.Point(data.points));
@@ -89,7 +131,8 @@
         userId: userId,
         drawing: drawing,
         points: points,
-        pathId: uniquePath
+        pathId: uniquePath,
+        tool: 1
       };
 
       drawEvent(data);
@@ -99,13 +142,13 @@
 
     tool.onMouseDrag = function (event) {
       var points = extractPoints(event);
-      var data = { channel: channel_id,drawing: 1, points: points, userId: userId};
+      var data = { channel: channel_id,drawing: 1, points: points, userId: userId, tool:1};
       drawEvent(data);
       emitPoint("onMouseDrag", data);
     }
 
     tool.onMouseUp = function(event) {
-      var data = { channel: channel_id, drawing: 2, userId: userId };
+      var data = { channel: channel_id, drawing: 2, userId: userId, tool:1 };
       drawEvent(data);
       emitPoint("onMouseUp", data);
       //testing export
@@ -113,6 +156,87 @@
       var picture = {channel: channel_id, JSON: pictureJSON}
       socket.emit("update", picture);
     }
+
+
+
+    // Hue Changing Tool
+    hueChanger.onMouseDown = function(event) {
+
+          var uniquePath = Math.round($.now()*Math.random());
+          var points = extractPoints(event);
+          var drawing = 0;
+
+          var data = {
+              channel: channel_id,
+              userId: userId,
+              drawing: drawing,
+              points: points,
+              pathId: uniquePath,
+              tool: 2
+          };
+
+      drawEvent(data);
+      emitPoint("onMouseDown", data);
+
+    }
+
+    hueChanger.onMouseDrag = function(event) {
+          var points = extractPoints(event);
+          var data = { channel: channel_id, drawing: 1, points: points, userId: userId, tool:2};
+          drawEvent(data);
+          emitPoint("onMouseDrag", data);
+    }
+
+    hueChanger.onMouseUp = function(event) {
+       var data = { channel: channel_id, drawing: 2, userId: userId, tool:2 };
+      drawEvent(data);
+      emitPoint("onMouseUp", data);
+      //testing export
+      var pictureJSON = paper.project.exportJSON();
+      var picture = {channel: channel_id, JSON: pictureJSON}
+      socket.emit("update", picture);
+    }
+
+
+   // Gradient Tool
+    gradientTool.onMouseDown = function(event) {
+      var uniquePath = Math.round($.now()*Math.random());
+      var points = extractPoints(event);
+      var drawing = 0;
+
+      var data = {
+          channel: channel_id,
+          userId: userId,
+          drawing: drawing,
+          points: points,
+          pathId: uniquePath,
+          tool: 3
+      };
+
+      drawEvent(data);
+      emitPoint("onMouseDown", data);
+
+    }
+
+    gradientTool.onMouseDrag = function(event) {
+          var points = extractPoints(event);
+          var data = { channel: channel_id, drawing: 1, points: points, userId: userId, tool:3};
+          drawEvent(data);
+          emitPoint("onMouseDrag", data);
+    }
+
+     gradientTool.onMouseUp = function(event) {
+       var data = { channel: channel_id, drawing: 2, userId: userId, tool:3 };
+      drawEvent(data);
+      emitPoint("onMouseUp", data);
+      //testing export
+      var pictureJSON = paper.project.exportJSON();
+      var picture = {channel: channel_id, JSON: pictureJSON}
+      socket.emit("update", picture);
+    }
+
+
+
 
     //
     // All emiter functions
@@ -130,7 +254,7 @@
     });
 
 });
-    
+
 //Conversation add with SVG
 function SVGadd(){
   var pictureSVG = paper.project.exportSVG();
@@ -150,16 +274,13 @@ socket.on("SVGadd"+channel_id, function(data){
 });
 
 </script>
-<div class="drawing">
-	<div class="top-bar">
 		<div id="title">
-			<h1><%= link_to("Gestalt Illusion", root_path) %></h1>
-		</div>	
-	</div>
-</div>
-<div class="canvas">
-   <canvas id=<%=@draw.id%>  width="1000" height="700"></canvas>
-</div>
+			<h1><%= link_to("Bulletin Board", root_path) %></h1>
+    </div>	
+    <a href="javascript:tool.activate();">Black Line</a>
+    <a href="javascript:hueChanger.activate();">Hued Line</a>
+    <a href="javascript:gradientTool.activate();">Gradient Line</a>
+   <canvas id=<%=@draw.id%>></canvas>
 
 <hr>
 
