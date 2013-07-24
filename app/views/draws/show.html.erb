@@ -3,6 +3,7 @@
   //
   // Initiate socket.io
   var socket = io.connect('http://172.27.129.91:8888');
+  socket.emit('channel', channel_id);
 
 
   // Define all tools globally
