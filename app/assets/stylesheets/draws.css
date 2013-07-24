@@ -36,6 +36,9 @@
 }
 
 .canvas {
-  background-color: white;
-  bottom: 0px;
+  background-color: #f5f5f5;
+}
+
+svg {
+  background-color: #f5f5f5;
 }
