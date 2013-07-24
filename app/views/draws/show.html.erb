@@ -132,20 +132,32 @@
 });
     
 //Conversation add with SVG
+//exports to SVG and prepends to page
 function SVGadd(){
   var pictureSVG = paper.project.exportSVG();
-  console.log(pictureSVG);
-  $('.previous').prepend(pictureSVG);
+  var picture = $('.previous').prepend(pictureSVG).html();
+  return picture;
 };
 
+//emits to nodejs server and rails server
 function SVGemit(){
-  SVGadd();
+  svg = SVGadd();
   var SVGpicture = {channel: channel_id};
+  //to socket io server
   socket.emit("SVGadd", SVGpicture);
+  console.log(svg.toString());
+  //to rails server
+  var image_data = {'image' : {'svg': svg, 'draws_id': channel_id+""}};
+  console.log(image_data);
+  $.ajax({
+    type: 'POST',
+    url: "/images",
+    data: image_data
+  });
 };
 
+//listens for nodejs
 socket.on("SVGadd"+channel_id, function(data){
-  console.log(data);
   SVGadd();
 });
 
@@ -164,8 +176,9 @@ socket.on("SVGadd"+channel_id, function(data){
 <hr>
 
 <button onclick="SVGemit()">Submit Picture</button>
-<%= link_to 'Back', draws_path %>
 
+
+<%= link_to 'Back', draws_path %>
 <div class="previous">
 
 </div>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Svg:</strong>
+  <%= @image.svg %>
+</p>
+
+<p>
+  <strong>Draws:</strong>
+  <%= @image.draws_id %>
+</p>
+
+<%= link_to 'Edit', edit_image_path(@image) %> |
+<%= link_to 'Back', images_path %>

@@ -1,4 +1,6 @@
 Drawing::Application.routes.draw do
+  resources :images
+
   devise_for :users
   resources :users
 
