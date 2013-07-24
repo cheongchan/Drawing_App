@@ -9,7 +9,6 @@
   var gradientTool = new paper.Tool();
   var hueChanger = new paper.Tool();
   var tool = new paper.Tool();
-  var dottedLine  = new paper.Tool();
 
   //
   // Define global variables
@@ -75,13 +74,6 @@
 
           path.strokeWidth = 30;
           path.strokeCap = 'round';
-          return path;
-       case 4:
-          path = new paper.Path();
-          path.strokeColor = '#1A1A00';
-          path.strokeWidth = 10;
-          path.strokeCap = 'round';
-          path.dashArray = [10, 24];
           return path;
       }
     }
@@ -245,43 +237,6 @@
 
 
 
-    // Dotted Line Tool
-    dottedLine.onMouseDown = function(event) {
-      var uniquePath = Math.round($.now()*Math.random());
-      var points = extractPoints(event);
-      var drawing = 0;
-
-      var data = {
-          channel: channel_id,
-          userId: userId,
-          drawing: drawing,
-          points: points,
-          pathId: uniquePath,
-          tool: 4
-      };
-
-      drawEvent(data);
-      emitPoint("onMouseDown", data);
-
-    }
-
-    dottedLine.onMouseDrag = function(event) {
-          var points = extractPoints(event);
-          var data = { channel: channel_id, drawing: 1, points: points, userId: userId, tool:4};
-          drawEvent(data);
-          emitPoint("onMouseDrag", data);
-    }
-
-     dottedLine.onMouseUp = function(event) {
-       var data = { channel: channel_id, drawing: 2, userId: userId, tool:4};
-      drawEvent(data);
-      emitPoint("onMouseUp", data);
-      //testing export
-      var pictureJSON = paper.project.exportJSON();
-      var picture = {channel: channel_id, JSON: pictureJSON}
-      socket.emit("update", picture);
-    }
-
 
     //
     // All emiter functions
@@ -301,19 +256,22 @@
 });
 
 //Conversation add with SVG
+//exports to SVG and prepends to page
 function SVGadd(){
   var pictureSVG = paper.project.exportSVG();
-  console.log(pictureSVG);
-  $('.previous').prepend(pictureSVG);
+  var picture = $('.previous').prepend(pictureSVG).html();
+  return picture;
 };
 
+//emits to nodejs server and rails server
 function SVGemit(){
-  SVGadd();
+  svg = SVGadd();
   var SVGpicture = {channel: channel_id};
+  //to socket io server
   socket.emit("SVGadd", SVGpicture);
   console.log(channel_id);
   //to rails server
-  var image_data = {'image' : {'svg': svg, 'draw_id': channel_id+""}};
+  var image_data = {'image' : {'svg': svg, 'draws_id': channel_id+""}};
   $.ajax({
     type: 'POST',
     url: "/images",
@@ -321,8 +279,8 @@ function SVGemit(){
   });
 };
 
+//listens for nodejs
 socket.on("SVGadd"+channel_id, function(data){
-  console.log(data);
   SVGadd();
 });
 
@@ -333,19 +291,14 @@ socket.on("SVGadd"+channel_id, function(data){
     <a href="javascript:tool.activate();">Black Line</a>
     <a href="javascript:hueChanger.activate();">Hued Line</a>
     <a href="javascript:gradientTool.activate();">Gradient Line</a>
-    <a href="javascript:dottedLine.activate();">Dotted Line</a>
    <canvas id=<%=@draw.id%>></canvas>
 
 <hr>
 
 <button onclick="SVGemit()">Submit Picture</button>
-<%= link_to 'Back', draws_path %>
 
+
+<%= link_to 'Back', draws_path %>
 <div class="previous">
-  <% @images.each do |image| %>
-      <tr>
-        <td><%= image.svg.html_safe %></td>
-      </tr>
-    <% end %>
 
 </div>

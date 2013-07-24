@@ -13,7 +13,7 @@ class DrawsController < ApplicationController
   # GET /draws/1
   # GET /draws/1.json
   def show
-    @images = @draw.images
+    @images = @draw.images.reverse
   end
 
   # GET /draws/new
