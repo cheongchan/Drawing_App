@@ -269,10 +269,9 @@ function SVGemit(){
   var SVGpicture = {channel: channel_id};
   //to socket io server
   socket.emit("SVGadd", SVGpicture);
-  console.log(svg.toString());
+  console.log(channel_id);
   //to rails server
-  var image_data = {'image' : {'svg': svg, 'draws_id': channel_id+""}};
-  console.log(image_data);
+  var image_data = {'image' : {'svg': svg, 'draw_id': channel_id+""}};
   $.ajax({
     type: 'POST',
     url: "/images",
@@ -301,5 +300,10 @@ socket.on("SVGadd"+channel_id, function(data){
 
 <%= link_to 'Back', draws_path %>
 <div class="previous">
+  <% @images.each do |image| %>
+      <tr>
+        <td><%= image.svg.html_safe %></td>
+      </tr>
+    <% end %>
 
 </div>
