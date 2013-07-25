@@ -14,4 +14,4 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require socket.io
-//= require paper
+//= require paper-full.min
