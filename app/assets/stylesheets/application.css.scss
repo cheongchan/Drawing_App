@@ -75,3 +75,46 @@ canvas {
 svg {
   background-color: #f5f5f5;
 }
+
+
+#picture-title {
+  position: fixed;
+  bottom:30px;
+  left:30px;
+
+  font-size: 10pt;
+
+  height:20px;
+  width: 75px;
+  background-color:transparent;
+  color:black;
+}
+
+#picture-title input[type=text] {
+  border: 2px solid black;
+  padding: 3px;
+  background: transparent;
+  font-family: 'apercu-medium';
+  color:black;
+  font-size: 13px;
+  outline: none;
+}
+
+#submit-picture {
+
+  position:fixed;
+  right: 30px;
+  bottom: 18px;
+
+  font-family: 'apercu-medium';
+  padding:5px 10px;
+  background-color:transparent;
+  border: 2px solid black;
+  color:black;
+  text-decoration:none;
+}
+
+#submit-picture:hover {
+  background:black;
+  color:#f5f5f5;
+}

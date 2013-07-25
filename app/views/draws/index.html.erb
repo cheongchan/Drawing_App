@@ -2,7 +2,7 @@
   var channel_id = 'main';
   //
   // Initiate socket.io
-  var socket = io.connect('http://172.27.129.91:8888');
+  var socket = io.connect('http://localhost:8888');
   socket.emit('channel', channel_id);
 
 
@@ -432,10 +432,11 @@ socket.on("titleSubmit"+channel_id, function(data){
   <canvas id='main' resize="true"></canvas>
   <div id="connectCounter"></div>
 
-<form id="picture-title">
-<input type="text" name="Title" value="Title" onblur='titleSubmit();'>
-</form>
-<button id='submit-picture' onclick="SVGemit()">Publish Picture to Gallery</button>
+  <form id="picture-title">
+      <input type="text" name="Title" value="Title" onblur='titleSubmit();'>
+  </form>
 
-<div class="temp">
+  <button id='submit-picture' onclick="SVGemit()">Publish Drawing</button>
+
+  <div class="temp">
 </div>
