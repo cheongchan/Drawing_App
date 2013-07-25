@@ -402,7 +402,8 @@ socket.on("SVGadd"+channel_id, function(data){
 <div id="nav_hide">
   <div class="header">Canvases</div>
     <% @draws.each do |draw| %>
-        <div><%= link_to draw.canvas_name, draw %></div>
+      <div><%= link_to draw.canvas_name, draw %></div> 
+       <%= link_to 'New Canvas', new_draw_path %>
     <% end %>
 
 
@@ -414,6 +415,6 @@ socket.on("SVGadd"+channel_id, function(data){
     <a href="javascript:blackWhite.activate();">Clone</a><br/>
   </div>
    </nav>
-
   <canvas id='main' ></canvas>
+
 

@@ -28,10 +28,6 @@ drawing_room
     socket.broadcast.emit("onMouseUp"+data.channel, data);
   });
 
-  socket.on('SVGadd',function(data){
-    socket.broadcast.emit("SVGadd"+data.channel, 'hello');
-  });
-
   //gets JSON data and puts it into variable
   socket.on('update',function(data){
     picture[data.channel] = data.JSON;

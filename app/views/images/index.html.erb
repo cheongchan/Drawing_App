@@ -1,11 +1,10 @@
-<h1>Listing images</h1>
+<h1>Gallery</h1>
 
 <table>
   <thead>
     <tr>
       <th>Svg</th>
-      <th>Draws</th>
-      <th></th>
+      <th>Title</th>
       <th></th>
       <th></th>
     </tr>
@@ -15,15 +14,11 @@
     <% @images.each do |image| %>
       <tr>
         <td><%= image.svg.html_safe %></td>
-        <td><%= image.draw_id %></td>
-        <td><%= link_to 'Show', image %></td>
-        <td><%= link_to 'Edit', edit_image_path(image) %></td>
-        <td><%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= image.title %></td>
+        <td><%= link_to 'Enlarge', image %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Image', new_image_path %>

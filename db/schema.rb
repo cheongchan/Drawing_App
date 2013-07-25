@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130724174214) do
+ActiveRecord::Schema.define(version: 20130725153500) do
 
   create_table "draws", force: true do |t|
     t.string   "drawing_url"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20130724174214) do
     t.integer  "draw_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "title"
   end
 
   add_index "images", ["draw_id"], name: "index_images_on_draw_id"

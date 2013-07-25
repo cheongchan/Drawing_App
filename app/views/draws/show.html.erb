@@ -2,7 +2,7 @@
   var channel_id = <%= @draw.id %>
   //
   // Initiate socket.io
-  var socket = io.connect('http://172.27.129.91:8888');
+  var socket = io.connect('http://localhost:8888');
   socket.emit('channel', channel_id);
 
 
@@ -117,12 +117,12 @@
         paper.view.draw();
 
         if (data.tool == 5) {
-          var copy = path.clone();
+              var copy = path.clone();
               copy.strokeColor = 'white';
               copy.strokeWidth = 4;
-
               copy.position.x += 10;
               copy.position.y += 10;
+             copy.add(new paper.Point(data.points));
           }
 
         path.add(new paper.Point(data.points));
@@ -360,17 +360,15 @@
 //exports to SVG and prepends to page
 function SVGadd(){
   var pictureSVG = paper.project.exportSVG();
-  var picture = $('.previous').prepend(pictureSVG).html();
+  //convert svg object to string
+  var picture = $('.temp').append(pictureSVG).html();
+  $('.temp').empty();
   return picture;
 };
 
-//emits to nodejs server and rails server
+//export svg to rails server
 function SVGemit(){
   svg = SVGadd();
-  var SVGpicture = {channel: channel_id};
-  //to socket io server
-  socket.emit("SVGadd", SVGpicture);
-  console.log(channel_id);
   //to rails server
   var image_data = {'image' : {'svg': svg, 'draw_id': channel_id+""}};
   $.ajax({
@@ -380,31 +378,27 @@ function SVGemit(){
   });
 };
 
-//listens for nodejs
-socket.on("SVGadd"+channel_id, function(data){
-  SVGadd();
-});
 
 </script>
 		<div id="title">
 			<h1><%= link_to("Bulletin Board", root_path) %></h1>
-    </div>	
-    <a href="javascript:tool.activate();">Black Line</a>
-    <a href="javascript:hueChanger.activate();">Hued Line</a>
-    <a href="javascript:gradientTool.activate();">Gradient Line</a>
-    <a href="javascript:dottedLine.activate();">Dotted</a>
-    <a href="javascript:blackWhite.activate();">Clone</a>
+    </div>
+    <div id="tools">	
+      <ul>
+        <li><a href="javascript:tool.activate();">Black Line</a></li>
+        <li><a href="javascript:hueChanger.activate();">Hued Line</a></li>
+        <li><a href="javascript:gradientTool.activate();">Gradient Line</a></li>
+        <li><a href="javascript:dottedLine.activate();">Dotted</a></li>
+        <li><a href="javascript:blackWhite.activate();">Clone</a></li>
+      </ul>
+    </div>
    <canvas id=<%=@draw.id%>></canvas>
 
 <hr>
 
-<button onclick="SVGemit()">Submit Picture</button>
-
+<button id='submit-picture' onclick="SVGemit()">Publish Picture to Gallery</button>
 
 <%= link_to 'Back', draws_path %>
-<div class="previous">
-  <% @images.each do |image| %>
-      <tr>
-        <td><%= image.svg.html_safe %></td>
-    <% end %>
+
+<div class="temp">
 </div>
