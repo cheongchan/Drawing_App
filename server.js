@@ -32,4 +32,9 @@ drawing_room
   socket.on('update',function(data){
     picture[data.channel] = data.JSON;
   });
+
+  socket.on('title',function(data){
+    socket.broadcast.emit("titleSubmit"+data.channel, data.title);
+    console.log(data);
+  });
 });
