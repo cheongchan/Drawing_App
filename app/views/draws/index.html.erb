@@ -312,7 +312,7 @@ function userCounter(data) {
      }
 
 
-    //                  Clone Tool                        //
+    //                 Clone Tool                        //
 
       blackWhite.onMouseDown = function(event) {
       var uniquePath = Math.round($.now()*Math.random());
@@ -402,6 +402,7 @@ function titleSubmit(){
 socket.on("titleSubmit"+channel_id, function(data){
   console.log(data);
   $('#picture-title').children().val(data);
+  $('#temp-title').text(data);
 });
 
 </script>
@@ -431,6 +432,7 @@ socket.on("titleSubmit"+channel_id, function(data){
    </nav>
   <canvas id='main' resize="true"></canvas>
   <div id="connectCounter"></div>
+  <div id="temp-title">Title</div>
 
   <form id="picture-title">
       <input type="text" name="Title" value="Title" onblur='titleSubmit();'>
