@@ -45,6 +45,5 @@ drawing_room
 
   socket.on('title',function(data){
     socket.broadcast.emit("titleSubmit"+data.channel, data.title);
-
   });
 });

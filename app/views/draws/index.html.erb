@@ -372,19 +372,19 @@ function userCounter(data) {
 //exports to SVG and prepends to page
 function SVGadd(){
   var pictureSVG = paper.project.exportSVG();
-  var picture = $('.previous').prepend(pictureSVG).html();
+  //convert svg object to string
+  var picture = $('.temp').append(pictureSVG).html();
+  $('.temp').empty();
   return picture;
 };
 
-//emits to nodejs server and rails server
+//export svg to rails server
 function SVGemit(){
   svg = SVGadd();
-  var SVGpicture = {channel: channel_id};
-  //to socket io server
-  socket.emit("SVGadd", SVGpicture);
-  console.log(channel_id);
+  //get title from form
+  var title = $('#picture-title').children().val();
   //to rails server
-  var image_data = {'image' : {'svg': svg, 'draw_id': channel_id+""}};
+  var image_data = {'image' : {'svg': svg, 'draw_id': channel_id+"", 'title': title}};
   $.ajax({
     type: 'POST',
     url: "/images",
@@ -392,12 +392,17 @@ function SVGemit(){
   });
 };
 
-//listens for nodejs
-socket.on("SVGadd"+channel_id, function(data){
-  SVGadd();
+function titleSubmit(){
+  var value = $('#picture-title').children().val();
+  data = {title: value, channel: channel_id};
+  socket.emit('title', data);
+  console.log(data);
+};
+
+socket.on("titleSubmit"+channel_id, function(data){
+  console.log(data);
+  $('#picture-title').children().val(data);
 });
-
-
 
 </script>
 
@@ -427,3 +432,10 @@ socket.on("SVGadd"+channel_id, function(data){
   <canvas id='main' resize="true"></canvas>
   <div id="connectCounter"></div>
 
+<form id="picture-title">
+<input type="text" name="Title" value="Title" onblur='titleSubmit();'>
+</form>
+<button id='submit-picture' onclick="SVGemit()">Publish Picture to Gallery</button>
+
+<div class="temp">
+</div>
