@@ -1,8 +1,8 @@
 <script type="text/javascript">
-  var channel_id = <%= @draw.id %>
+  var channel_id = <%= @draw.id %>;
   //
   // Initiate socket.io
-  var socket = io.connect('http://localhost:8888');
+  var socket = io.connect('http://172.27.129.91:8888');
   socket.emit('channel', channel_id);
 
 
@@ -20,6 +20,19 @@
   var userId = Math.round($.now()*Math.random());
 
   $(document).ready(function(){
+
+ $("#logo_type").click(function () {
+    $("#nav_hide").slideToggle("slow");
+ });
+
+function userCounter(data) {
+     $('#connectCounter').text("Drawers: " + data);
+ }
+
+
+   socket.on('changeCount', function(data) {
+         userCounter(data);
+   });
 
     var canvas = document.getElementById(channel_id);
     paper.setup(canvas);
@@ -122,7 +135,6 @@
               copy.strokeWidth = 4;
               copy.position.x += 10;
               copy.position.y += 10;
-             copy.add(new paper.Point(data.points));
           }
 
         path.add(new paper.Point(data.points));
@@ -393,20 +405,32 @@ socket.on("titleSubmit"+channel_id, function(data){
 });
 
 </script>
-		<div id="title">
-			<h1><%= link_to("Bulletin Board", root_path) %></h1>
-    </div>
-    <div id="tools" class="ui-widget-content">	
-      <ul>
-        <li><a href="javascript:tool.activate();">Black Line</a></li>
-        <li><a href="javascript:hueChanger.activate();">Hued Line</a></li>
-        <li><a href="javascript:gradientTool.activate();">Gradient Line</a></li>
-        <li><a href="javascript:dottedLine.activate();">Dotted</a></li>
-        <li><a href="javascript:blackWhite.activate();">Clone</a></li>
-      </ul>
-    </div>
-   <canvas id=<%=@draw.id%>></canvas>
 
+<nav>
+<div id="logo_type">
+  <%= link_to("Drawing IO", root_path) %>
+</div>
+
+
+<div id="nav_hide">
+  <div class="header">Canvases</div>
+    <% @draws.each do |draw| %>
+      <div><%= link_to draw.canvas_name, draw %></div> 
+    <% end %>
+<%= link_to 'New Canvas', new_draw_path %>
+
+
+
+    <div>Tools</div>
+    <a href="javascript:tool.activate();">Black Line</a><br/>
+    <a href="javascript:hueChanger.activate();">Hued Line</a><br/>
+    <a href="javascript:gradientTool.activate();">Gradient Line</a><br/>
+    <a href="javascript:dottedLine.activate();">Dotted</a><br/>
+    <a href="javascript:blackWhite.activate();">Clone</a><br/>
+  </div>
+   </nav>
+  <canvas id=<%= @draw.id %> resize="true"></canvas>
+  <div id="connectCounter"></div>
 
 <form id="picture-title">
 <input type="text" name="Title" value="Title" onblur='titleSubmit();'>
