@@ -363,7 +363,6 @@ function SVGadd(){
   //convert svg object to string
   var picture = $('.temp').append(pictureSVG).html();
   $('.temp').empty();
-  console.log(picture);
   return picture;
 };
 
@@ -379,20 +378,18 @@ function SVGemit(){
   });
 };
 
-//listens for nodejs
-socket.on("SVGadd"+channel_id, function(data){
-  SVGadd();
-});
 
 </script>
 		<div id="title">
 			<h1><%= link_to("Bulletin Board", root_path) %></h1>
-    </div>	
-    <a href="javascript:tool.activate();">Black Line</a>
-    <a href="javascript:hueChanger.activate();">Hued Line</a>
-    <a href="javascript:gradientTool.activate();">Gradient Line</a>
-    <a href="javascript:dottedLine.activate();">Dotted</a>
-    <a href="javascript:blackWhite.activate();">Clone</a>
+    </div>
+    <div id="tools">	
+      <a href="javascript:tool.activate();">Black Line</a>
+      <a href="javascript:hueChanger.activate();">Hued Line</a>
+      <a href="javascript:gradientTool.activate();">Gradient Line</a>
+      <a href="javascript:dottedLine.activate();">Dotted</a>
+      <a href="javascript:blackWhite.activate();">Clone</a>
+    </div>
    <canvas id=<%=@draw.id%>></canvas>
 
 <hr>
