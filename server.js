@@ -6,9 +6,14 @@ var app = connect().use(connect.static('public')).listen(8888);
 
 var drawing_room = io.listen(app);
 var picture = new Object();
+var connectCounter = 0;
 
 drawing_room
   .on('connection', function(socket) {
+
+  connectCounter++;
+
+  drawing_room.sockets.emit('changeCount', connectCounter);
 
   //imports info for each show page
   socket.on('channel', function(data) {
@@ -31,5 +36,10 @@ drawing_room
   //gets JSON data and puts it into variable
   socket.on('update',function(data){
     picture[data.channel] = data.JSON;
+  });
+
+  socket.on('disconnect', function() {
+    connectCounter--;
+    drawing_room.sockets.emit('changeCount', connectCounter);
   });
 });

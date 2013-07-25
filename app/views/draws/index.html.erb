@@ -2,7 +2,7 @@
   var channel_id = 'main';
   //
   // Initiate socket.io
-  var socket = io.connect('http://localhost:8888');
+  var socket = io.connect('http://172.27.129.91:8888');
   socket.emit('channel', channel_id);
 
 
@@ -25,6 +25,14 @@
     $("#nav_hide").slideToggle("slow");
  });
 
+function userCounter(data) {
+     $('#connectCounter').text("Drawers: " + data);
+ }
+
+
+   socket.on('changeCount', function(data) {
+         userCounter(data);
+   });
 
     var canvas = document.getElementById(channel_id);
     paper.setup(canvas);
@@ -403,8 +411,9 @@ socket.on("SVGadd"+channel_id, function(data){
   <div class="header">Canvases</div>
     <% @draws.each do |draw| %>
       <div><%= link_to draw.canvas_name, draw %></div> 
-       <%= link_to 'New Canvas', new_draw_path %>
     <% end %>
+<%= link_to 'New Canvas', new_draw_path %>
+
 
 
     <div>Tools</div>
@@ -415,6 +424,6 @@ socket.on("SVGadd"+channel_id, function(data){
     <a href="javascript:blackWhite.activate();">Clone</a><br/>
   </div>
    </nav>
-  <canvas id='main' ></canvas>
-
+  <canvas id='main' resize="true"></canvas>
+  <div id="connectCounter"></div>
 
