@@ -2,7 +2,7 @@
   var channel_id = <%= @draw.id %>
   //
   // Initiate socket.io
-  var socket = io.connect('http://172.27.129.91:8888');
+  var socket = io.connect('http://localhost:8888');
   socket.emit('channel', channel_id);
 
 
@@ -117,12 +117,12 @@
         paper.view.draw();
 
         if (data.tool == 5) {
-          var copy = path.clone();
+              var copy = path.clone();
               copy.strokeColor = 'white';
               copy.strokeWidth = 4;
-
               copy.position.x += 10;
               copy.position.y += 10;
+             copy.add(new paper.Point(data.points));
           }
 
         path.add(new paper.Point(data.points));
@@ -360,17 +360,16 @@
 //exports to SVG and prepends to page
 function SVGadd(){
   var pictureSVG = paper.project.exportSVG();
-  var picture = $('.previous').prepend(pictureSVG).html();
+  //convert svg object to string
+  var picture = $('.temp').append(pictureSVG).html();
+  $('.temp').empty();
+  console.log(picture);
   return picture;
 };
 
-//emits to nodejs server and rails server
+//export svg to rails server
 function SVGemit(){
   svg = SVGadd();
-  var SVGpicture = {channel: channel_id};
-  //to socket io server
-  socket.emit("SVGadd", SVGpicture);
-  console.log(channel_id);
   //to rails server
   var image_data = {'image' : {'svg': svg, 'draw_id': channel_id+""}};
   $.ajax({
@@ -398,13 +397,9 @@ socket.on("SVGadd"+channel_id, function(data){
 
 <hr>
 
-<button onclick="SVGemit()">Submit Picture</button>
-
+<button id='submit-picture' onclick="SVGemit()">Submit Picture</button>
 
 <%= link_to 'Back', draws_path %>
-<div class="previous">
-  <% @images.each do |image| %>
-      <tr>
-        <td><%= image.svg.html_safe %></td>
-    <% end %>
+
+<div class="temp">
 </div>
