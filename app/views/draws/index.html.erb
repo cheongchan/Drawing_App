@@ -21,6 +21,11 @@
 
   $(document).ready(function(){
 
+ $("#logo_type").click(function () {
+    $("#nav_hide").slideToggle("slow");
+ });
+
+
     var canvas = document.getElementById(channel_id);
     paper.setup(canvas);
 
@@ -384,46 +389,32 @@ socket.on("SVGadd"+channel_id, function(data){
   SVGadd();
 });
 
+
+
 </script>
 
-
-<div class="drawing">
-  <div class="top-bar">
-    <div id="title">
-      <h1><%= link_to("Gestalt Illusion", root_path) %></h1>
-    </div>  
-  </div>
-</div>  
+<nav>
+<div id="logo_type">
+  <%= link_to("Drawing IO", root_path) %>
+</div>
 
 
-<div class="list">
-<table>
-  <thead>
-    <tr>
-      <th>Canvas</th>
-    </tr>
-  </thead>
-  <tbody>
+<div id="nav_hide">
+  <div class="header">Canvases</div>
     <% @draws.each do |draw| %>
-      <tr>
-        <td><%= draw.canvas_name %></td>
-        <td><%= link_to 'Show', draw %></td>
-        <td><%= link_to 'New Canvas', new_draw_path %></td>
-      </tr>
+      <div><%= link_to draw.canvas_name, draw %></div> 
+       <%= link_to 'New Canvas', new_draw_path %>
     <% end %>
-  </tbody>
-</table>
-</div>
 
-<br>
- 
-    <a href="javascript:tool.activate();">Black Line</a>
-    <a href="javascript:hueChanger.activate();">Hued Line</a>
-    <a href="javascript:gradientTool.activate();">Gradient Line</a>
-    <a href="javascript:dottedLine.activate();">Dotted</a>
-    <a href="javascript:blackWhite.activate();">Clone</a>
-   <canvas id='main'></canvas>
 
-<hr>
-</div>
-<%= link_to 'New Canvas', new_draw_path %>
+    <div>Tools</div>
+    <a href="javascript:tool.activate();">Black Line</a><br/>
+    <a href="javascript:hueChanger.activate();">Hued Line</a><br/>
+    <a href="javascript:gradientTool.activate();">Gradient Line</a><br/>
+    <a href="javascript:dottedLine.activate();">Dotted</a><br/>
+    <a href="javascript:blackWhite.activate();">Clone</a><br/>
+  </div>
+   </nav>
+  <canvas id='main' ></canvas>
+
+
