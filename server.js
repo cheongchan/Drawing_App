@@ -42,4 +42,10 @@ drawing_room
     connectCounter--;
     drawing_room.sockets.emit('changeCount', connectCounter);
   });
+
+  socket.on('title',function(data){
+    socket.broadcast.emit("titleSubmit"+data.channel, data.title);
+    console.log(data);
+
+  });
 });

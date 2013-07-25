@@ -369,8 +369,10 @@ function SVGadd(){
 //export svg to rails server
 function SVGemit(){
   svg = SVGadd();
+  //get title from form
+  var title = $('#picture-title').children().val();
   //to rails server
-  var image_data = {'image' : {'svg': svg, 'draw_id': channel_id+""}};
+  var image_data = {'image' : {'svg': svg, 'draw_id': channel_id+"", 'title': title}};
   $.ajax({
     type: 'POST',
     url: "/images",
@@ -378,12 +380,23 @@ function SVGemit(){
   });
 };
 
+function titleSubmit(){
+  var value = $('#picture-title').children().val();
+  data = {title: value, channel: channel_id};
+  socket.emit('title', data);
+  console.log(data);
+};
+
+socket.on("titleSubmit"+channel_id, function(data){
+  console.log(data);
+  $('#picture-title').children().val(data);
+});
 
 </script>
 		<div id="title">
 			<h1><%= link_to("Bulletin Board", root_path) %></h1>
     </div>
-    <div id="tools">	
+    <div id="tools" class="ui-widget-content">	
       <ul>
         <li><a href="javascript:tool.activate();">Black Line</a></li>
         <li><a href="javascript:hueChanger.activate();">Hued Line</a></li>
@@ -394,11 +407,11 @@ function SVGemit(){
     </div>
    <canvas id=<%=@draw.id%>></canvas>
 
-<hr>
 
+<form id="picture-title">
+<input type="text" name="Title" value="Title" onblur='titleSubmit();'>
+</form>
 <button id='submit-picture' onclick="SVGemit()">Publish Picture to Gallery</button>
-
-<%= link_to 'Back', draws_path %>
 
 <div class="temp">
 </div>
