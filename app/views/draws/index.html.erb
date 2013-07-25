@@ -30,11 +30,9 @@
       <th>Canvas</th>
     </tr>
   </thead>
-
   <tbody>
     <% @draws.each do |draw| %>
       <tr>
-        <td><canvas id=draw.id  width="200" height="100"></canvas></td>
         <td><%= draw.canvas_name %></td>
         <td><%= link_to 'Show', draw %></td>
       </tr>
@@ -44,5 +42,7 @@
 
 <br>
 
-<%= link_to 'New Draw', new_draw_path %>
+<hr>
+
+<%= link_to 'New Canvas', new_draw_path %>
 </div>
