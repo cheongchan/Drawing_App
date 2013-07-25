@@ -2,7 +2,7 @@
   var channel_id = <%= @draw.id %>
   //
   // Initiate socket.io
-  var socket = io.connect('http://localhost:8888');
+  var socket = io.connect('http://172.27.129.91:8888');
   socket.emit('channel', channel_id);
 
 
@@ -117,12 +117,12 @@
         paper.view.draw();
 
         if (data.tool == 5) {
-              var copy = path.clone();
+          var copy = path.clone();
               copy.strokeColor = 'white';
               copy.strokeWidth = 4;
+
               copy.position.x += 10;
               copy.position.y += 10;
-             copy.add(new paper.Point(data.points));
           }
 
         path.add(new paper.Point(data.points));
