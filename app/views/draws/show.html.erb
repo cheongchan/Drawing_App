@@ -384,11 +384,13 @@ function SVGemit(){
 			<h1><%= link_to("Bulletin Board", root_path) %></h1>
     </div>
     <div id="tools">	
-      <a href="javascript:tool.activate();">Black Line</a>
-      <a href="javascript:hueChanger.activate();">Hued Line</a>
-      <a href="javascript:gradientTool.activate();">Gradient Line</a>
-      <a href="javascript:dottedLine.activate();">Dotted</a>
-      <a href="javascript:blackWhite.activate();">Clone</a>
+      <ul>
+        <li><a href="javascript:tool.activate();">Black Line</a></li>
+        <li><a href="javascript:hueChanger.activate();">Hued Line</a></li>
+        <li><a href="javascript:gradientTool.activate();">Gradient Line</a></li>
+        <li><a href="javascript:dottedLine.activate();">Dotted</a></li>
+        <li><a href="javascript:blackWhite.activate();">Clone</a></li>
+      </ul>
     </div>
    <canvas id=<%=@draw.id%>></canvas>
 
