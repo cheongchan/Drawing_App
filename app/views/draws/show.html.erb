@@ -2,7 +2,7 @@
   var channel_id = <%= @draw.id %>
   //
   // Initiate socket.io
-  var socket = io.connect('http://172.27.129.91:8888');
+  var socket = io.connect('http://localhost:8888');
   socket.emit('channel', channel_id);
 
 
@@ -10,6 +10,8 @@
   var gradientTool = new paper.Tool();
   var hueChanger = new paper.Tool();
   var tool = new paper.Tool();
+  var dottedLine  = new paper.Tool();
+  var blackWhite = new paper.Tool();
 
   //
   // Define global variables
@@ -76,6 +78,19 @@
           path.strokeWidth = 30;
           path.strokeCap = 'round';
           return path;
+       case 4:
+         var path = new paper.Path();
+         path.strokeColor = '#1A1A00';
+         path.strokeWidth = 10;
+         path.strokeCap = 'round';
+         path.dashArray = [10, 24];
+         return path;
+      case 5:
+          var path = new paper.Path();
+          path.strokeColor = 'black';
+          path.strokeWidth = 40;
+          path.strokeCap = 'square';
+          return path;
       }
     }
 
@@ -100,6 +115,15 @@
         var userDrawObject = filterPaths(data.userId);
         var path = userDrawObject.path;
         paper.view.draw();
+
+        if (data.tool == 5) {
+              var copy = path.clone();
+              copy.strokeColor = 'white';
+              copy.strokeWidth = 4;
+              copy.position.x += 10;
+              copy.position.y += 10;
+             copy.add(new paper.Point(data.points));
+          }
 
         path.add(new paper.Point(data.points));
         paper.view.draw();
@@ -238,6 +262,82 @@
 
 
 
+    // Dotted Line Tool
+     dottedLine.onMouseDown = function(event) {
+      var uniquePath = Math.round($.now()*Math.random());
+      var points = extractPoints(event);
+      var drawing = 0;
+
+      var data = {
+          channel: channel_id,
+          userId: userId,
+          drawing: drawing,
+          points: points,
+          pathId: uniquePath,
+          tool: 4
+      };
+
+      drawEvent(data);
+      emitPoint("onMouseDown", data);
+
+    }
+
+    dottedLine.onMouseDrag = function(event) {
+          var points = extractPoints(event);
+          var data = { channel: channel_id, drawing: 1, points: points, userId: userId, tool:3};
+          drawEvent(data);
+          emitPoint("onMouseDrag", data);
+    }
+
+     dottedLine.onMouseUp = function(event) {
+       var data = { channel: channel_id, drawing: 2, userId: userId, tool:3 };
+      drawEvent(data);
+      emitPoint("onMouseUp", data);
+      //testing export
+      var pictureJSON = paper.project.exportJSON();
+      var picture = {channel: channel_id, JSON: pictureJSON}
+      socket.emit("update", picture);
+     }
+
+
+    //                  Clone Tool                        //
+
+      blackWhite.onMouseDown = function(event) {
+      var uniquePath = Math.round($.now()*Math.random());
+      var points = extractPoints(event);
+      var drawing = 0;
+
+      var data = {
+          channel: channel_id,
+          userId: userId,
+          drawing: drawing,
+          points: points,
+          pathId: uniquePath,
+          tool: 5
+      };
+
+      drawEvent(data);
+      emitPoint("onMouseDown", data);
+
+    }
+
+    blackWhite.onMouseDrag = function(event) {
+          var points = extractPoints(event);
+          var data = { channel: channel_id, drawing: 1, points: points, userId: userId, tool:5};
+          drawEvent(data);
+          emitPoint("onMouseDrag", data);
+    }
+
+     blackWhite.onMouseUp = function(event) {
+       var data = { channel: channel_id, drawing: 2, userId: userId, tool:5 };
+      drawEvent(data);
+      emitPoint("onMouseUp", data);
+      //testing export
+      var pictureJSON = paper.project.exportJSON();
+      var picture = {channel: channel_id, JSON: pictureJSON}
+      socket.emit("update", picture);
+     }
+
 
     //
     // All emiter functions
@@ -292,6 +392,8 @@ socket.on("SVGadd"+channel_id, function(data){
     <a href="javascript:tool.activate();">Black Line</a>
     <a href="javascript:hueChanger.activate();">Hued Line</a>
     <a href="javascript:gradientTool.activate();">Gradient Line</a>
+    <a href="javascript:dottedLine.activate();">Dotted</a>
+    <a href="javascript:blackWhite.activate();">Clone</a>
    <canvas id=<%=@draw.id%>></canvas>
 
 <hr>
