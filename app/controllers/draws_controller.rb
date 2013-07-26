@@ -30,10 +30,10 @@ class DrawsController < ApplicationController
     respond_to do |format|
       if @draw.save
         format.html { redirect_to @draw, notice: 'Draw was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @draw }
+        format.js { render action: 'show', status: :created, location: @draw }
       else
         format.html { render action: 'new' }
-        format.json { render json: @draw.errors, status: :unprocessable_entity }
+        format.js { render json: @draw.errors, status: :unprocessable_entity }
       end
     end
   end
