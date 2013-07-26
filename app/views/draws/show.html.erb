@@ -2,7 +2,7 @@
   var channel_id = <%= @draw.id %>;
   //
   // Initiate socket.io
-  var socket = io.connect('http://172.27.129.91:8888');
+  var socket = io.connect('http://localhost:8888');
   socket.emit('channel', channel_id);
 
 
@@ -312,7 +312,7 @@ function userCounter(data) {
      }
 
 
-    //                  Clone Tool                        //
+    //                 Clone Tool                        //
 
       blackWhite.onMouseDown = function(event) {
       var uniquePath = Math.round($.now()*Math.random());
@@ -366,6 +366,21 @@ function userCounter(data) {
       drawEvent(data);
     });
 
+    $('#canvas-links').hide();
+    $('#canvas-toggle').click(function() {
+      $('#canvas-links').slideToggle('slow');
+    });
+
+   $('#tools-links').hide();
+   $('#tools-toggle').click(function() {
+      $('#tools-links').slideToggle('slow');
+   });
+
+   $('#new-canvas-form').hide();
+   $('#new-canvas').click(function() {
+      $('#new-canvas-form').fadeToggle('slow');
+   });
+
 });
 
 //Conversation add with SVG
@@ -396,46 +411,91 @@ function titleSubmit(){
   var value = $('#picture-title').children().val();
   data = {title: value, channel: channel_id};
   socket.emit('title', data);
-  console.log(data);
+  $('#temp-title').text(data.title).hide().addClass("red").fadeIn("slow").delay(1000).queue(function(next){
+    $(this).removeClass("red");
+    next();
+  });
 };
 
 socket.on("titleSubmit"+channel_id, function(data){
-  console.log(data);
   $('#picture-title').children().val(data);
+ $('#temp-title').text(data).hide().addClass("red").fadeIn("slow").delay(1000).queue(function(next){
+    $(this).removeClass("red");
+    next();
+  });
+
 });
+
+function clearForm(){
+  $('#newCanvasForm').val('');
+};
+
+function resetForm(){
+  $('#newCanvasForm').val('Add');
+};
+
+function EnterKey(event){
+    if (event.keyCode == 13) {
+      title = $('#newCanvasForm').val();
+      draws_data = {'draw' : {'canvas_name': title}};
+      $.ajax({
+        type: 'POST',
+        url: "/draws",
+        data: draws_data
+      });
+      resetForm();
+    }
+};
 
 </script>
 
 <nav>
-<div id="logo_type">
-  <%= link_to("Drawing IO", root_path) %>
-</div>
+        <div id="logo_type">
+              <%= link_to("Drawing IO", root_path) %>
+        </div>
+
+        <div id="nav_hide">
 
 
-<div id="nav_hide">
-  <div class="header">Canvases</div>
-    <% @draws.each do |draw| %>
-      <div><%= link_to draw.canvas_name, draw %></div> 
-    <% end %>
-<%= link_to 'New Canvas', new_draw_path %>
+          <div id="canvas-button" class="header"><span id='canvas-toggle' class="button-span">Canvases</span></div>
+            <div id="canvas-links">
+              <% @draws.each do |draw| %>
+              <div>
+                     <%= link_to draw.canvas_name, draw %>
+              </div>
+            <% end %>
+            </div>
+
+              <div id="tools">
+                <div class='header'><span id='tools-toggle' class='button-span'>Tools</span></div>
+
+                <div id='tools-links'>
+                  <a href="javascript:tool.activate();">Standard</a><br />
+                  <a href="javascript:hueChanger.activate();">Hued</a><br />
+                  <a href="javascript:gradientTool.activate();">Gradient</a><br />
+                  <a href="javascript:dottedLine.activate();">Dotted</a><br />
+                  <a href="javascript:blackWhite.activate();">Clone</a><br />
+                </div>
+              </div>
+              <div class="header"><%= link_to "Collection", images_path%>
+              <div id="new-canvas" class="header"><span class='button-span'>New Canvas</span></div>
+              <div id="new-canvas-form">
+                <input id="newCanvasForm" type='text' value="Add" onfocus="clearForm()" onblur="resetForm()" onsubmit="console.log('hello')" onkeypress="EnterKey(event)">
+              </div>
+
+         </div>
+</nav>
 
 
-
-    <div>Tools</div>
-    <a href="javascript:tool.activate();">Black Line</a><br/>
-    <a href="javascript:hueChanger.activate();">Hued Line</a><br/>
-    <a href="javascript:gradientTool.activate();">Gradient Line</a><br/>
-    <a href="javascript:dottedLine.activate();">Dotted</a><br/>
-    <a href="javascript:blackWhite.activate();">Clone</a><br/>
-  </div>
-   </nav>
   <canvas id=<%= @draw.id %> resize="true"></canvas>
-  <div id="connectCounter"></div>
+  <div id="connectCounter">Drawers: 1</div>
+  <div id="temp-title">Untitled</div>
 
-<form id="picture-title">
-<input type="text" name="Title" value="Title" onblur='titleSubmit();'>
-</form>
-<button id='submit-picture' onclick="SVGemit()">Publish Picture to Gallery</button>
+  <form id="picture-title">
+      <input type="text" name="Title" value="Untitled" onblur='titleSubmit();'>
+  </form>
 
-<div class="temp">
+  <button id='submit-picture' onclick="SVGemit()">Publish</button>
+
+  <div class="temp">
 </div>
