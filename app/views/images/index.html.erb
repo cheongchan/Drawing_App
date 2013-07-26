@@ -10,10 +10,9 @@
     <% @images.each do |image| %>
       <div class="col-2-3">
         <%= image.svg.html_safe %>
-        <div>
+        <div class='inner-title'>
           <%= image.title %>
         </div>
-        <%= link_to 'Enlarge', image %>
       </div>
       <% end %>
 </div>

@@ -7,29 +7,35 @@
   float:left;
   overflow:hidden;
   margin-bottom:100px;
+  font-size: 18pt;
+}
+
+.inner-title {
+  margin-top:20px;
 }
 
 .grid {
  width: 1000px;
  margin:180px auto;
  text-align:center;
+
+ font-family:'apercu-medium';
 }
 
 svg {
   position:relative;
   left:-175px;
-  border: solid black 7px;
 }
 
 #permanent-collection {
-  top: 30px;
+  top: 38px;
   left:50%;
   margin-left:-250px;
   z-index:100;
   position:fixed;
   font-family: 'apercu-medium';
   color: black;
-  font-size: 35pt;
+  font-size: 30pt;
   text-decoration:none;
   text-align:center;
 }
