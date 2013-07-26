@@ -426,6 +426,27 @@ socket.on("titleSubmit"+channel_id, function(data){
 
 });
 
+function clearForm(){
+  $('#newCanvasForm').val('');
+};
+
+function resetForm(){
+  $('#newCanvasForm').val('Add');
+};
+
+function EnterKey(event){
+    if (event.keyCode == 13) {
+      title = $('#newCanvasForm').val();
+      draws_data = {'draw' : {'canvas_name': title}};
+      $.ajax({
+        type: 'POST',
+        url: "/draws",
+        data: draws_data
+      });
+      resetForm();
+    }
+};
+
 </script>
 
 <nav>
@@ -445,8 +466,9 @@ socket.on("titleSubmit"+channel_id, function(data){
             <% end %>
             </div>
 
-                <div id="tools">
+              <div id="tools">
                 <div class='header'><span id='tools-toggle' class='button-span'>Tools</span></div>
+
                 <div id='tools-links'>
                   <a href="javascript:tool.activate();">Standard</a><br />
                   <a href="javascript:hueChanger.activate();">Hued</a><br />
@@ -457,7 +479,9 @@ socket.on("titleSubmit"+channel_id, function(data){
               </div>
               <div class="header"><%= link_to "Collection", images_path%>
               <div id="new-canvas" class="header"><span class='button-span'>New Canvas</span></div>
-              <div id="new-canvas-form"><input type='text'></div>
+              <div id="new-canvas-form">
+                <input id="newCanvasForm" type='text' value="Add" onfocus="clearForm()" onblur="resetForm()" onsubmit="console.log('hello')" onkeypress="EnterKey(event)">
+              </div>
 
          </div>
 </nav>
