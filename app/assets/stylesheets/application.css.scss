@@ -12,7 +12,10 @@
  *= require_tree .
  */
 
-body { margin: 0px; }
+body {
+  margin: 0px;
+  background: #f5f5f5 !important; 
+}
 
 @font-face {
   font-family: 'apercu-medium';
@@ -34,6 +37,10 @@ nav {
   width: 15%;
 }
 
+#nav_hide {
+  margin-left: 10px;
+}
+
 #connectCounter {
   font-family:'apercu-medium';
   position:absolute;
@@ -52,16 +59,29 @@ nav {
 }
 
 .header {
-  font-size: 12pt;
+  font-size: 13pt;
 }
 
-nav a, nav div {
-  padding-left:9px;
+#canvas-links a {
+  margin-left:9px;
+  padding: 3px
+}
+
+#tools a {
+  margin-left:9px;
+}
+
+.red {
+  color:#e30000;
 }
 
 nav a:link {color:black; text-decoration:none;}/* unvisited link */
 nav a:visited {color:black;}  /* visited link */
-nav a:hover {color:black; border-bottom: solid white 1px;}  /* mouse over link */
+nav a:hover {color:#e30000;
+
+background: #eacfcf;
+
+}  /* mouse over link */
 nav a:active {color:black;}  /* selected link */
 
 #logo_type {
@@ -73,6 +93,19 @@ nav a:active {color:black;}  /* selected link */
   padding:9px;
   border: 5px solid black;
   margin-bottom: 20px;
+}
+
+#logo_type:hover, #logo_type:hover * {
+  color:#e30000 ;
+  border-color: #e30000;
+  background:#eacfcf;
+}
+
+.button-span:hover {
+  cursor: hand;
+  cursor: pointer;
+   color:#e30000;
+  background:#eacfcf;
 }
 
 canvas {
@@ -98,7 +131,7 @@ svg {
   color:black;
 }
 
-#picture-title input[type=text] {
+input[type=text] {
   border: 2px solid black;
   padding: 3px;
   background: transparent;
@@ -108,6 +141,13 @@ svg {
   outline: none;
 }
 
+input[type=text]:focus {
+color:#e30000;
+border-color: #e30000;
+background: #eacfcf;
+}
+
+
 #submit-picture {
 
   position:fixed;
@@ -115,6 +155,8 @@ svg {
   bottom: 18px;
 
   font-family: 'apercu-medium';
+  font-size: 13px;
+
   padding:5px 10px;
   background-color:transparent;
   border: 2px solid black;
@@ -123,6 +165,8 @@ svg {
 }
 
 #submit-picture:hover {
-  background:black;
-  color:#f5f5f5;
+
+color:#e30000;
+border-color: #e30000;
+background: #eacfcf;
 }

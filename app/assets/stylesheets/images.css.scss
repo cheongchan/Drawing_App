@@ -1,3 +1,35 @@
 // Place all the styles related to the Images controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.col-2-3 {
+  width: 95%;
+  float:left;
+  overflow:hidden;
+  margin-bottom:100px;
+}
+
+.grid {
+ width: 1000px;
+ margin:80px auto;
+ text-align:center;
+}
+
+svg {
+  position:relative;
+  left:-175px;
+  border: solid black 7px;
+}
+
+#permanent-collection {
+  top: 30px;
+  left:50%;
+  margin-left:-250px;
+  z-index:100;
+  position:fixed;
+  font-family: 'apercu-medium';
+  color: black;
+  font-size: 35pt;
+  text-decoration:none;
+  text-align:center;
+}

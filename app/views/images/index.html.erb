@@ -1,24 +1,13 @@
-<h1>Gallery</h1>
+<div id="permanent-collection">Permanent Collection</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Svg</th>
-      <th>Title</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="grid grid-path">
     <% @images.each do |image| %>
-      <tr>
-        <td><%= image.svg.html_safe %></td>
-        <td><%= image.title %></td>
-        <td><%= link_to 'Enlarge', image %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+      <div class="col-2-3">
+        <%= image.svg.html_safe %>
+        <div>
+          <%= image.title %>
+        </div>
+        <%= link_to 'Enlarge', image %>
+      </div>
+      <% end %>
+</div>
