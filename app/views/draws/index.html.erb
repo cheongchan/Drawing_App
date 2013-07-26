@@ -367,18 +367,18 @@ function userCounter(data) {
     });
 
     $('#canvas-links').hide();
-    $('#canvas-button').click(function() {
+    $('#canvas-toggle').click(function() {
       $('#canvas-links').slideToggle('slow');
     });
 
    $('#tools-links').hide();
-   $('#tools').click(function() {
+   $('#tools-toggle').click(function() {
       $('#tools-links').slideToggle('slow');
    });
 
    $('#new-canvas-form').hide();
    $('#new-canvas').click(function() {
-      $('#new-canvas-form').fadeIn('slow');
+      $('#new-canvas-form').fadeToggle('slow');
    });
 
 });
@@ -436,7 +436,7 @@ socket.on("titleSubmit"+channel_id, function(data){
         <div id="nav_hide">
 
 
-          <div id="canvas-button" class="header"><span class="button-span">Canvases</span></div>
+          <div id="canvas-button" class="header"><span id='canvas-toggle' class="button-span">Canvases</span></div>
             <div id="canvas-links">
               <% @draws.each do |draw| %>
               <div>
@@ -446,7 +446,7 @@ socket.on("titleSubmit"+channel_id, function(data){
             </div>
 
                           <div id="tools">
-                <div class='header'><span class='button-span'>Tools</span></div>
+                <div class='header'><span id='tools-toggle' class='button-span'>Tools</span></div>
                 <div id='tools-links'>
                   <a href="javascript:tool.activate();">Standard</a><br />
                   <a href="javascript:hueChanger.activate();">Hued</a><br />
